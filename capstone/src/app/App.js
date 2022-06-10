@@ -10,10 +10,14 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+<<<<<<< HEAD
 import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
 
+=======
+import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
+>>>>>>> 2ee7832872be13724fda7ca9051a4d4d281d2f40
 function App() {
   return (
     <div className="App">
@@ -27,12 +31,20 @@ function App() {
 
           <Route exact path="/store" element={<Store />} />
           <Route exact path="/store/:id" element={<Productlisting />} />
-          <Route exact path="/store/:id/:tag" element={<Productdiscription />} />
+          <Route
+            exact
+            path="/store/:id/:tag"
+            element={<Productdiscription />}
+          />
           <Route exact path="/vet" element={<Veterinary />} />
           <Route exact path="/signup" element={<Signup/>} />
           <Route exact path="/store/:id" element={<Productlisting />} />
           <Route exact path="/vet/:id" element={<Booking />} />
+<<<<<<< HEAD
           <Route exact path="/login" element={<Login/>} />
+=======
+          <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
+>>>>>>> 2ee7832872be13724fda7ca9051a4d4d281d2f40
         </Routes>
       </BrowserRouter>
     </div>
