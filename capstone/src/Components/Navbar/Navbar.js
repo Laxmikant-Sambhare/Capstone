@@ -23,9 +23,6 @@ export const Navbar = () => {
               <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
               <a href="/signin">Signin</a>
             </li>
             <li>
