@@ -11,6 +11,7 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/signin" element={<Signin />} />
           <Route exact path="/store/:id" element={<Productlisting />} />
           <Route exact path="/vet/:id" element={<Booking />} />
+          <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
         </Routes>
       </BrowserRouter>
     </div>
