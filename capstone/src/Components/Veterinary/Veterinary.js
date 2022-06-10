@@ -18,11 +18,7 @@ const Veterinary = () => {
           return (
             <>
               {data.id === 1 ? (
-<<<<<<< HEAD
-                <Container onClick={(e) => navigate("/vet/bookings")}>
-=======
                 <Container onClick={(e) => navigate("/vet/booking")}>
->>>>>>> 3ce4ba6ae52d80ed513b9bc9caf5ff85f2313ed9
                   <img src={data.image} alt="" />
                   <Text>
                     {data.service}
@@ -31,11 +27,7 @@ const Veterinary = () => {
                   </Text>
                 </Container>
               ) : (
-<<<<<<< HEAD
-                <Container onClick={(e) => navigate("/vet/bookings")}>
-=======
                 <Container onClick={(e) => navigate("/vet/booking")}>
->>>>>>> 3ce4ba6ae52d80ed513b9bc9caf5ff85f2313ed9
                   <img src={data.image} alt="" />
                   <Text>{data.service}</Text>
                 </Container>
