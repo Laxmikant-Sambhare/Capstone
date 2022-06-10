@@ -28,10 +28,10 @@ export const Navbar = () => {
               <a href="/signin">Signin</a>
             </li>
             <li>
-              <a href="/booking">Signin</a>
+              <a href="/booking">Booking</a>
             </li>
             <li>
-              <a href="/signin">Signin</a>
+              <a href="/Cart">Cart</a>
             </li>
           </ul>
         </div>
