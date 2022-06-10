@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/vet" element={<Veterinary />} />
           <Route exact path="/signin" element={<Signin />} />
           <Route exact path="/store/plp" element={<Productlisting />} />
-          <Route exact path="/vet/booking" element={<Booking />} />
+          <Route exact path="/vet/:id" element={<Booking />} />
         </Routes>
       </BrowserRouter>
     </div>

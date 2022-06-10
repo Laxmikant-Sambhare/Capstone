@@ -1,4 +1,5 @@
 import React from "react";
+import { Navbar } from "../Navbar/Navbar";
 import {
   Container1,
   Container2,
@@ -7,33 +8,43 @@ import {
   Form,
   MobileVet,
   Description,
-  Header,
   Image,
 } from "./Booking.styling";
-
-// import { Services } from "../../Data/Services";
+// import Veterinary from "./Veterinary";
+// import { Services } from "./Data/Services";
+// import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function Booking() {
+  // const params = useParams();
+  // const service = Veterinary.find((data) => data.id === params.id);
+  const location = useLocation();
+  const service = location.state;
+  console.log("location", location);
+  // console.log("params", params);
   return (
     <MobileVet>
-      <Header>Header</Header>
+      <Navbar />
+      {/* {Services.map((data) => {
+        return (
+          <> */}
       <Image>
-        <img
-          src="https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png"
-          alt=""
-        />
+        <img src={service.image} alt="" />
       </Image>
-      <Description></Description>
+      <Description>{service.Description}</Description>
+      {/* </>
+        );
+      })} */}
       <Form>
         <Container1>
-          Full Name:<input placeholder="Full Name"></input>
+          Full Name:<input type="text"></input>
           <br></br>
-          Email:<input placeholder="Email"></input>
+          Email:<input></input>
         </Container1>
         <Container2>
-          Contact No:<input placeholder="Contact No"></input>
+          Contact No:<input type="number"></input>
         </Container2>
         <Container3>
-          Address:<input placeholder="Address"></input>
+          Address:<input></input>
         </Container3>
         <Container4>Google Location</Container4>
       </Form>
@@ -42,3 +53,5 @@ function Booking() {
 }
 
 export default Booking;
+
+// https://console.cloud.google.com/projectselector2/google/maps-apis/api-list?supportedpurview=project
