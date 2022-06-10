@@ -37,16 +37,23 @@ export const Form = styled.div`
 export const Container1 = styled.div`
   margin: 2%;
   > input {
+    width: 40%;
+    margin-left: 8%;
   }
 `;
 export const Container2 = styled.div`
   margin: 2%;
+
   > input {
+    width: 40%;
+    margin-left: 5.5%;
   }
 `;
 export const Container3 = styled.div`
   margin: 2%;
   > input {
+    width: 40%;
+    margin-left: 7%;
   }
 `;
 export const Container4 = styled.div`
