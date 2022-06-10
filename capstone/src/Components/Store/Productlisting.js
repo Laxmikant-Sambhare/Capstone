@@ -1,47 +1,76 @@
 import styled from "styled-components";
-import React from "react";
+import React, { useState } from "react";
 import { section } from "./data";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Productlisting = () => {
   const params = useParams();
   const product = section.find((item) => item.id == params.id);
+  const [isActive, setIsActive] = useState(false);
   console.log(product);
   return (
     <div>
-      <Product> 
-      {product.products.map((data)=> {
-          return(
-              <Productcontainer>
-                  <img src={data.imageurl} alt='Category' /> 
-                  <h3>{data.name}</h3>
-                  <h4>{data.price}</h4>
-              </Productcontainer>
-          )
-      })}
-      </Product> 
+      <Dropdown>
+        <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+          <h2> Sorted by ⏷ </h2>
+        </div>
+        {isActive && (
+          <Dropdowncontent>
+            <h2>Price</h2>
+            <hr />
+            <div className="dropdown-item">
+              <h2>High to Low </h2>
+            </div>
+            <div className="dropdown-item">
+              <h2>Low to High </h2>
+            </div>
+          </Dropdowncontent>
+        )}
+      </Dropdown>
+      <Product>
+        {product.products.map((data) => {
+          return (
+            <Productcontainer>
+              <img src={data.imageurl} alt="Category" />
+              <h3>{data.name}</h3>
+              <h4>{data.price}</h4>
+            </Productcontainer>
+          );
+        })}
+      </Product>
     </div>
   );
 };
-const Product = styled.div`
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
 
-`
+const Dropdown = styled.div`
+  width: 110px;
+  background-color: #ffd301;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+`;
+const Dropdowncontent = styled.div`
+  position: absolute;
+  background-color: #ffd301;
+  padding: 10px;
+`;
+const Product = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+`;
 const Productcontainer = styled.div`
-width : 200px;
-height : 300px;
-margin-bottom: 50px;
-margin-left:50px;
-cursor: pointer;
->img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  cursor: pointer;
+  > img {
     width: 160px;
-    height:200px;
-}
-:hover {
-    border-color: red;
-   
+    height: 200px;
   }
-`
+  :hover {
+    border-color: red;
+  }
+`;
 export default Productlisting;
