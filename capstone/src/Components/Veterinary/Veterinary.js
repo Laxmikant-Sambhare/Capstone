@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Services } from "./Data/Services";
 import { Text, Container, Containers, MobileVet } from "./Veterinary.styling";
-import { Navbar } from "../Navbar/Navbar";
 const Veterinary = () => {
   return (
     <MobileVet>
-      <Navbar />
       <Containers>
         {Services.map((data, index) => {
           return (

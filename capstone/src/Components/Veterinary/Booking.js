@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "../Navbar/Navbar";
 import {
   Container1,
   Container2,
@@ -23,7 +22,6 @@ function Booking() {
   // console.log("params", params);
   return (
     <MobileVet>
-      <Navbar />
       {/* {Services.map((data) => {
         return (
           <> */}
