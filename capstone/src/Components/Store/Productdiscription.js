@@ -4,7 +4,7 @@ import { section } from './data';
 
 const Productdiscription = () => {
     const params = useParams();
-    const discription = section.find((item) => item.id == params.id);
+    const discription = section.find((product) => product.id == params.id);
     // const location = useLocation();
     // const discription = location.state;
 
