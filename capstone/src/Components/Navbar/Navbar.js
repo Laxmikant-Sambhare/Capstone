@@ -1,8 +1,9 @@
 import { Input } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 
 export const Navbar = () => {
+  const [isActive , setIsActive] = useState(false);
   return (
     <div className="navbar">
       <nav className="main-nav">
@@ -17,13 +18,31 @@ export const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/store">Store</a>
-            </li>
-            <li>
               <a href="/contact">Contact</a>
             </li>
             <li>
               <a href="/signin">Signin</a>
+            </li>
+            <li className="dropdown">
+              <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+                Services ▾
+                </div>
+                {isActive &&(
+              <div className="dropdown-content">
+                <div>
+                <a href="/rescue" className="dropdown-item">Rescue  </a>
+                </div>
+                <div>
+                <a href="/adoption" className="dropdown-item">  Adoption</a>
+                </div>
+                <div>
+                <a href="/store" className="dropdown-item">  Store</a>
+                </div>
+                <div>
+                <a href="/vet" className="dropdown-item">  Veterinary</a>
+                </div>
+              </div>
+              )}
             </li>
             <li>
               <a href="/booking">Booking</a>
