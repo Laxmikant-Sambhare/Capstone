@@ -13,6 +13,7 @@ import DogDescription from "../Components/Adoption/DogDescription";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
+import Login from "../Components/Signup/Login";
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
           />
           <Route exact path="/vet" element={<Veterinary />} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/store/:id" element={<Productlisting />} />
           <Route exact path="/vet/:id" element={<Booking />} />
           <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
