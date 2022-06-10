@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { section } from "./data";
+import {  useParams } from "react-router-dom";
 // import { section } from "./data";
 
 const Productlisting = () => {
-  const location = useLocation();
-  const product = location.state;
-  console.log("location", location);
-  // const params = useParams();
-  // const product = section.find((item) => item.id === params.id);
-
+  const params = useParams();
+  const product = section.find((item) => item.id == params.id);
+  console.log(product);
   return (
     <div>
       <Product> 
