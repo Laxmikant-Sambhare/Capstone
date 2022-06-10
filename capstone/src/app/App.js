@@ -11,6 +11,7 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+import Productdiscription from "../Components/Store/Productdiscription";
 function App() {
   return (
     <div className="App">
@@ -23,9 +24,10 @@ function App() {
           <Route exact path="/adoption/:id" element={<DogDescription />} />
 
           <Route exact path="/store" element={<Store />} />
+          <Route exact path="/store/:id" element={<Productlisting />} />
+          <Route exact path="/store/:id/:id" element={<Productdiscription />} />
           <Route exact path="/vet" element={<Veterinary />} />
           <Route exact path="/signin" element={<Signin />} />
-          <Route exact path="/store/:id" element={<Productlisting />} />
           <Route exact path="/vet/:id" element={<Booking />} />
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 import { section } from "./data";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Productlisting = () => {
   const params = useParams();
@@ -10,6 +10,7 @@ const Productlisting = () => {
   console.log(product);
   return (
     <div>
+      {product.name}
       <Dropdown>
         <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
           <h2> Sorted by ⏷ </h2>
@@ -27,14 +28,17 @@ const Productlisting = () => {
           </Dropdowncontent>
         )}
       </Dropdown>
+      
       <Product>
-        {product.products.map((data) => {
+        {product.products.map((data,index) => {
           return (
+            <Link to={`/store/${product.id}/${data.id}`} state={data} key={index}>
             <Productcontainer>
               <img src={data.imageurl} alt="Category" />
               <h3>{data.name}</h3>
               <h4>{data.price}</h4>
             </Productcontainer>
+            </Link>
           );
         })}
       </Product>
