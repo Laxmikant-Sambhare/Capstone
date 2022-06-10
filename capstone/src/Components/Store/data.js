@@ -58,9 +58,29 @@ export const section =
         id:2,
         products:[ 
             {
-            name:'Chappi Adult Dry Dog Food, Chicken & Rice, 3kg Pack',
-            imageurl: "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
-            price: "₹460 (₹15.33/100 g) ₹475 (3% off)"
+            name:'DOGGIE DOG Attractive Cotton Poly Mix Chew Dog Toys Rope for Adult and Small Dogs for Teething Suitable',
+            imageurl: "https://m.media-amazon.com/images/I/918TsN8GjgL._AC_UL480_FMwebp_QL65_.jpg",
+            price: "₹658 ₹1,497 (56% off)"
+        },
+            {
+            name:'PetVogue Dog Puzzle Toy for Dispensing Treats, Pet Toys Game for Training IQ and Slow Feed, Non-Slip Feeder Bowl',
+            imageurl: "https://m.media-amazon.com/images/I/61lkCw7nAZL._AC_UL480_FMwebp_QL65_.jpg",
+            price: "₹444.60 ₹999 (55% off)"
+        },
+            {
+            name:'Goofy Tails Dumbbell Treat Dispensing Interactive Dog Toy | Natural Rubber Chew Toy for Dogs | Ideal Dog Toy for A',
+            imageurl: "https://m.media-amazon.com/images/I/51J8AthiSSL._AC_UL480_FMwebp_QL65_.jpg",
+            price: "₹425 ₹450 (6% off)"
+        },
+            {
+            name:'Tales Of Mr. Joey Dog Toy Hippo | Crackling Plush Toy | Soft Polyester Fabric | Chew Tug Fetch | Tough Reinforced',
+            imageurl: "https://m.media-amazon.com/images/I/71lznW6hJjL._AC_UL480_FMwebp_QL65_.jpg",
+            price: "₹749 (₹749/count) ₹999 (25% off)"
+        },
+            {
+            name:'Meat Up Non-Toxic Rubber Stud Spike Hard Ball Chew Toy, Puppy/Dog Teething Toy - 3 inches',
+            imageurl: "https://m.media-amazon.com/images/I/61ZWp5CCMAL._AC_UL480_FMwebp_QL65_.jpg",
+            price: "₹166 ₹175 (5% off)"
         },
     ]
     },
