@@ -26,7 +26,7 @@ export const Navbar = () => {
               <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="/signin">Signin</a>
+              <a href="/signup">Signup</a>
             </li>
             <li className="dropdown">
               <div

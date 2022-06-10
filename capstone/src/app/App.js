@@ -4,13 +4,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Adoption from "../Components/Adoption/Adoption";
 import Home from "../Components/Home/Home";
 import Rescue from "../Components/Rescue/Rescue";
-import Signin from "../Components/Signin/Signin";
 import Productlisting from "../Components/Store/Productlisting";
 import Store from "../Components/Store/Store";
 import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+import Login from "../Components/Signin/Login";
+import Signup from "../Components/Signin/Signup";
+
 function App() {
   return (
     <div className="App">
@@ -24,9 +26,10 @@ function App() {
 
           <Route exact path="/store" element={<Store />} />
           <Route exact path="/vet" element={<Veterinary />} />
-          <Route exact path="/signin" element={<Signin />} />
+          <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/store/:id" element={<Productlisting />} />
           <Route exact path="/vet/:id" element={<Booking />} />
+          <Route exact path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
