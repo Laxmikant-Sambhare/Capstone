@@ -9,32 +9,21 @@ import {
   Description,
   Image,
 } from "./Booking.styling";
-// import Veterinary from "./Veterinary";
-// import { Services } from "./Data/Services";
-// import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Services } from "./Data/Services";
+import { useParams } from "react-router-dom";
 function Booking() {
-  // const params = useParams();
-  // const service = Veterinary.find((data) => data.id === params.id);
-  const location = useLocation();
-  const service = location.state;
-  console.log("location", location);
-  // console.log("params", params);
+  const params = useParams();
+  const service = Services.find((item) => item.id == params.id);
+  console.log("params", params);
   return (
     <MobileVet>
-      {/* {Services.map((data) => {
-        return (
-          <> */}
       <Image>
         <img src={service.image} alt="" />
       </Image>
       <Description>{service.Description}</Description>
-      {/* </>
-        );
-      })} */}
       <Form>
         <Container1>
-          Full Name:<input type="text"></input>
+          Full Name:<input type="text" style={{ marginLeft: "6%" }}></input>
           <br></br>
           Email:<input></input>
         </Container1>
