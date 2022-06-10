@@ -1,0 +1,20 @@
+
+.dog-list {
+    box-shadow: 2px 3px 4px 5px sandybrown;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .dog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    justify-content: space-evenly;
+  }
+  
+  .dog-information {
+    box-shadow: 2px 3px 4px 5px sandybrown;
+    margin: 10px;
+    padding: 10px;
+  }
