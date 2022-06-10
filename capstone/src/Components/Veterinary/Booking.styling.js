@@ -25,10 +25,8 @@ export const Description = styled.div`
 `;
 export const Form = styled.div`
   width: 70%;
-  height: 50%;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
+  height: 40%;
+
   background-color: #d3dee5;
   margin-top: 3%;
   margin-left: 14%;
@@ -36,26 +34,50 @@ export const Form = styled.div`
 `;
 export const Container1 = styled.div`
   margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   > input {
-    width: 40%;
-    margin-left: 8%;
+    width: 30%;
   }
 `;
 export const Container2 = styled.div`
   margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
   > input {
-    width: 40%;
-    margin-left: 5.5%;
+    width: 30%;
+    margin-left: 4%;
   }
 `;
 export const Container3 = styled.div`
   margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   > input {
-    width: 40%;
-    margin-left: 7%;
+    width: 30%;
+    margin-left: -27.5%;
   }
 `;
 export const Container4 = styled.div`
   margin: 2%;
+  > input {
+    width: 30%;
+    margin-left: 7%;
+  }
+`;
+export const Container5 = styled.div`
+  margin: 2%;
+`;
+export const Button = styled.button`
+  background-color: yellowgreen;
+  width: 23%;
+  margin-left: 37%;
+  padding: 1%;
 `;
