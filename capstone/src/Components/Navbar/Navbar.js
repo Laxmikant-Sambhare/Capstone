@@ -1,76 +1,51 @@
+import { Input } from "@material-ui/core";
 import React from "react";
 import "./Nav.css";
-// import {
-//   FaFacebookSquare,
-//   FaInstagramSquare,
-//   FaYouTubeSquare,
-// } from "react-icons/fa";
-// import React, { Component } from "react";
-// import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+
 export const Navbar = () => {
   return (
-    <>
+    <div className="navbar">
       <nav className="main-nav">
         {/* this div for logo */}
-        <div className="logo">
-          <h2>
-            <samp>M</samp>obile
-            <samp>V</samp>et
-          </h2>
-        </div>
+          <img src={require('./Navlogo.jpg')}  alt="logo" className="Mainname" style={{height: '7rem', padding:'2px'}}/>
+          
+        
         {/* the second div for the navbar element */}
         <div className="menu-link">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="/store">Store</a>
             </li>
             <li>
-              <a href="#">Store</a>
+              <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="/signin">Signin</a>
             </li>
             <li>
-              <a href="#">Signin</a>
+              <a href="/booking">Booking</a>
+            </li>
+            <li>
+              <a href="/Cart">Cart</a>
             </li>
           </ul>
         </div>
-        {/* 3rd div for social media link */}
-        <div className="social-media">
-          <ul className="social-media-desktop">
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCpchDc9ibtKi6Qj4wWP-Iog"
-                target="balram"
-              >
-                {/* <FaFacebookSquare className="facebook" /> */}
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCpchDc9ibtKi6Qj4wWP-Iog"
-                target="balram"
-              >
-                {/* <FaFacebookSquare className="instagram" /> */}
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCpchDc9ibtKi6Qj4wWP-Iog"
-                target="balram"
-              >
-                {/* <FaFacebookSquare className="youtube" /> */}
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Input placeholder="🔍  Search" style={{ 
+          alignContent: "center",
+          alignItems: "center",
+          width: '200px',
+          height: '50px',
+           fontSize: "20px",
+           border: 'px',
+           marginLeft : '200px'
+           }}/>
       </nav>
-    </>
+    </div>
   );
 };
