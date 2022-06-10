@@ -66,7 +66,7 @@ export const Navbar = () => {
             <li>
               <a href="/booking">Booking</a>
             </li>
-            <Badge  badgeContent= '0'color="secondary" style={{font : 'bold'}}>
+            <Badge  badgeContent= '11'color="secondary" style={{}}>
             <ShoppingCart style={{width : '30px', height: '30px',cursor: 'pointer'}}/>
             </Badge>
           </ul>

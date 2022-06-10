@@ -10,7 +10,7 @@ const Productlisting = () => {
   console.log(product);
   return (
     <div>
-      {product.name}
+      <h1 style={{textalign: 'center', padding: "10px"}}>{product.name}</h1>
       <Dropdown>
         <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
           <h2> Sorted by ⏷ </h2>
