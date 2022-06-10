@@ -15,9 +15,9 @@ const Store = () => {
                 </Banner>
         
         <Categories> 
-            {section.map((data) => {
+            {section.map((data ,index) => {
                 return(
-                    <Link to={`/store/${data.id}`} state={data}>
+                    <Link to={`/store/${data.id}`} state={data} key = {index}>
                         <Catergory>
                     <img src={data.imageurl} alt='Category' />
                     <Typography  style={{
