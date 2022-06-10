@@ -35,7 +35,7 @@ flex-direction: row;
 const Productcontainer = styled.div`
 width : 200px;
 height : 300px;
-margin-bottom: 100px;
+margin-bottom: 50px;
 margin-left:50px;
 cursor: pointer;
 >img {

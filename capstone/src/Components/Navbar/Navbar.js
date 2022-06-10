@@ -27,6 +27,12 @@ export const Navbar = () => {
             <li>
               <a href="/signin">Signin</a>
             </li>
+            <li>
+              <a href="/booking">Signin</a>
+            </li>
+            <li>
+              <a href="/signin">Signin</a>
+            </li>
           </ul>
         </div>
       </nav>
