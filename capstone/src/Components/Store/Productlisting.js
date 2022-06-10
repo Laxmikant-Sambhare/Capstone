@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React from "react";
 import { section } from "./data";
 import {  useParams } from "react-router-dom";
-// import { section } from "./data";
 
 const Productlisting = () => {
   const params = useParams();

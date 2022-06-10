@@ -25,7 +25,7 @@ export const Navbar = () => {
             </li>
             <li className="dropdown">
               <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
-                Services ▾
+                Services ⏷
                 </div>
                 {isActive &&(
               <div className="dropdown-content">
