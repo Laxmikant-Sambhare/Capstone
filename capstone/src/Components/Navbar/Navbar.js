@@ -1,3 +1,4 @@
+import { Input } from "@material-ui/core";
 import React from "react";
 import "./Nav.css";
 
@@ -35,6 +36,15 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
+        <Input placeholder="🔍  Search" style={{ 
+          alignContent: "center",
+          alignItems: "center",
+          width: '200px',
+          height: '50px',
+           fontSize: "20px",
+           border: 'px',
+           marginLeft : '200px'
+           }}/>
       </nav>
     </div>
   );
