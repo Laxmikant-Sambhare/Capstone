@@ -10,7 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const { signUp } = useUserAuth();
   let navigate = useNavigate();
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -52,7 +52,7 @@ const Signup = () => {
         </Form>
       </div>
       <div className="p-4 box mt-3 text-center">
-        Already have an account? <Link to="/">Log In</Link>
+        Already have an account? <Link to="/login">Log In</Link>
       </div>
     </>
   );

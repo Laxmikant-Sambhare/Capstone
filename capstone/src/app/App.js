@@ -14,32 +14,38 @@ import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
+
+// import ProtectedRoute from "./components/ProtectedRoute";
+import { UserAuthContextProvider } from "../context/UserAuthContext";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/rescue" element={<Rescue />} />
-          <Route exact path="/adoption" element={<Adoption />} />
-          <Route exact path="/adoption/:id" element={<DogDescription />} />
+      <UserAuthContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/login" element={<Login />} />
 
-          <Route exact path="/store" element={<Store />} />
-          <Route exact path="/store/:id" element={<Productlisting />} />
-          <Route
-            exact
-            path="/store/:id/:tag"
-            element={<Productdiscription />}
-          />
-          <Route exact path="/vet" element={<Veterinary />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/store/:id" element={<Productlisting />} />
-          <Route exact path="/vet/:id" element={<Booking />} />
-          <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
-        </Routes>
-      </BrowserRouter>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/rescue" element={<Rescue />} />
+            <Route exact path="/adoption" element={<Adoption />} />
+            <Route exact path="/adoption/:id" element={<DogDescription />} />
+
+            <Route exact path="/store" element={<Store />} />
+            <Route exact path="/store/:id" element={<Productlisting />} />
+            <Route
+              exact
+              path="/store/:id/:tag"
+              element={<Productdiscription />}
+            />
+            <Route exact path="/vet" element={<Veterinary />} />
+            <Route exact path="/store/:id" element={<Productlisting />} />
+            <Route exact path="/vet/:id" element={<Booking />} />
+            <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
+          </Routes>
+        </BrowserRouter>
+      </UserAuthContextProvider>
     </div>
   );
 }
