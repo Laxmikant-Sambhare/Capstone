@@ -34,6 +34,30 @@ li {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+
+
+.dropdown .dropdown-btn{
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+    position: absolute;
+    padding: 15px;
+    background: #ffd301;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+
+.dropdown .dropdown-content .dropdown-items{
+    padding: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.dropdown-items :hover {color: #ddd;}
 .logo {
   display: grid;
   /* background-color: #3b5998; */
