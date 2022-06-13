@@ -18,3 +18,7 @@
     margin: 10px;
     padding: 10px;
   }
+
+  .dog-list a {
+    text-decoration: none;
+  }
