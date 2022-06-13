@@ -11,6 +11,8 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+import Lower from "../Components/Footer/Lower";
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +31,7 @@ function App() {
           <Route exact path="/vet/:id" element={<Booking />} />
         </Routes>
       </BrowserRouter>
+      <Lower />
     </div>
   );
 }

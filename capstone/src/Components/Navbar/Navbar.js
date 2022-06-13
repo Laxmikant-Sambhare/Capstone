@@ -7,9 +7,13 @@ export const Navbar = () => {
     <div className="navbar">
       <nav className="main-nav">
         {/* this div for logo */}
-          <img src={require('./Navlogo.jpg')}  alt="logo" className="Mainname" style={{height: '7rem', padding:'2px'}}/>
-          
-        
+        <img
+          src={require("./Navlogo.jpg")}
+          alt="logo"
+          className="Mainname"
+          style={{ height: "7rem", padding: "2px" }}
+        />
+
         {/* the second div for the navbar element */}
         <div className="menu-link">
           <ul>
@@ -33,15 +37,18 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Input placeholder="🔍  Search" style={{ 
-          alignContent: "center",
-          alignItems: "center",
-          width: '200px',
-          height: '50px',
-           fontSize: "20px",
-           border: 'px',
-           marginLeft : '200px'
-           }}/>
+        <Input
+          placeholder="🔍  Search"
+          style={{
+            alignContent: "center",
+            alignItems: "center",
+            width: "200px",
+            height: "50px",
+            fontSize: "20px",
+            border: "px",
+            marginLeft: "200px",
+          }}
+        />
       </nav>
     </div>
   );
