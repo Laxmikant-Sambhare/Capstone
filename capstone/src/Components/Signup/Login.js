@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="p-4 box">
+      <div className="p-4 box" style={{ width: "70%" }}>
         <h2 className="mb-3">Firebase Auth Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
