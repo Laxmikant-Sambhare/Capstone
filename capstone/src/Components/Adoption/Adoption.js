@@ -6,7 +6,7 @@ export default function Adoption() {
     return (
       <div key={doggie.id} className="dog-list">
        <Link to={`/adoption/${doggie.id}`} state={doggie}>
-        <img alt={doggie.Breed} src={doggie.image} width={500} />
+        <img alt={doggie.Breed} src={doggie.image} width={300} />
         <h3>
            <em> Breed:</em> 
             {doggie.Breed}
