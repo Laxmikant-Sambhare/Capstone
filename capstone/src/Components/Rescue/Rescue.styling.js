@@ -52,3 +52,7 @@ export const Container4 = styled.div`
 export const Container5 = styled.div`
   margin: 2%;
 `;
+// export const button=styled.div`
+// justify-content:space-around;
+// `;
+
