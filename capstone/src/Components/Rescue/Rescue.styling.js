@@ -1,0 +1,54 @@
+import styled from "styled-components";
+
+export const Header = styled.div`
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size:50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const Rescue = styled.div``;
+export const Image = styled.div`
+  margin-top: 5%;
+  margin-left: 40%;
+
+  > img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+  }
+`;
+export const Form = styled.div`
+  width: 90%;
+  height: 50%;
+
+  margin-top: 3%;
+  margin-left: 4%;
+  padding: 2%;
+`;
+export const Container1 = styled.div`
+  margin: 2%;
+  > input {
+  }
+`;
+export const Container2 = styled.div`
+  margin: 2%;
+  > input {
+  }
+`;
+export const Container3 = styled.div`
+  margin: 2%;
+  > input {
+  }
+`;
+export const Container4 = styled.div`
+  margin: 2%;
+`;
+export const Container5 = styled.div`
+  margin: 2%;
+`;
