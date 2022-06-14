@@ -11,11 +11,11 @@ export const Containers = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 11%;
+  margin-left: 17%;
 `;
 export const Container = styled.div`
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   margin-top: 20%;
   margin-right: 210px;
   margin-bottom: 9%;
@@ -23,24 +23,24 @@ export const Container = styled.div`
   border-radius: 20px;
   border-collapse: collapse;
   > img {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 20px;
     cursor: pointer;
     :hover {
       opacity: 0.5;
-      width: 15rem;
-      height: 15rem;
+      width: 20rem;
+      height: 20rem;
     }
   }
 `;
 export const Text = styled.div`
   width: 15rem;
   height: 3rem;
-  margin-left: -5px;
+  margin-left: 20px;
   text-align: center;
   font-weight: bold;
   color: black;
-  font-size: small;
+  font-size: medium;
   cursor: pointer;
 `;
