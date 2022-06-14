@@ -31,7 +31,6 @@ function App() {
             <Route exact path="/rescue" element={<Rescue />} />
             <Route exact path="/adoption" element={<Adoption />} />
             <Route exact path="/adoption/:id" element={<DogDescription />} />
-
             <Route exact path="/store" element={<Store />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
             <Route
