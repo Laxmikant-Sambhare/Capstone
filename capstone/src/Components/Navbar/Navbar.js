@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./Nav.css";
 import { ShoppingCart } from '@material-ui/icons';
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -68,9 +69,14 @@ export const Navbar = () => {
             <li>
               <a href="/booking">Booking</a>
             </li>
-            <Badge  badgeContent={cartTotalQuantity } color="secondary">
+            <li>
+              <a href="/Cart"> 
+              <Badge  badgeContent={cartTotalQuantity } color="secondary">
             <ShoppingCart style={{width : '30px', height: '30px',cursor: 'pointer'}}/>
             </Badge>
+            </a>
+            </li>
+            
           </ul>
         </div>
         <Input
