@@ -7,23 +7,11 @@ import {
   Container4,
   Container5,
   Image,
-  button,
+  Button,
   Form,
   Header,
 } from "./Rescue.styling";
-import { RescueData } from "./data/RescueData";
-import { useParams, useNavigate } from "react-router-dom";
-
-function Rescue() {
-  const params = useParams();
-  const Features = Features.find((item) => item.id == params.id);
-  console.log("params", params);
-  const navigate = useNavigate();
-  const submit = () => {
-    navigate("/");
-  };
-
-
+function Rescue(){
   return (
     <>
       <Header>Rescue Panel</Header>
@@ -32,8 +20,8 @@ function Rescue() {
           src="https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png"
           alt=""
         />
-      </Image>
-      <div id="container-div">
+      </Image><br></br>
+      <div id="para2"><p2><b>Please upload the image of dog here..</b></p2></div>
         <Form>
           <Container1>
             <b>Full Name :</b>
@@ -55,15 +43,13 @@ function Rescue() {
           <Container5>
             <b>Share Current Location :</b>
           </Container5>
-          <button>
+          <Button>
             <b>SUBMIT</b>
-          </button>
+          </Button>
         </Form>
-      </div>
     </>
   );
-}
-
+  }
 export default Rescue;
 
 // import React, { useState } from "react";
