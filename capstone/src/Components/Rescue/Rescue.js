@@ -7,7 +7,7 @@ import {
   Container4,
   Container5,
   Image,
-  button,
+  Button,
   Form,
   Header,
 } from "./Rescue.styling";
@@ -26,8 +26,8 @@ function Rescue() {
 
   return (
     <>
-      <Header>Rescue Panel</Header>
- <p>Please upload the image of Dog to be recued..</p>
+      <Header>Rescue Panel</Header><br></br><br></br>
+ <p><strong>Please upload the image of Dog to be recued..</strong></p>
       <Image>
         <img
           src="https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png"
@@ -42,20 +42,20 @@ function Rescue() {
       {/* <span class="icon--3u91i upload--2f6eM uploadIcon--1Tkqt"></span> */}
       <Form>
         <Container1>
-          Full Name:<input placeholder="Full Name"></input>
-          <br></br>
+          ,<b>Full Name :</b><input placeholder="Full Name"></input>
         </Container1>
         <Container2>
-          Contact No:<input placeholder="Contact No"></input>
+          <b>Contact No :</b><input placeholder="Contact No"></input>
         </Container2>
         <Container3>
-          Address:<input placeholder="Address"></input>
+         <b> Address :</b><input placeholder="Address"></input>
         </Container3>
         <Container4>
-          Email:<input placeholder="Email"></input>
+          <b>Email :</b><input placeholder="Email"></input>
         </Container4>
-        <Container5>Share Current Location</Container5>
+        <Container5><b>Share Current Location</b></Container5>
       </Form>
+      <Button><b>SUBMIT</b></Button>
     </>
   );
 }
