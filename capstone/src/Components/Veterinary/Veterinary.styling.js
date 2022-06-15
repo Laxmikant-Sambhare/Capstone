@@ -19,7 +19,7 @@ export const Container = styled.div`
   margin-top: 20%;
   margin-right: 210px;
   margin-bottom: 9%;
-  box-shadow: gray 0 0 15px;
+  box-shadow: black 0 0 15px;
   border-radius: 20px;
   border-collapse: collapse;
   > img {
