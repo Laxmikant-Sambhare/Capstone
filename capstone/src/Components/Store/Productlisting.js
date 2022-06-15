@@ -2,11 +2,19 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import { section } from "./data";
 import { Link, useParams } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/counter/cartSlice";
 
 const Productlisting = () => {
   const params = useParams();
   const product = section.find((item) => item.id == params.id);
   const [isActive, setIsActive] = useState(false);
+  const dispatch =  useDispatch();
+  const handleAddToCart = (data) => {
+    dispatch(addToCart(data));
+    console.log("hi")
+  };
   console.log(product);
   return (
     <div>
@@ -32,6 +40,7 @@ const Productlisting = () => {
       <Product>
         {product.products.map((data,index) => {
           return (
+            <>
             <Link to={`/store/${product.id}/${data.id}`} state={data} key={index}>
             <Productcontainer>
               <img src={data.imageurl} alt="Category" />
@@ -39,8 +48,11 @@ const Productlisting = () => {
               <h4>{data.price}</h4>
             </Productcontainer>
             </Link>
+            <Button onClick={() => handleAddToCart(data) }>Add to Cart</Button>
+            </>
           );
         })}
+        
       </Product>
     </div>
   );
