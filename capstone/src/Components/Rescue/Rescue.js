@@ -69,9 +69,10 @@ export class Rescue extends Component {
           <Container5>
             <b>Share Current Location</b>
           </Container5>
-          <Button type="submit">Submit</Button>
+          <Button type="submit">
+            <strong>Submit</strong>
+          </Button>
         </Form>
-        
       </>
     );
   }
