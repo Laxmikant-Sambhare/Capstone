@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { Component } from "react";
 import {
   Container1,
   Container2,
@@ -9,94 +8,73 @@ import {
   Image,
   Button,
   Form,
-  Header,
 } from "./Rescue.styling";
-// import { RescueData } from "./data/RescueData";
-// import { useParams, useNavigate } from "react-router-dom";
 
-function Rescue() {
-  // const params = useParams();
-  // const Features = Features.find((item) => item.id == params.id);
-  // console.log("params", params);
-  // const navigate = useNavigate();
-  // const submit = () => {
-  //   navigate("/");
-  // };
-
-
-  return (
-    <>
-      <Header>Rescue Panel</Header><br></br><br></br>
- <p><strong>Please upload the image of Dog to be recued..</strong></p>
-      <Image>
-        <img
-          src="https://thealmanian.com/wp-content/uploads/2019/01/product_image_thumbnail_placeholder.png"
-          alt=""
-        />
-      </Image>
-      {/* <button class="_abl- _abm2" type="button" tabindex="0"><div class="_abm0"><svg aria-label="New post" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg></div></button> */}
-      {/* <div class="_abm0"></div><svg aria-label="New post" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg> */}
-      {/* {/* <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line> */}
-
-      {/* <a href="/accounts/register/?source=main_nav" class="button--2AOTE uploadButton--PbkQd mediumLarge--lJrSS primary--3Ox1d rounded--x-kje"><span class="icon--3u91i upload--2f6eM uploadIcon--1Tkqt"></span> Upload</a> */}
-      {/* <span class="icon--3u91i upload--2f6eM uploadIcon--1Tkqt"></span> */}
-      <Form>
-        <Container1>
-          ,<b>Full Name :</b><input placeholder="Full Name"></input>
-        </Container1>
-        <Container2>
-          <b>Contact No :</b><input placeholder="Contact No"></input>
-        </Container2>
-        <Container3>
-         <b> Address :</b><input placeholder="Address"></input>
-        </Container3>
-        <Container4>
-          <b>Email :</b><input placeholder="Email"></input>
-        </Container4>
-        <Container5><b>Share Current Location</b></Container5>
-      </Form>
-      <Button><b>SUBMIT</b></Button>
-    </>
-  );
+import "./Rescue.css";
+export class Rescue extends Component {
+  state = {
+    profileImg:
+      "data:image/png;base64,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",
+  };
+  imageHandler = (e) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        this.setState({ profileImg: reader.result });
+      }
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+  render() {
+    const { profileImg } = this.state;
+    return (
+      <>
+        <div className="page">
+          <div className="container">
+            <h1 className="heading">Dog Rescue Panel</h1>
+            <div className="img-holder">
+              <img src={profileImg} alt="" id="img" className="img" />
+            </div>
+            <input
+              type="file"
+              accept="image/*"
+              name="image-upload"
+              id="input"
+              onChange={this.imageHandler}
+            />
+            <div className="label">
+              <label className="image-upload" htmlFor="input">
+                <b style={{ color: "black" }}>Upload Image</b>
+              </label>
+            </div>
+          </div>
+        </div>
+        <Form>
+          <Container1>
+            <b>Full Name :</b>
+            <input placeholder="Full Name"></input>
+          </Container1>
+          <Container2>
+            <b>Contact No :</b>
+            <input placeholder="Contact No"></input>
+          </Container2>
+          <Container3>
+            <b> Address :</b>
+            <input placeholder="Address"></input>
+          </Container3>
+          <Container4>
+            <b>Email :</b>
+            <input placeholder="Email"></input>
+          </Container4>
+          <Container5>
+            <b>Share Current Location</b>
+          </Container5>
+          <Button type="submit">Submit</Button>
+        </Form>
+        
+      </>
+    );
+  }
 }
 
 export default Rescue;
-
-// import React, { useState } from "react";
-// import axios from "axios";
-
-// function Rescue() {
-//   const [file, setFile] = useState();
-
-//   function handleChange(event) {
-//     setFile(event.target.files[0]);
-//   }
-
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//     const url = "http://localhost:3000/uploadFile";
-//     const formData = new FormData();
-//     formData.append("file", file);
-//     formData.append("fileName", file.name);
-//     const config = {
-//       headers: {
-//         "content-type": "multipart/form-data",
-//       },
-//     };
-//     axios.post(url, formData, config).then((response) => {
-//       console.log(response.data);
-//     });
-//   }
-
-//   return (
-//     <div className="App">
-//       <form onSubmit={handleSubmit}>
-//         <h1>React File Upload</h1>
-//         <input type="file" onChange={handleChange} />
-//         <button type="submit">Upload</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Rescue;
