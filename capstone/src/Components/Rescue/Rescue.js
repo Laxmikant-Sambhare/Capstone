@@ -7,11 +7,23 @@ import {
   Container4,
   Container5,
   Image,
+  button,
   Form,
   Header,
 } from "./Rescue.styling";
+// import { RescueData } from "./data/RescueData";
+// import { useParams, useNavigate } from "react-router-dom";
 
 function Rescue() {
+  // const params = useParams();
+  // const Features = Features.find((item) => item.id == params.id);
+  // console.log("params", params);
+  // const navigate = useNavigate();
+  // const submit = () => {
+  //   navigate("/");
+  // };
+
+
   return (
     <>
       <Header>Rescue Panel</Header>
@@ -49,8 +61,6 @@ function Rescue() {
 }
 
 export default Rescue;
-
-
 
 // import React, { useState } from "react";
 // import axios from "axios";
