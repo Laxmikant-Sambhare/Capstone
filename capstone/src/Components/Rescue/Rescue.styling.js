@@ -14,7 +14,7 @@ export const Form = styled.div`
 `;
 export const Container1 = styled.div`
   border-radius:10px;
-  margin-left: 35%;
+  margin-left: 30%;
   margin-top: -40%;
 
   > input {
@@ -24,26 +24,26 @@ export const Container1 = styled.div`
 `;
 export const Container2 = styled.div`
   border-radius:10px;
-  margin-left: 35%;
+  margin-left: 30%;
 
   > input {
-    width: 50.5%;
+    width: 48%;
     margin-bottom: 5%;
   }
 `;
 export const Container3 = styled.div`
   border-radius:10px;
-  margin-left: 35%;
+  margin-left: 30%;
   > input {
     margin-bottom: 5%;
-    width: 50%;
+    width: 51%;
   }
 `;
 export const Container4 = styled.div`
   border-radius:10px;
-  margin-left: 35%;
+  margin-left: 30%;
   > input {
-    width: 50%;
+    width: 55%;
     margin-bottom: 5%;
   }
 `;
