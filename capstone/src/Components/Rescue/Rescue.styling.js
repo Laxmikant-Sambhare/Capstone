@@ -30,28 +30,40 @@ export const Form = styled.div`
   padding: 2%;
 `;
 export const Container1 = styled.div`
-  margin: 2%;
+  margin-left: 40%;
+
   > input {
+    width:30%;
   }
 `;
 export const Container2 = styled.div`
-  margin: 2%;
+  margin-left: 40%;
   > input {
+    width:29.5%;
+
   }
 `;
 export const Container3 = styled.div`
-  margin: 2%;
+  margin-left: 40%;
   > input {
+    width:31%
+
   }
 `;
 export const Container4 = styled.div`
-  margin: 2%;
+  margin-left: 40%;
+  >input{
+    width:30%;
+
+  }
 `;
 export const Container5 = styled.div`
-  margin: 2%;
+  margin-left: 40%;
 `;
-// export const button = styled.button`
-//   width: 300%;
-//   padding: 5%;
-// `;
+export const Button = styled.button`
+  width: 15%;
+  padding: 1%;
+  margin-left:40%;
+
+`;
 
