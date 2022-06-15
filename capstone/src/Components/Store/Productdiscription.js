@@ -20,7 +20,7 @@ const Productdiscription = () => {
          <Div>
          <h2>Description :{''} {discription.descripction}</h2>
          </Div>
-         <h1 style={{color:'rgb(14, 126, 224)' }}>{Price}</h1>
+         <h1 style={{color:'rgb(14, 126, 224)' }}>₹{Price}</h1>
          </Description>
         
     </DescriptionContainer>
