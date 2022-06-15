@@ -122,7 +122,7 @@ const Home = () => {
                 textAlign: "center",
                 direction: "flex",
               }}
-              src="https://cdn.discordapp.com/attachments/947918952338706462/985172816485830686/unknown.png"
+              src="https://cdn.discordapp.com/attachments/947918952338706462/985174308450103316/unknown.png"
               alt="new"
             />
             <div
