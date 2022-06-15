@@ -13,7 +13,7 @@ export default function DogDescription() {
   console.log("Params", params);
   const doggie = data.find((dog) => dog.id === params.id);
   if(adopt) {
-    return <Navigate to = "/signin"/>
+    return <Navigate to = "/forms"/>
   }
   return (
     <div className="dog-information">

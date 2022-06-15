@@ -11,7 +11,7 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import {Navbar} from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
-// import Forms from "../Components/Adoption/Forms";
+ import Forms from "../Components/Adoption/Forms";
 function App() {
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/rescue" element={<Rescue />} />
           <Route exact path="/adoption" element={<Adoption />} />
           <Route exact path="/adoption/:id" element={<DogDescription />} />
-          {/* <Route exact path="/forms" element={<Forms />} /> */}
+          <Route exact path="/forms" element={<Forms />} /> 
 
           <Route exact path="/store" element={<Store />} />
           <Route exact path="/vet" element={<Veterinary />} />
