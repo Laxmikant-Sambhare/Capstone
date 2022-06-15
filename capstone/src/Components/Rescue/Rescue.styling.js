@@ -13,7 +13,8 @@ export const Form = styled.div`
   
 `;
 export const Container1 = styled.div`
-  margin-left: 40%;
+  border-radius:10px;
+  margin-left: 30%;
   margin-top: -40%;
 
   > input {
@@ -22,33 +23,40 @@ export const Container1 = styled.div`
   }
 `;
 export const Container2 = styled.div`
-  margin-left: 40%;
+  border-radius:10px;
+  margin-left: 30%;
+
   > input {
-    width: 50.5%;
+    width: 48%;
     margin-bottom: 5%;
   }
 `;
 export const Container3 = styled.div`
-  margin-left: 40%;
+  border-radius:10px;
+  margin-left: 30%;
   > input {
     margin-bottom: 5%;
-    width: 50%;
+    width: 51%;
   }
 `;
 export const Container4 = styled.div`
-  margin-left: 40%;
+  border-radius:10px;
+  margin-left: 30%;
   > input {
-    width: 50%;
+    width: 55%;
     margin-bottom: 5%;
   }
 `;
 export const Container5 = styled.div`
+  border-radius:10px;
   margin-left: 40%;
   margin-bottom:5%;
 `;
 export const Button = styled.button`
-  width: 50%;
+  width: 11%;
   padding: 1%;
-  margin-left: 40%;
+  margin-left:45%;
   margin-top:-50px;
+  /* background-color:black; */
+  border-radius:8px;
 `;
