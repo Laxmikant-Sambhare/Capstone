@@ -7,11 +7,23 @@ import {
   Container4,
   Container5,
   Image,
+  button,
   Form,
   Header,
 } from "./Rescue.styling";
+import { RescueData } from "./data/RescueData";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Rescue() {
+  const params = useParams();
+  const Features = Features.find((item) => item.id == params.id);
+  console.log("params", params);
+  const navigate = useNavigate();
+  const submit = () => {
+    navigate("/");
+  };
+
+
   return (
     <>
       <Header>Rescue Panel</Header>
@@ -21,30 +33,38 @@ function Rescue() {
           alt=""
         />
       </Image>
-
-      <Form>
-        <Container1>
-          Full Name:<input placeholder="Full Name"></input>
-          <br></br>
-        </Container1>
-        <Container2>
-          Contact No:<input placeholder="Contact No"></input>
-        </Container2>
-        <Container3>
-          Address:<input placeholder="Address"></input>
-        </Container3>
-        <Container4>
-          Email:<input placeholder="Email"></input>
-        </Container4>
-        <Container5>Share Current Location</Container5>
-      </Form>
+      <div id="container-div">
+        <Form>
+          <Container1>
+            <b>Full Name :</b>
+            <input placeholder="Full Name"></input>
+            <br></br>
+          </Container1>
+          <Container2>
+            <b>Contact No :</b>
+            <input placeholder="Contact No"></input>
+          </Container2>
+          <Container3>
+            <b>Address :</b>
+            <input placeholder="Address"></input>
+          </Container3>
+          <Container4>
+            <b> Email :</b>
+            <input placeholder="Email"></input>
+          </Container4>
+          <Container5>
+            <b>Share Current Location :</b>
+          </Container5>
+          <button>
+            <b>SUBMIT</b>
+          </button>
+        </Form>
+      </div>
     </>
   );
 }
 
 export default Rescue;
-
-
 
 // import React, { useState } from "react";
 // import axios from "axios";
