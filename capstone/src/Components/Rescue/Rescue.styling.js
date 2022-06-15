@@ -6,8 +6,7 @@ export const Header = styled.div`
   height: 100px;
   color: white;
   font-size:50px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bolder;
+  font-family: "Jost", sans-serif;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,6 @@ export const Image = styled.div`
 export const Form = styled.div`
   width: 90%;
   height: 50%;
-
   margin-top: 3%;
   margin-left: 4%;
   padding: 2%;
@@ -52,3 +50,8 @@ export const Container4 = styled.div`
 export const Container5 = styled.div`
   margin: 2%;
 `;
+export const button = styled.button`
+  width: 300%;
+  padding: 5%;
+`;
+
