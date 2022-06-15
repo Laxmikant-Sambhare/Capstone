@@ -50,8 +50,7 @@ export const Container4 = styled.div`
 export const Container5 = styled.div`
   margin: 2%;
 `;
-export const button = styled.button`
-  width: 300%;
-  padding: 5%;
-`;
-
+export const Button = styled.button`
+  width: 10%;
+  padding: 1%;
+margin-left:2%`;
