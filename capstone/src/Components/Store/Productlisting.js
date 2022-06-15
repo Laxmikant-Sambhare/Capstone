@@ -45,7 +45,7 @@ const Productlisting = () => {
             <Productcontainer>
               <img src={data.imageurl} alt="Category" />
               <h3>{data.name}</h3>
-              <h4>{data.price}</h4>
+              <h4>₹{data.price}</h4>
             </Productcontainer>
             </Link>
             <Button onClick={() => handleAddToCart(data) }>Add to Cart</Button>
