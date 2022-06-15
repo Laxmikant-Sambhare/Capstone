@@ -10,7 +10,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "Complete and balanced food for adult dogs",
-        price: "₹460 (₹15.33/100 g) ₹475 (3% off)",
+        price:460,
       },
       {
         id: "2",
@@ -18,7 +18,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/716AueVULCL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹699 (₹11.65/100 g)",
+        price: 699,
       },
       {
         id: "3",
@@ -26,7 +26,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71PKpcLG-3L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹1,169 (₹11.69/100 g) ₹1,299 (10% off)",
+        price: 1169,
       },
       {
         id: "4",
@@ -34,7 +34,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/61Gm70FJSxL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹628 (₹20.93/100 g) ₹675 (7% off)",
+        price: 628,
       },
       {
         id: "5",
@@ -42,7 +42,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71zn2kSN1QL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹1,699 (₹8.50/100 g) ₹1,999 (15% off)",
+        price: 1699,
       },
       {
         id: "6",
@@ -50,7 +50,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71uRrkgD6hL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹500 (₹16.67/100 g)",
+        price: 500,
       },
       {
         id: "7",
@@ -58,7 +58,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/61Wkf0mAOIL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹460 (₹15.33/100 g) ₹475 (3% off)",
+        price: 460,
       },
       {
         id: "8",
@@ -66,7 +66,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹1,862 (₹18.62/100 g) ₹1,950 (5% off)",
+        price: 1862,
       },
       {
         id: "9",
@@ -74,7 +74,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹460 (₹15.33/100 g) ₹475 (3% off)",
+        price: 460,
       },
     ],
   },
@@ -90,7 +90,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/918TsN8GjgL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹658 ₹1,497 (56% off)",
+        price: 658,
       },
       {
         id: "2",
@@ -98,7 +98,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/61lkCw7nAZL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹444.60 ₹999 (55% off)",
+        price: 444.60,
       },
       {
         id: "3",
@@ -106,7 +106,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/51J8AthiSSL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹425 ₹450 (6% off)",
+        price: 425,
       },
       {
         id: "4",
@@ -114,7 +114,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71lznW6hJjL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹749 (₹749/count) ₹999 (25% off)",
+        price: 749,
       },
       {
         id: "5",
@@ -122,7 +122,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/61ZWp5CCMAL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹166 ₹175 (5% off)",
+        price: 166,
       },
     ],
   },
@@ -138,7 +138,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹460 (₹15.33/100 g) ₹475 (3% off)",
+        price: 460,
       },
     ],
   },
@@ -153,7 +153,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/71Ditu2Bd6L._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: "₹460 (₹15.33/100 g) ₹475 (3% off)",
+        price: 460,
       },
     ],
   },
