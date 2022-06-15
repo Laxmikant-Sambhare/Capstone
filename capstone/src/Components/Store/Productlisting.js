@@ -2,15 +2,23 @@ import styled from "styled-components";
 import React, { useState } from "react";
 import { section } from "./data";
 import { Link, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/counter/cartSlice";
+import "./styles.css"
 
 const Productlisting = () => {
   const params = useParams();
   const product = section.find((item) => item.id == params.id);
   const [isActive, setIsActive] = useState(false);
+  const dispatch = useDispatch();
+  const handleAddToCart = (data) => {
+    dispatch(addToCart(data));
+    console.log("hi")
+  };
   console.log(product);
   return (
     <div>
-      <h1 style={{textalign: 'center', padding: "10px"}}>{product.name}</h1>
+      <h1 style={{ textalign: 'center', padding: "10px" }}>{product.name}</h1>
       <Dropdown>
         <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
           <h2> Sorted by ⏷ </h2>
@@ -28,20 +36,30 @@ const Productlisting = () => {
           </Dropdowncontent>
         )}
       </Dropdown>
-      
-      <Product>
-        {product.products.map((data,index) => {
-          return (
-            <Link to={`/store/${product.id}/${data.id}`} state={data} key={index}>
-            <Productcontainer>
-              <img src={data.imageurl} alt="Category" />
-              <h3>{data.name}</h3>
-              <h4>{data.price}</h4>
-            </Productcontainer>
-            </Link>
-          );
-        })}
-      </Product>
+      <div className="home-container">
+        <div className="products">
+          {
+            product.products.map((data, index) => (
+              <>
+
+                <div key={data.id} className="product">
+                  <Link to={`/store/${product.id}/${data.id}`} state={data} key={index}>
+                  <img src={data.imageurl} alt={data.name} />
+                    <h3>{data.name}</h3>
+                    <div className="details">
+                      <span>{product.desc}</span>
+                      <span className="price">Price: ₹{data.price}</span>
+                    </div>
+                  </Link>
+                  <button onClick={() => handleAddToCart(data)}>
+                    Add To Cart
+                  </button>
+                </div>
+              </>
+            ))}
+        </div>
+      </div>
+
     </div>
   );
 };
@@ -58,23 +76,5 @@ const Dropdowncontent = styled.div`
   background-color: #ffd301;
   padding: 10px;
 `;
-const Product = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-`;
-const Productcontainer = styled.div`
-  width: 200px;
-  height: 300px;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  cursor: pointer;
-  > img {
-    width: 160px;
-    height: 200px;
-  }
-  :hover {
-    border-color: red;
-  }
-`;
+
 export default Productlisting;

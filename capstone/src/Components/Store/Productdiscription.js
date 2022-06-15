@@ -1,6 +1,8 @@
+
 import React from 'react'
 import { useLocation} from 'react-router-dom';
 import styled from "styled-components";
+
 
 const Productdiscription = () => {
     // const params = useParams();
@@ -10,8 +12,6 @@ const Productdiscription = () => {
     const Name = discription.name;
     const url = discription.imageurl;
     const Price =  discription.price;
-   
-
   return (
     <DescriptionContainer>
          <img src={url} alt="Product" />
@@ -20,8 +20,9 @@ const Productdiscription = () => {
          <Div>
          <h2>Description :{''} {discription.descripction}</h2>
          </Div>
-         <h1 style={{color:'rgb(14, 126, 224)' }}>{Price}</h1>
+         <h1 style={{color:'rgb(14, 126, 224)' }}>₹{Price}</h1>
          </Description>
+        
     </DescriptionContainer>
   )
 }
