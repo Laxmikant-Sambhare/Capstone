@@ -2,9 +2,12 @@ import { Input,Badge } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Nav.css";
 import { ShoppingCart } from '@material-ui/icons';
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
   return (
     <div className="navbar">
       <nav className="main-nav">
@@ -66,9 +69,14 @@ export const Navbar = () => {
             <li>
               <a href="/booking">Booking</a>
             </li>
-            <Badge  badgeContent= '11'color="secondary" style={{}}>
+            <li>
+              <a href="/Cart"> 
+              <Badge  badgeContent={cartTotalQuantity } color="secondary">
             <ShoppingCart style={{width : '30px', height: '30px',cursor: 'pointer'}}/>
             </Badge>
+            </a>
+            </li>
+            
           </ul>
         </div>
         <Input
