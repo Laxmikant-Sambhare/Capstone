@@ -8,25 +8,26 @@ import styled from "styled-components";
 // `;
 export const MobileVet = styled.div``;
 export const Image = styled.div`
-  margin-top: 5%;
-  margin-left: 40%;
+  margin-top: 1%;
+  margin-left: 37%;
 
   > img {
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
   }
 `;
 export const Description = styled.div`
-  width: 70%;
+  width: 60%;
   height: 40%;
   justify-items: center;
-  margin-left: 13%;
-  margin-top: 3%;
+  margin-left: 20%;
+  font-size: 14px;
+  text-indent: 2cm;
 `;
 export const Form = styled.div`
   width: 70%;
   height: 40%;
-
+  font-size: 14px;
   background-color: #d3dee5;
   margin-top: 3%;
   margin-left: 14%;
