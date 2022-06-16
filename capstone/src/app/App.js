@@ -19,12 +19,12 @@ import { ToastContainer } from "react-toastify";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
-
+import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <UserAuthContextProvider>
+        <Navbar />
         <BrowserRouter>
           <ToastContainer />
           <Routes>

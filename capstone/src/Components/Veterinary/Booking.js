@@ -70,6 +70,10 @@ function Booking() {
     } else if (values.FirstName.length < 2 || values.FirstName.length > 10) {
       errors.FirstName = "The First name must be between 6 and 40 characters";
     }
+    // else if{
+    //   if (values.FirstName.length < 2 || values.FirstName.length > 10) {
+    //     errors.FirstName = "The First name must be between 6 and 40 characters"
+    // }
     if (!values.email) {
       errors.email = "Email is required!";
     } else if (!regex.test(values.email)) {
@@ -164,7 +168,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "48px" }}
                 />
-                <p className="para">{formErrors.Address}</p>
+                <p>{formErrors.Address}</p>
               </div>
 
               <div className="field">

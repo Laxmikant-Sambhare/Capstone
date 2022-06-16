@@ -32,6 +32,10 @@ const Home = () => {
       url: 'https://image.shutterstock.com/image-photo/collage-different-dogs-on-white-260nw-1724568655.jpg',
       caption: 'Slide 3'
     },
+    {
+      url: 'https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/various-dogs-horizontal-web-banner-susan-schmitz.jpg',
+      caption: 'Slide 4'
+    },
   ];
 
   const services = [
@@ -118,10 +122,14 @@ const Home = () => {
         })}
       </Categories>
         </div>
+        <Bottomtabs/>
       </div>
     </>
   );
 };
+const Bottomtabs = styled.div`
+height:50px;
+`
 const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;

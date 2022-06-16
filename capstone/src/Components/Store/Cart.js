@@ -9,6 +9,7 @@ import {
 } from "../../features/counter/cartSlice";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -101,7 +102,9 @@ const Cart = () => {
                 <span className="amount"> ₹{cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
+              <Link to= '/payment'>
               <button>Check out</button>
+              </Link>
               <div className="continue-shopping">
                 <Link to="/store">
                   <svg
@@ -124,8 +127,13 @@ const Cart = () => {
           </div>
         </div>
       )}
+      <Bottomtap/>
     </div>
   );
 };
+
+const Bottomtap = styled.div`
+height: 50px
+`
 
 export default Cart;

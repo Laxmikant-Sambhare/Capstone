@@ -13,7 +13,6 @@ const Productlisting = () => {
   const dispatch = useDispatch();
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
-    console.log("hi")
   };
   console.log(product);
   return (
@@ -59,10 +58,14 @@ const Productlisting = () => {
             ))}
         </div>
       </div>
-
+      <Bottomtap/>
     </div>
   );
 };
+
+const Bottomtap = styled.div`
+height: 50px
+`
 
 const Dropdown = styled.div`
   width: 110px;

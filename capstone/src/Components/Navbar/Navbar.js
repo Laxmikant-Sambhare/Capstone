@@ -1,12 +1,25 @@
-import { Input,Badge } from "@material-ui/core";
+import { Input, Badge } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Nav.css";
 import { ShoppingCart } from '@material-ui/icons';
 import { useSelector } from "react-redux";
-
+// import { useUserAuth } from "../../context/UserAuthContext";
+// import { useNavigate } from "react-router-dom";
+// import { Button } from "react-bootstrap";
+// import {authe} from "../../firebase"
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const { cartTotalQuantity } = useSelector((state) => state.cart);
+  // const {  user } = useUserAuth();
+  // const navigate = useNavigate();
+  // const handleLogout = async () => {
+  //   try {
+  //     await logOut();
+  //     navigate("/signup");
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
   return (
     <div className="navbar">
       <nav className="main-nav">
@@ -17,7 +30,7 @@ export const Navbar = () => {
           className="Mainname"
           style={{ height: "7rem", padding: "2px" }}
         />
-
+        {/* <h2> {user && user.email}</h2> */}
         {/* the second div for the navbar element */}
         <div className="menu-link">
           <ul>
@@ -28,7 +41,9 @@ export const Navbar = () => {
               <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="/signup">Signup</a>
+              <a href="/signup">
+                Signup
+              </a>
             </li>
             <li className="dropdown">
               <div
@@ -69,14 +84,14 @@ export const Navbar = () => {
               <a href="/booking">Booking</a>
             </li>
             <li>
-              <a href="/Cart"> 
-              <Badge  badgeContent={cartTotalQuantity } color="secondary">
-            <ShoppingCart style={{width : '30px', height: '30px',cursor: 'pointer'}}/>
-            </Badge>
-            </a>
+              <a href="/Cart">
+                <Badge badgeContent={cartTotalQuantity} color="secondary">
+                  <ShoppingCart style={{ width: '30px', height: '30px', cursor: 'pointer' }} />
+                </Badge>
+              </a>
             </li>
-            
           </ul>
+          {/* <button onClick={authe.signOut}>SignOut</button> */}
         </div>
         <Input
           placeholder="🔍  Search"
