@@ -91,7 +91,7 @@ function Booking() {
     return errors;
   };
   return (
-    <MobileVet>
+    <MobileVet style={{ marginBottom: "100px" }}>
       <div style={{ fontSize: "20px", textAlign: "center", marginTop: "3%" }}>
         <b>{service.service}</b>
       </div>
