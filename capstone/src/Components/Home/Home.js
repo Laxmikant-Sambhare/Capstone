@@ -122,10 +122,14 @@ const Home = () => {
         })}
       </Categories>
         </div>
+        <Bottomtabs/>
       </div>
     </>
   );
 };
+const Bottomtabs = styled.div`
+height:50px;
+`
 const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;
