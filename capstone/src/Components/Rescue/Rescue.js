@@ -1,15 +1,5 @@
 import React, { Component } from "react";
-import {
-  Container1,
-  Container2,
-  Container3,
-  Container4,
-  Container5,
-  Image,
-  Button,
-  Form,
-} from "./Rescue.styling";
-
+import Form from "./Form";
 import "./Rescue.css";
 export class Rescue extends Component {
   state = {
@@ -49,7 +39,27 @@ export class Rescue extends Component {
             </div>
           </div>
         </div>
-        <Form>
+        <Form/>
+      </>
+    );
+  }
+}
+
+export default Rescue;
+
+
+
+// import {
+//   Container1,
+//   Container2,
+//   Container3,
+//   Container4,
+//   Container5,
+//   Image,
+//   Button,
+//   Form,
+// } from "./Rescue.styling";
+{/* <Form>
           <Container1><br></br><br></br>
             <b>Full Name :</b>
             <input placeholder="Full Name"></input>
@@ -72,10 +82,4 @@ export class Rescue extends Component {
           <Button type="submit">
             <strong>Submit</strong>
           </Button>
-        </Form>
-      </>
-    );
-  }
-}
-
-export default Rescue;
+        </Form> */}
