@@ -13,7 +13,6 @@ const Productlisting = () => {
   const dispatch = useDispatch();
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
-    console.log("hi")
   };
   console.log(product);
   return (
