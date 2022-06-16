@@ -1,4 +1,7 @@
 import React from "react";
+// import { db } from "../../firebase";
+// import { collection, addDoc } from "firebase/firestore/lite";
+
 import "./Booking.css";
 import { Text, Form, MobileVet, Description, Image } from "./Booking.styling";
 import { Services } from "./Data/Services";
@@ -13,6 +16,23 @@ function Booking() {
     Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
     // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
   };
+  // const submit = async () => {
+  //   await addDoc(collection(db, "vet-user-bookings"), {
+  //     FirstName: formValues.FirstName,
+  //     LastName: formValues.LastName,
+  //     Email: formValues.email,
+  //     ContactNo: formValues.ContactNo,
+  //     Address: formValues.Address,
+  //   })
+  //     .then(function (res) {
+  //       alert("Data is successfully added");
+  //     })
+  //     .catch(function (err) {
+  //       alert("Data cannot be added");
+  //     });
+  //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
+  //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+  // };
 
   const initialValues = {
     FirstName: "",
@@ -124,7 +144,7 @@ function Booking() {
               <div className="field">
                 <label>ContactNo</label>
                 <input
-                  type="number"
+                  type="string"
                   name="ContactNo"
                   placeholder="Enter Your Contact Number"
                   value={formValues.ContactNo}

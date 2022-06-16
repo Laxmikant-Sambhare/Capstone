@@ -19,6 +19,7 @@ import { ToastContainer } from "react-toastify";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
+
 function App() {
   return (
     <div className="App">
