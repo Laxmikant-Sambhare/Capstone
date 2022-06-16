@@ -41,16 +41,15 @@
     font-size: larger;
   } */
   
-  button {
+  /* button {
     background: #ffd301  !important;
     margin-left: 100px;
-    /* margin-bottom:'25px'; */
     border-width: 1px;
     width: 150px;
     font-weight: bold;
     height:25px;
     border-radius: 5px;
-  }
+  } */
   p {
     color: red;
   }

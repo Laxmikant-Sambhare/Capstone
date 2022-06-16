@@ -45,6 +45,7 @@ li {
 
 .dropdown .dropdown-content {
     position: absolute;
+    z-index: 1000000;
     padding: 15px;
     background: #ffd301;
     font-weight: 500;

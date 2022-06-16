@@ -1,8 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Button } from "react-bootstrap";
-import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { useUserAuth } from "../../context/UserAuthContext";
 import styled from "styled-components";
 import { Slide } from 'react-slideshow-image';
@@ -11,11 +10,11 @@ import { Typography } from "@material-ui/core";
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate("/signup");
+      // navigate("/");
     } catch (error) {
       console.log(error.message);
     }
@@ -32,6 +31,10 @@ const Home = () => {
     {
       url: 'https://image.shutterstock.com/image-photo/collage-different-dogs-on-white-260nw-1724568655.jpg',
       caption: 'Slide 3'
+    },
+    {
+      url: 'https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/various-dogs-horizontal-web-banner-susan-schmitz.jpg',
+      caption: 'Slide 4'
     },
   ];
   const services = [
@@ -62,7 +65,7 @@ const Home = () => {
   ]
   return (
     <>
-      {/* <div className="p-4 box mt-3 text-center">
+      <div className="p-4 box mt-3 text-center">
         Hello Welcome <br />
         {user && user.email}
       </div>
@@ -70,7 +73,7 @@ const Home = () => {
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
-      </div> */}
+      </div>
       <div>
       <Banner>
       <div className="slide-container">

@@ -23,14 +23,14 @@ import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 function App() {
   return (
     <div className="App">
-      <UserAuthContextProvider>
       <Navbar />
+      <UserAuthContextProvider>
         <BrowserRouter>
           <ToastContainer />
           <Routes>
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/Cart" element={<Cart />} />
+            <Route exact path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
             <Route exact path="/adoption" element={<Adoption />} />
@@ -48,8 +48,8 @@ function App() {
             <Route exact path="/payment" element={<ConfirmBooking />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </UserAuthContextProvider>
-      <Footer />
     </div>
   );
 }
