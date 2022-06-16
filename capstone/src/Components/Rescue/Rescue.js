@@ -50,7 +50,7 @@ export class Rescue extends Component {
             </div>
           </div>
         </div>
-        
+        {/* <Form/> */}
         <Form>
           <Container1>
             <br></br>
@@ -78,5 +78,9 @@ export class Rescue extends Component {
             <strong>Submit</strong>
           </Button>
         </Form>
-        </>
-  )}}
+      </>
+    );
+  }
+}
+
+export default Rescue;
