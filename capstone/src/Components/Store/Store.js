@@ -3,17 +3,46 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { section } from "./data";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 const Store = () => {
+  const slideImages = [
+    {
+      url: 'https://www.seekpng.com/png/full/3-39193_happy-birthday-if-you-have-clicked-through-to.png',
+      caption: 'Slide 1'
+    },
+    {
+      url: 'https://thumbs.dreamstime.com/b/collage-different-dogs-white-background-banner-design-179886014.jpg',
+      caption: 'Slide 2'
+    },
+    {
+      url: 'https://image.shutterstock.com/image-photo/collage-different-dogs-on-white-260nw-1724568655.jpg',
+      caption: 'Slide 3'
+    },
+  ];
   return (
     <div style={{ backgroundcolor: "#b5aa74" }}>
-      <Banner>
+      {/* <Banner>
         <img
           src="http://atlbrescue.org/resources/banner1.jpg?timestamp=1346122477510"
           alt="Category"
         />
+      </Banner> */}
+      <Banner>
+      <div className="slide-container">
+        <Slide>
+         {slideImages.map((slideImage, index)=> (
+            <div className="each-slide" key={index} style={{alignItems: 'center'}}>
+           <img src={slideImage.url} alt="Category"  style={{
+                   height: '350px',
+                   width: '1400px'
+                  }}/>  
+            </div>
+          ))} 
+        </Slide>
+      </div>
       </Banner>
-
       <Categories>
         {section.map((data, index) => {
           return (
@@ -40,11 +69,10 @@ const Store = () => {
 };
 
 const Banner = styled.div`
-  display: flex;
-  justify-content: center;
-  > img {
-    width: 70%;
-  }
+align-items: center;
+margin-left:80px;
+margin-right:80px;
+ height: 350px;
 `;
 
 const Categories = styled.div`
@@ -64,8 +92,6 @@ const Catergory = styled.div`
     height: 150px;
     :hover {
       opacity: 0.5;
-      width: 170px;
-      height: 170px;
     }
     cursor: pointer;
   }

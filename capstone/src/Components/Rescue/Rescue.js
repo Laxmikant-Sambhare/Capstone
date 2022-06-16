@@ -1,6 +1,17 @@
 import React, { Component } from "react";
-import Form from "./Form";
+// import Form from "./Form";
 import "./Rescue.css";
+import {
+  Container1,
+  Container2,
+  Container3,
+  Container4,
+  Container5,
+  Image,
+  Button,
+  Form,
+} from "./Rescue.styling";
+
 export class Rescue extends Component {
   state = {
     profileImg:
@@ -39,28 +50,11 @@ export class Rescue extends Component {
             </div>
           </div>
         </div>
-        <Form/>
-      </>
-    );
-  }
-}
-
-export default Rescue;
-
-
-
-// import {
-//   Container1,
-//   Container2,
-//   Container3,
-//   Container4,
-//   Container5,
-//   Image,
-//   Button,
-//   Form,
-// } from "./Rescue.styling";
-{/* <Form>
-          <Container1><br></br><br></br>
+        
+        <Form>
+          <Container1>
+            <br></br>
+            <br></br>
             <b>Full Name :</b>
             <input placeholder="Full Name"></input>
           </Container1>
@@ -78,8 +72,11 @@ export default Rescue;
           </Container4>
           <Container5>
             <b>Share Current Location</b>
-          </Container5><br></br>
+          </Container5>
+          <br></br>
           <Button type="submit">
             <strong>Submit</strong>
           </Button>
-        </Form> */}
+        </Form>
+        </>
+  )}}

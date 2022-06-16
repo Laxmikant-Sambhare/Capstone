@@ -53,11 +53,11 @@ export const Services = [
       "We finish your pet the numerous periods of their lives. From specific and deterrent consideration during their more youthful years to ordinary health checks as they age, we try to forestall and recognize issues before they emerge. We realize your pet is imperative to you, that is the reason we endeavor to guarantee they are given simply the best in consideration through all the long stretches of their lives. The American Animal Hospital Association suggests that your pet have a wellbeing test at any rate once consistently. As your pet ages, they suggest having considerably more. We accept firmly in preventive mind and have created wellbeing conventions for each phase of the life of your pet. Contingent upon your pet's life stage, antibodies might be managed, just as infection screenings.",
     image: require("../images/WellnessAndPreventivecare.jpg"),
   },
-  {
-    id: 9,
-    service: "Dog Boarding",
-    Description:
-      "We think it’s very important for you to visit our centre before making a booking. This gives you the opportunity to see the facilities, meet the team and ask any questions. You don’t need to make a booking, just turn up between 11am – 2pm and our staff will be on hand to take you on a tour. In addition Your dog will receive a daily health check every single day of their stay with us. The records of the daily health checks will be kept in your dog’s apartment along with details of when they were last walked, fed and given any medication.",
-    image: require("../images/pet-relocation.png"),
-  },
+  // {
+  //   id: 9,
+  //   service: "Dog Boarding",
+  //   Description:
+  //     "We think it’s very important for you to visit our centre before making a booking. This gives you the opportunity to see the facilities, meet the team and ask any questions. You don’t need to make a booking, just turn up between 11am – 2pm and our staff will be on hand to take you on a tour. In addition Your dog will receive a daily health check every single day of their stay with us. The records of the daily health checks will be kept in your dog’s apartment along with details of when they were last walked, fed and given any medication.",
+  //   image: require("../images/pet-relocation.png"),
+  // },
 ];
