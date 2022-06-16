@@ -23,7 +23,7 @@ function Booking() {
   // console.log("params", params);
   const navigate = useNavigate();
   const submit = () => {
-    navigate("/ConfirmBooking");
+    navigate("/payment");
   };
   // const { handleChange, values } = useForm();
   // const initialValues = {
@@ -244,7 +244,9 @@ function Booking() {
                 </select>
               </div>
 
-              <button className="fluid ui button blue">Book Your Slots</button>
+              <button className="fluid ui button blue" onClick={submit}>
+                Book Your Slots
+              </button>
               {
                 Object.keys(formErrors).length === 0 && isSubmit ? (
                   <div className="ui message success">
