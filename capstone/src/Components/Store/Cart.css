@@ -52,12 +52,13 @@
     font-weight: 400;
   }
   .cart-item .cart-product button {
-    border: none;
-    outline: none;
+    border: 1px;
+    outline: 1px;
+    border-radius: 10%;
     margin-top: 0.7rem;
+    padding: 2px;
     cursor: pointer;
-    background: none;
-    color: gray;
+    background-color: rgb(251, 57, 57);
   }
   .cart-item .cart-product button:hover {
     color: black;
@@ -105,8 +106,7 @@
     font-weight: 400;
     letter-spacing: 1.15px;
     border: 0.5px solid rgb(177, 177, 177);
-    color: gray;
-    background: none;
+    background-color: rgb(251, 57, 57);
     outline: none;
     cursor: pointer;
   }
