@@ -1,19 +1,6 @@
 import React from "react";
-// import useForm from "./useForm";
 import "./Booking.css";
-import {
-  Container1,
-  Container2,
-  Container3,
-  Container4,
-  Container5,
-  Text,
-  Form,
-  MobileVet,
-  Description,
-  Image,
-  Button,
-} from "./Booking.styling";
+import { Text, Form, MobileVet, Description, Image } from "./Booking.styling";
 import { Services } from "./Data/Services";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -23,77 +10,10 @@ function Booking() {
   // console.log("params", params);
   const navigate = useNavigate();
   const submit = () => {
-    navigate("/payment");
+    Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
+    // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
   };
-  // const { handleChange, values } = useForm();
-  // const initialValues = {
-  //   FirstName: "",
-  //   LastName: "",
-  //   ContactNo: "",
-  //   email: "",
-  //   Address: "",
-  // };
-  // const [formErrors, setFormErrors] = useState({});
-  // const [formValues, setFormvalues] = useState(initialValues);
-  // const [isSubmit, setIsSubmit] = useState(false);
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormvalues({ ...formValues, [name]: value });
-  //   console.log(formValues);
-  // };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setFormErrors(validate(formValues));
-  //   setIsSubmit(true);
-  // };
-  // useEffect(() => {
-  //   console.log(formErrors);
-  //   if (Object.keys(formErrors).length === 0 && isSubmit) {
-  //     console.log(formValues);
-  //   }
-  // }, [formErrors]);
-  // const [formValues, setFormValues] = useState(initialValues);
-  // const [formErrors, setFormErrors] = useState({});
-  // const [isSubmit, setIsSubmit] = useState(false);
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormValues({ ...formValues, [name]: value });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setFormErrors(validate(formValues));
-  //   setIsSubmit(true);
-  // };
-
-  // useEffect(() => {
-  //   console.log(formErrors);
-  //   if (Object.keys(formErrors).length === 0 && isSubmit) {
-  //     console.log(formValues);
-  //   }
-  // }, [formErrors]);
-  // const validate = (values) => {
-  //   const errors = {};
-  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  //   if (!values.FirstName) {
-  //     errors.FirstName = "first name is required";
-  //   }
-  //   if (!values.LastName) {
-  //     errors.LastName = "last name is required";
-  //   }
-  //   if (!values.email) {
-  //     errors.email = "email is required";
-  //   }
-  //   if (!values.Address) {
-  //     errors.Address = "Address is required";
-  //   }
-  //   if (!values.ContactNo) {
-  //     errors.ContactNo = "Contact no is required";
-  //   }
-  //   return errors;
-  // };
   const initialValues = {
     FirstName: "",
     LastName: "",
@@ -175,8 +95,9 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "30px" }}
                 />
+                <p>{formErrors.FirstName}</p>
               </div>
-              <p>{formErrors.FirstName}</p>
+
               <div className="field">
                 <label>LastName</label>
                 <input
@@ -187,8 +108,9 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "34px" }}
                 />
+                <p>{formErrors.LastName}</p>
               </div>
-              <p>{formErrors.LastName}</p>
+
               <div className="field">
                 <label>Email</label>
                 <input
@@ -199,8 +121,8 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "70px" }}
                 />
+                <p>{formErrors.email}</p>
               </div>
-              <p>{formErrors.email}</p>
               <div className="field">
                 <label>ContactNo</label>
                 <input
@@ -211,8 +133,9 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "29px" }}
                 />
+                <p>{formErrors.ContactNo}</p>
               </div>
-              <p>{formErrors.ContactNo}</p>
+
               <div className="field">
                 <label>Address</label>
                 <input
@@ -223,8 +146,9 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "48px" }}
                 />
+                <p>{formErrors.Address}</p>
               </div>
-              <p>{formErrors.Address}</p>
+
               <div className="field">
                 <label>Slots Available</label>
                 <select>
@@ -247,14 +171,6 @@ function Booking() {
               <button className="fluid ui button blue" onClick={submit}>
                 Book Your Slots
               </button>
-              {
-                Object.keys(formErrors).length === 0 && isSubmit ? (
-                  <div className="ui message success">
-                    Successfully Booked your slot
-                  </div>
-                ) : null
-                // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-              }
             </div>
           </form>
         </div>
