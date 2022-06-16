@@ -47,11 +47,9 @@ function Booking() {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.FirstName) {
       errors.FirstName = "Firstname is required!";
+    } else if (values.FirstName.length < 2 || values.FirstName.length > 10) {
+      errors.FirstName = "The First name must be between 6 and 40 characters";
     }
-    // else if{
-    //   if (values.FirstName.length < 2 || values.FirstName.length > 10) {
-    //     errors.FirstName = "The First name must be between 6 and 40 characters"
-    // }
     if (!values.email) {
       errors.email = "Email is required!";
     } else if (!regex.test(values.email)) {
@@ -95,7 +93,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "30px" }}
                 />
-                <p>{formErrors.FirstName}</p>
+                <p className="para">{formErrors.FirstName}</p>
               </div>
 
               <div className="field">
@@ -108,7 +106,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "34px" }}
                 />
-                <p>{formErrors.LastName}</p>
+                <p className="para">{formErrors.LastName}</p>
               </div>
 
               <div className="field">
@@ -121,7 +119,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "70px" }}
                 />
-                <p>{formErrors.email}</p>
+                <p className="para">{formErrors.email}</p>
               </div>
               <div className="field">
                 <label>ContactNo</label>
@@ -133,7 +131,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "29px" }}
                 />
-                <p>{formErrors.ContactNo}</p>
+                <p className="para">{formErrors.ContactNo}</p>
               </div>
 
               <div className="field">
@@ -146,7 +144,7 @@ function Booking() {
                   onChange={handleChange}
                   style={{ marginLeft: "48px" }}
                 />
-                <p>{formErrors.Address}</p>
+                <p className="para">{formErrors.Address}</p>
               </div>
 
               <div className="field">
@@ -168,7 +166,7 @@ function Booking() {
                 </select>
               </div>
 
-              <button className="fluid ui button blue" onClick={submit}>
+              <button className="button" onClick={submit}>
                 Book Your Slots
               </button>
             </div>

@@ -3,7 +3,7 @@
     padding: 0;
   }
    */
-  .page{
+   .page{
     height: 100vh;
     display: flex;
     /* align-items: center; */
@@ -44,9 +44,9 @@
   }
   .label{
     width: 100%;
-    margin-top: 1rem;
     display: flex;
     align-items: center;
+
     
   }
   .image-upload{
@@ -59,7 +59,7 @@
    
     /* align-items: center; */
     /* justify-content: center; */
-    /* margin-top: 5px;  */
+    margin-top: -490px; 
     background-color:#ffd301;
     text-align: center;
     justify-items: center;

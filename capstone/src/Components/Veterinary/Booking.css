@@ -41,7 +41,7 @@
     font-size: larger;
   } */
   
-  /* button {
+  .button{
     background: #ffd301  !important;
     margin-left: 100px;
     border-width: 1px;
@@ -49,8 +49,8 @@
     font-weight: bold;
     height:25px;
     border-radius: 5px;
-  } */
-  p {
+  }
+  .para {
     color: red;
   }
   .field{
