@@ -10,7 +10,7 @@ import { Typography } from "@material-ui/core";
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleLogout = async () => {
     try {
       await logOut();
