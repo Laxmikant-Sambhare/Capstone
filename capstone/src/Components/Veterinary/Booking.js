@@ -107,7 +107,7 @@ function Booking() {
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
-              <div className="field">
+              <div className="fields">
                 <label>FirstName</label>
                 <input
                   type="text"
@@ -120,7 +120,7 @@ function Booking() {
                 <p className="para">{formErrors.FirstName}</p>
               </div>
 
-              <div className="field">
+              <div className="fields">
                 <label>LastName</label>
                 <input
                   type="text"
@@ -133,7 +133,7 @@ function Booking() {
                 <p className="para">{formErrors.LastName}</p>
               </div>
 
-              <div className="field">
+              <div className="fields">
                 <label>Email</label>
                 <input
                   type="text"
@@ -145,7 +145,7 @@ function Booking() {
                 />
                 <p className="para">{formErrors.email}</p>
               </div>
-              <div className="field">
+              <div className="fields">
                 <label>ContactNo</label>
                 <input
                   type="string"
@@ -158,7 +158,7 @@ function Booking() {
                 <p className="para">{formErrors.ContactNo}</p>
               </div>
 
-              <div className="field">
+              <div className="fields">
                 <label>Address</label>
                 <input
                   type="text"
@@ -171,7 +171,7 @@ function Booking() {
                 <p>{formErrors.Address}</p>
               </div>
 
-              <div className="field">
+              <div className="fields">
                 <label>Slots Available</label>
                 <select>
                   <option value="">None</option>
@@ -190,7 +190,7 @@ function Booking() {
                 </select>
               </div>
 
-              <button className="button" onClick={submit}>
+              <button className="Submit" onClick={submit}>
                 Book Your Slots
               </button>
             </div>
@@ -292,7 +292,7 @@ function Booking() {
     //     <form onSubmit={handleSubmit}>
     //       <div className="ui divider"></div>
     //       <div className="ui form">
-    //         <div className="field">
+    //         <div className="fields">
     //           <label>Firstname</label>
     //           <input
     //             type="text"
