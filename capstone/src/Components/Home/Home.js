@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import { Button } from "react-bootstrap";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../../context/UserAuthContext";
 import styled from "styled-components";
@@ -15,7 +14,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate("/signup");
+      navigate("/");
     } catch (error) {
       console.log(error.message);
     }
@@ -34,6 +33,7 @@ const Home = () => {
       caption: 'Slide 3'
     },
   ];
+
   const services = [
     {
       id: 1 ,
@@ -62,7 +62,7 @@ const Home = () => {
   ]
   return (
     <>
-      {/* <div className="p-4 box mt-3 text-center">
+      <div className="p-4 box mt-3 text-center">
         Hello Welcome <br />
         {user && user.email}
       </div>
@@ -70,7 +70,7 @@ const Home = () => {
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
-      </div> */}
+      </div>
       <div>
       <Banner>
       <div className="slide-container">
@@ -118,14 +118,10 @@ const Home = () => {
         })}
       </Categories>
         </div>
-      <Bottomtap/>        
       </div>
     </>
   );
 };
-const Bottomtap = styled.div`
-height: 50px
-`
 const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +147,6 @@ align-items: center;
 margin-left:80px;
 margin-right:80px;
  height: 350px;
- z-index: 1;
 `;
 
 export default Home;

@@ -59,7 +59,6 @@ const Productlisting = () => {
             ))}
         </div>
       </div>
-      <Bottomtap/>
     </div>
   );
 };

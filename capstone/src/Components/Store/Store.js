@@ -64,14 +64,9 @@ const Store = () => {
           );
         })}
       </Categories>
-      <Bottomtap/> 
     </div>
   );
 };
-
-const Bottomtap = styled.div`
-height: 50px
-`
 
 const Banner = styled.div`
 align-items: center;
