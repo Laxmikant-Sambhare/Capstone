@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Form from "./Form";
+import Form from "./Form";
 import "./Rescue.css";
 import {
   Container1,
@@ -9,7 +9,7 @@ import {
   Container5,
   Image,
   Button,
-  Form,
+  // Form,
 } from "./Rescue.styling";
 
 export class Rescue extends Component {
@@ -50,8 +50,9 @@ export class Rescue extends Component {
             </div>
           </div>
         </div>
+        <Form/>
         {/* <Form/> */}
-        <Form>
+        {/* <Form>
           <Container1>
             <br></br>
             <br></br>
@@ -77,7 +78,7 @@ export class Rescue extends Component {
           <Button type="submit">
             <strong>Submit</strong>
           </Button>
-        </Form>
+        </Form> */}
       </>
     );
   }
