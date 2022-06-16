@@ -45,19 +45,19 @@ const Home = () => {
       id: 2 ,
       url:'https://cdn.discordapp.com/attachments/947918952338706462/985170895230337056/unknown.png',
       service : "Adoption",
-      path: "/rescue"
+      path: "/adoption"
     },
     {
       id: 3 ,
       url:'https://cdn.discordapp.com/attachments/947918952338706462/985172816485830686/unknown.png',
       service : "Veterinary",
-      path: "/rescue"
+      path: "/vet"
     },
     {
       id: 4 ,
       url:'https://cdn.discordapp.com/attachments/947918952338706462/985174308450103316/unknown.png',
       service : "Store",
-      path: "/rescue"
+      path: "/store"
     }
   ]
   return (

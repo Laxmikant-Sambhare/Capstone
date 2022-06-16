@@ -92,8 +92,6 @@ const Catergory = styled.div`
     height: 150px;
     :hover {
       opacity: 0.5;
-      width: 170px;
-      height: 170px;
     }
     cursor: pointer;
   }
