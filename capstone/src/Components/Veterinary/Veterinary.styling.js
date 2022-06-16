@@ -11,14 +11,14 @@ export const Containers = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 17%;
+  margin-left: 14%; //17px
 `;
 export const Container = styled.div`
   width: 20rem;
   height: 20rem;
-  margin-top: 20%;
-  margin-right: 210px;
-  margin-bottom: 9%;
+  margin-top: 25%;
+  margin-right: 100px; //210px
+  margin-bottom: 20%;
   box-shadow: black 0 0 15px;
   border-radius: 20px;
   border-collapse: collapse;
