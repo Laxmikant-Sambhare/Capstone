@@ -59,10 +59,14 @@ const Productlisting = () => {
             ))}
         </div>
       </div>
-
+      <Bottomtap/>
     </div>
   );
 };
+
+const Bottomtap = styled.div`
+height: 50px
+`
 
 const Dropdown = styled.div`
   width: 110px;
