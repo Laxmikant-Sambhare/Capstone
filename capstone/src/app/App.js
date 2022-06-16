@@ -17,7 +17,7 @@ import Login from "../Components/Signup/Login";
 import { ToastContainer } from "react-toastify";
 // import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
-import Cart from "../Components/Store/Cart"
+import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
 import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 function App() {
@@ -26,11 +26,11 @@ function App() {
       <UserAuthContextProvider>
       <Navbar />
         <BrowserRouter>
-        <ToastContainer/>
+          <ToastContainer />
           <Routes>
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/Cart" element={<Cart/>} />
+            <Route exact path="/Cart" element={<Cart />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
             <Route exact path="/adoption" element={<Adoption />} />
@@ -45,11 +45,11 @@ function App() {
             <Route exact path="/vet" element={<Veterinary />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
             <Route exact path="/vet/:id" element={<Booking />} />
-            <Route exact path="/confirmBooking" element={<ConfirmBooking />} />
+            <Route exact path="/payment" element={<ConfirmBooking />} />
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
