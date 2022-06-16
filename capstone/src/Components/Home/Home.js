@@ -139,7 +139,7 @@ const Categories = styled.div`
 const Catergory = styled.div`
   margin-bottom: 20px;
   > img {
-    margin: 50px;
+    margin: 30px;
     background-color: #ffd301;
     border-radius: 5%;
     width: 200px;
