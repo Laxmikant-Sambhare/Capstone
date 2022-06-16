@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// import Form from "./Form";
+import "./Rescue.css";
 import {
   Container1,
   Container2,
@@ -9,7 +11,7 @@ import {
   Button,
   Form,
 } from "./Rescue.styling";
-import "./Rescue.css";
+
 export class Rescue extends Component {
   state = {
     profileImg:
@@ -48,6 +50,7 @@ export class Rescue extends Component {
             </div>
           </div>
         </div>
+        {/* <Form/> */}
         <Form>
           <Container1>
             <br></br>
@@ -60,14 +63,16 @@ export class Rescue extends Component {
             <input placeholder="Contact No"></input>
           </Container2>
           <Container3>
-            <b>Address :</b>
+            <b> Address :</b>
             <input placeholder="Address"></input>
           </Container3>
           <Container4>
             <b>Email :</b>
             <input placeholder="Email"></input>
           </Container4>
-          <Container5>Share Current Location(pending)</Container5>
+          <Container5>
+            <b>Share Current Location</b>
+          </Container5>
           <br></br>
           <Button type="submit">
             <strong>Submit</strong>
