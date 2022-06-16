@@ -159,7 +159,7 @@ function Form() {
                 </select> */}
               {/* </div> */}
 
-              <button className="btn" onClick={submit}>
+              <button className="bttn" onClick={submit}>
                 SUBMIT
               </button>
             </div>
