@@ -40,8 +40,8 @@
     color: #fff;
     font-size: larger;
   } */
-  
-  .button{
+ 
+  .Submit{
     background: #ffd301  !important;
     margin-left: 100px;
     border-width: 1px;
@@ -49,16 +49,16 @@
     font-weight: bold;
     height:25px;
     border-radius: 5px;
-  }
+  } 
   .para {
     color: red;
   }
-  .field{
+  .fields{
     margin-bottom: 35px;
   }
-  .field > label{
+  .fields > label{
     font-weight: 500;
   }
-  .field>input{
+  .fields>input{
     width: 200px;
   }
