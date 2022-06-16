@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-// export const Header = styled.div`
-//   background-color: black;
-//   width: 100%;
-//   height: 60px;
-//   color: white;
-// `;
 export const MobileVet = styled.div``;
 export const Image = styled.div`
   margin-top: 1%;
@@ -25,13 +19,14 @@ export const Description = styled.div`
   text-indent: 2cm;
 `;
 export const Form = styled.div`
-  width: 70%;
-  height: 40%;
+  width: 40%;
+  height: 700px;
   font-size: 14px;
-  background-color: #d3dee5;
+  background-color: #ffd301;
   margin-top: 3%;
-  margin-left: 14%;
+  margin-left: 31%;
   padding: 2%;
+  border-radius: 15px;
 `;
 export const Container1 = styled.div`
   margin: 2%;
@@ -81,4 +76,10 @@ export const Button = styled.button`
   width: 23%;
   margin-left: 37%;
   padding: 1%;
+`;
+export const Text = styled.h2`
+  justify-content: center;
+  /* text-align: center; */
+  /* justify-items: center; */
+  /* align-items: center; */
 `;
