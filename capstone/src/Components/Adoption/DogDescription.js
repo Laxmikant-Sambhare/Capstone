@@ -27,7 +27,7 @@ export default function DogDescription() {
       <h3> <em> Approx Age:</em> {doggie["Approx Age"]} </h3>
       <br/>
       <br/>
-     <button onClick = {() => setAdopt(true)}> ADOPT</button>
+     <button className = "button" onClick = {() => setAdopt(true)}> ADOPT</button>
     </div>
   );
 }
