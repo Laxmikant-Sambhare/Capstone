@@ -1,3 +1,4 @@
+
 import React from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -15,7 +16,7 @@ import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
 import { ToastContainer } from "react-toastify";
- import ProtectedRoute from "./components/ProtectedRoute";
+ //import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
@@ -35,11 +36,9 @@ function App() {
             <Route exact path="/Cart" element={<Cart />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
-            <Route element = {<PrivateRoutes/>} > 
             <Route exact path="/adoption" element={<Adoption />} /> 
               <Route exact path="/adoption/:id" element={<DogDescription />} />
-              <Route exact path="/forms" element={<Forms />} />
-             </Route>  
+              <Route exact path="/forms" element={<ProtectedRoute><Forms /></ProtectedRoute>} />
             <Route exact path="/store" element={<Store />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
             <Route
