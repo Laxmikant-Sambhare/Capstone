@@ -1,15 +1,4 @@
 
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:300); */
-
-/* body {
-  /* background: #76b852; */
-  /* display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center; */
-
-
 .form-container {
   display: flex;
   min-height: 50vh;
@@ -18,7 +7,7 @@
   width: 100px;
   background-color: white;
   margin: auto;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(152, 129, 129, 0.24);
   padding: 10px;
 }
 
@@ -63,7 +52,7 @@ input {
 }
 
 button {
-  background: #FFD301;
+  background-color: #FFD301;
   color: white;
   cursor: pointer;
 }

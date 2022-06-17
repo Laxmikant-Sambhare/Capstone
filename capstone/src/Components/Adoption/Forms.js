@@ -1,15 +1,4 @@
 
-// import React from "react";
-
-// export default function Forms(){
-//     return(
-//         <div>
-//             Forms..!
-//         </div>
-//     )
-// }
-
-
 import React from "react";
 import {useState} from "react";
 import "./Forms.css";
@@ -53,7 +42,7 @@ export default function Forms() {
   return (
     <div class="form-container">
       <form class="register-form" onSubmit = {handleSubmit}>
-        {/* Uncomment the next line to show the success message */}
+        
         {submitted && valid ? <div class="success-message">Success! Thank you for registering</div> : null}  
         <input
           value = {values.firstName}
@@ -64,7 +53,7 @@ export default function Forms() {
           placeholder="First Name"
           name="firstName"
         />
-        {/* Uncomment the next line to show the error message */}
+        
         {submitted && !values.firstName ?  <span id="first-name-error">Please enter a first name</span> : null}  
         <input
           id="last-name"
@@ -75,7 +64,7 @@ export default function Forms() {
           placeholder="Last Name"
           name="lastName"
         />
-        {/* Uncomment the next line to show the error message */}
+        
         {submitted && !values.lastName ?  <span id="last-name-error">Please enter a last name</span> : null}  
         <input
           id="email"

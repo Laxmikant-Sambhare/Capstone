@@ -49,5 +49,7 @@
       font: inherit;
       cursor: pointer;
       outline: inherit;
+      /* position:absolute;
+      top:50%; */
     }
   

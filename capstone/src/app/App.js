@@ -12,6 +12,7 @@ import Booking from "../Components/Veterinary/Booking";
 import {Navbar} from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
  import Forms from "../Components/Adoption/Forms";
+ //import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
 function App() {
   return (
     <div className="App">
@@ -20,10 +21,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/rescue" element={<Rescue />} />
-          <Route exact path="/adoption" element={<Adoption />} />
-          <Route exact path="/adoption/:id" element={<DogDescription />} />
-          <Route exact path="/forms" element={<Forms />} /> 
-
+           {/* <Route element = {<PrivateRoutes/>} > */}
+              <Route exact path="/adoption" element={<Adoption />} /> 
+              <Route exact path="/adoption/:id" element={<DogDescription />} />
+              <Route exact path="/forms" element={<Forms />} />
+              {/* </Route>  */}
           <Route exact path="/store" element={<Store />} />
           <Route exact path="/vet" element={<Veterinary />} />
           <Route exact path="/signin" element={<Signin />} />
