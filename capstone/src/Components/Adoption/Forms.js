@@ -42,7 +42,8 @@ export default function Forms() {
   return (
     <div class="form-container">
       <form class="register-form" onSubmit = {handleSubmit}>
-        
+
+        <h2> ADOPTION FORM:</h2>
         {submitted && valid ? <div class="success-message">Success! Thank you for registering</div> : null}  
         <input
           value = {values.firstName}
@@ -65,7 +66,7 @@ export default function Forms() {
           name="lastName"
         />
         
-        {submitted && !values.lastName ?  <span id="last-name-error">Please enter a last name</span> : null}  
+        {submitted && !values.lastName ?  <span id="first-name-error">Please enter a last name</span> : null}  
         <input
           id="email"
           value = {values.email}
@@ -75,7 +76,7 @@ export default function Forms() {
           placeholder="Email"
           name="email"
         />
-      {submitted && !values.email ?  <span id="last-name-error">Please enter a Email address </span> : null}   
+      {submitted && !values.email ?  <span id="first-name-error">Please enter a Email address </span> : null}   
         <input
           id="password"
           value = {values.password}
@@ -85,7 +86,7 @@ export default function Forms() {
           placeholder="Password"
           name="password"
         />
-       {submitted && !values.password ?  <span id="last-name-error">Please enter a Password</span> : null}  
+       {submitted && !values.password ?  <span id="first-name-error">Please enter a Password</span> : null}  
         <input
           id="phonenumber"
           value = {values.phonenumber}
@@ -95,7 +96,7 @@ export default function Forms() {
           placeholder="phonenumber"
           name="phonenumber"
         />
-       {submitted && !values.phonenumber ? <span id="last-name-error">Please enter a valid Phonenumber</span> : null}  
+       {submitted && !values.phonenumber ? <span id="first-name-error">Please enter a valid Phonenumber</span> : null}  
         
         <button class="form-field" type="submit">
           Register
@@ -104,4 +105,3 @@ export default function Forms() {
     </div>
   );
 }
-
