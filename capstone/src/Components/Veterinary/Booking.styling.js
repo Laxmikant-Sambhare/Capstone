@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const MobileVet = styled.div``;
 export const Image = styled.div`
   margin-top: 1%;
-  margin-left: 37%;
+  margin-left: 27%;
 
   > img {
-    width: 40%;
-    height: 40%;
+    height: 190px;
+    margin-bottom: 35px;
+    margin-top: 25px;
   }
 `;
 export const Description = styled.div`
@@ -79,7 +80,4 @@ export const Button = styled.button`
 `;
 export const Text = styled.h2`
   justify-content: center;
-  /* text-align: center; */
-  /* justify-items: center; */
-  /* align-items: center; */
 `;
