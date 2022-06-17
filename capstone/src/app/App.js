@@ -10,6 +10,7 @@ import Veterinary from "../Components/Veterinary/Veterinary";
 import Booking from "../Components/Veterinary/Booking";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
+<<<<<<< HEAD
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
@@ -50,6 +51,29 @@ function App() {
         </BrowserRouter>
       </UserAuthContextProvider>
       <Footer />
+=======
+ import Forms from "../Components/Adoption/Forms";
+ //import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
+function App() {
+  return (
+    <div className="App">
+      <Navbar/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/rescue" element={<Rescue />} />
+           {/* <Route element = {<PrivateRoutes/>} > */}
+              <Route exact path="/adoption" element={<Adoption />} /> 
+              <Route exact path="/adoption/:id" element={<DogDescription />} />
+              <Route exact path="/forms" element={<Forms />} />
+              {/* </Route>  */}
+          <Route exact path="/store" element={<Store />} />
+          <Route exact path="/vet" element={<Veterinary />} />
+          <Route exact path="/signin" element={<Signin />} />
+          <Route exact path="/store/:id" element={<Productlisting />} />
+          <Route exact path="/vet/booking" element={<Booking />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
