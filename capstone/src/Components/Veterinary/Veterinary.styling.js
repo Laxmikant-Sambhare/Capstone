@@ -1,23 +1,17 @@
 import styled from "styled-components";
-
-// export const Header = styled.div`
-//   background-color: black;
-//   width: 100%;
-//   height: 60px;
-//   color: white;
-// `;
-export const MobileVet = styled.div``;
-export const Containers = styled.div`
+export const Vet = styled.div``;
+export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 14%; //17px
+  margin-left: 14%;
+  margin-bottom: 50px;
 `;
-export const Container = styled.div`
+export const Maincontainer = styled.div`
   width: 20rem;
   height: 20rem;
   margin-top: 25%;
-  margin-right: 100px; //210px
+  margin-right: 100px;
   margin-bottom: 20%;
   box-shadow: black 0 0 15px;
   border-radius: 20px;
