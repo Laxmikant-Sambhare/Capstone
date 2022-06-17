@@ -16,11 +16,11 @@ import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
 import { ToastContainer } from "react-toastify";
- import ProtectedRoute from "./components/ProtectedRoute";
+ //import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
-import ProtectedRoute from "../Components/Signup/ProtectedRoute";
+//import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
 import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
 function App() {
