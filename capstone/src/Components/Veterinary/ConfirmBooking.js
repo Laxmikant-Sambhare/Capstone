@@ -1,6 +1,6 @@
 import React from "react";
 import "./Styling.css";
-import { Text1, Form } from "./Styling";
+import { Text1, Form, HeadingTag } from "./Styling";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 function ConfirmBooking() {
@@ -12,8 +12,6 @@ function ConfirmBooking() {
   // };
   const location = useLocation();
   const Bookingdata = location.state;
-
-
 
   const initialValues = {
     FirstName: "",
@@ -78,12 +76,20 @@ function ConfirmBooking() {
     <div style={{ marginBottom: "100px" }} className="BackgroundImage">
       <Form className="form">
         <div className="container">
-          <Text1 style={{ marginTop: "-25px", marginBottom: "15px" }}>
-            BOOK YOUR SLOTS
-          </Text1>
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
+              <HeadingTag>
+                <img
+                  src={require("./complete-small.jpg")}
+                  alt="logo"
+                  className="Mainname"
+                  style={{ height: "5rem", padding: "2px" }}
+                />
+                <Text1 style={{ marginTop: "9px", marginBottom: "15px" }}>
+                  BOOK YOUR SLOTS
+                </Text1>
+              </HeadingTag>
               <div className="fields">
                 <label>FirstName</label>
                 <input
