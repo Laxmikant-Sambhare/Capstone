@@ -101,8 +101,9 @@ export const Paragraph = styled.div`
   margin-right: 9.5px;
 `;
 
-export const Text1 = styled.h2`
+export const Text1 = styled.h3`
   justify-content: center;
+  margin-top: 20px;
 `;
 export const Form = styled.div`
   width: 40%;
