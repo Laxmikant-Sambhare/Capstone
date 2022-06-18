@@ -64,8 +64,8 @@ function ConfirmBooking() {
     }
     if (!values.Address) {
       errors.Address = "Address is required!";
-    } else if (values.Address.length < 20 || values.Address.length > 40) {
-      errors.Address = "The Address must be between 20 to 40 characters.";
+    } else if (values.Address.length < 20 || values.Address.length > 100) {
+      errors.Address = "The Address must be between 20 to 100 characters.";
     }
 
     return errors;
