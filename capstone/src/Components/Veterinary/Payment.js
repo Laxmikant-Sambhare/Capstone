@@ -2,9 +2,9 @@ import {
   Bookings,
   HeadingTag,
   PaymentContainer,
-  Text,
+  Text2,
   Containers,
-} from "./Payment.styling";
+} from "./Styling";
 
 import StripeCheckout from "react-stripe-checkout";
 
@@ -23,12 +23,12 @@ function ConfirmBooking() {
     <Bookings>
       <HeadingTag>Payment Options</HeadingTag>
       <img src={cartItems.imageurl} alt={cartItems.name} />
-      <Text>{cartItems.name}</Text>
+      <Text2>{cartItems.name}</Text2>
 
-      <Text>Total: {cartTotalAmount}</Text>
+      <Text2>Total: {cartTotalAmount}</Text2>
       <Containers>
         <PaymentContainer>
-          <Text>Card Payment</Text>
+          <Text2>Card Payment</Text2>
           <StripeCheckout
             stripeKey="pk_test_51KuyaPSCQaVx7HBe8OxRf2sNJR6frOJUsRuVFJzPvui7Ni4icPjxO5u1YjNTWAwFtK9xxxQS03dMb6aetPKBxzSP004S3AwqfR"
             token={handleToken}
@@ -39,7 +39,7 @@ function ConfirmBooking() {
           />
           <br></br>
           <br></br>
-          <Text>G-Pay</Text>
+          <Text2>G-Pay</Text2>
         </PaymentContainer>
       </Containers>
     </Bookings>
