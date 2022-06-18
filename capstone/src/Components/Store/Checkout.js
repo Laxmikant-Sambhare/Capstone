@@ -23,7 +23,7 @@ import {
   
     const { cartItems } = useSelector((state) => state.cart);
 
-    const Price = (cartItems !== 0)?(cartTotalAmount):(store.price)
+    const Price = (cartTotalAmount !== 0)?(cartTotalAmount):(store.price)
 
     return (
       <Bookings>
