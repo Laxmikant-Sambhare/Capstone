@@ -115,13 +115,12 @@ export const Form = styled.div`
   border-radius: 15px;
   /* border: 1px solid #000; */
 `;
-export const  Bookings = styled.div`
-display:flex;
-justify-content: center;
-margin-top: 20px;
-margin-bottom: 70px;
-
-`
+export const Bookings = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+`;
 export const Payment = styled.div`
   width: 500px;
   box-shadow: 0px 1px 16px;
@@ -138,9 +137,9 @@ export const Containers = styled.div`
   justify-content: center;
 `;
 export const HeadingTag = styled.div`
-  display: flex;  
+  display: flex;
   justify-content: center;
-  align-items:'center'
+  align-items: "center";
   font-weight: bolder;
   font-size: 20px;
   background-color: #ffd301;
