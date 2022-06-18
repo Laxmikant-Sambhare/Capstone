@@ -20,6 +20,7 @@ export const Maincontainer = styled.div`
     width: 20rem;
     height: 20rem;
     border-radius: 20px;
+
     cursor: pointer;
     :hover {
       opacity: 0.5;
