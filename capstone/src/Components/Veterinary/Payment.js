@@ -4,28 +4,49 @@ import {
   PaymentContainer,
   Text2,
   Containers,
+  Payment,
 } from "./Styling";
 
 import StripeCheckout from "react-stripe-checkout";
-
-import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import styled from "styled-components";
 
 function ConfirmBooking() {
   function handleToken(token, addresses) {
     console.log({ token, addresses });
   }
-
-  const { cartTotalAmount } = useSelector((state) => state.cart);
-
-  const { cartItems } = useSelector((state) => state.cart);
+  const location = useLocation();
+  const store = location.state;
 
   return (
     <Bookings>
-      <HeadingTag>Payment Options</HeadingTag>
-      <img src={cartItems.imageurl} alt={cartItems.name} />
-      <Text2>{cartItems.name}</Text2>
-
-      <Text2>Total: {cartTotalAmount}</Text2>
+      <Payment>
+      <HeadingTag>
+      <img
+          src={require("./complete-small.jpg")}
+          alt="logo"
+          className="Mainname"
+          style={{ height: "5rem", padding: "2px" }}
+        />
+        <h1>
+       Payment</h1></HeadingTag>
+      <h1 style={{display:"flex", justifyContent: 'flex-start' , margin: '10px'}}>
+        Your Orders:
+        </h1>
+      <Product>
+      <> 
+      <div style={{display: 'flex',alignItems:'center'}}>
+        <div style={{width:'300px',display: 'flex',margin:'20px'}}>
+      <img src={store.image} alt= ''style={{width: '150px',height : '150px' }} />
+      <h2>{store.service}</h2>
+      </div>
+      <h2>Price: ₹{store.price}</h2>
+      </div>
+      </>
+      </Product>
+      <h1 style={{display:"flex", justifyContent:"flex-end" , margin: '10px'}}>
+        Total: ₹{store.price}
+        </h1>
       <Containers>
         <PaymentContainer>
           <Text2>Card Payment</Text2>
@@ -34,16 +55,21 @@ function ConfirmBooking() {
             token={handleToken}
             billingAddress
             shippingAddress
-            amount={cartTotalAmount} //*100 for converting from dollar to blaah
+            amount={store.price} //*100 for converting from dollar to blaah
             name="Service Charge"
           />
-          <br></br>
-          <br></br>
-          <Text2>G-Pay</Text2>
         </PaymentContainer>
       </Containers>
+      </Payment>
     </Bookings>
+    
   );
 }
+
+
+const Product = styled.div`
+display:flex;
+justify-content: center;
+`
 
 export default ConfirmBooking;
