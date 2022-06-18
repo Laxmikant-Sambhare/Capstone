@@ -86,7 +86,7 @@ function Form() {
                   onChange={handleChange}
                   style={{ marginLeft: "30px" }}
                 />
-                <p>{formErrors.FirstName}</p>
+                <p className='content'>{formErrors.FirstName}</p>
               </div>
 
               <div className="field">
@@ -99,7 +99,7 @@ function Form() {
                   onChange={handleChange}
                   style={{ marginLeft: "34px" }}
                 />
-                <p>{formErrors.LastName}</p>
+                <p className='content'>{formErrors.LastName}</p>
               </div>
 
               <div className="field">
@@ -112,7 +112,7 @@ function Form() {
                   onChange={handleChange}
                   style={{ marginLeft: "70px" }}
                 />
-                <p>{formErrors.email}</p>
+                <p className='content'>{formErrors.email}</p>
               </div>
               <div className="field">
                 <label>ContactNo</label>
@@ -124,7 +124,7 @@ function Form() {
                   onChange={handleChange}
                   style={{ marginLeft: "29px" }}
                 />
-                <p>{formErrors.ContactNo}</p>
+                <p className='content'>{formErrors.ContactNo}</p>
               </div>
 
               <div className="field">
@@ -137,7 +137,7 @@ function Form() {
                   onChange={handleChange}
                   style={{ marginLeft: "48px" }}
                 />
-                <p>{formErrors.Address}</p>
+                <p className='content'>{formErrors.Address}</p>
               </div>
 
               {/* <div className="field"> */}
