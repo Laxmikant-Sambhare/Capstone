@@ -84,13 +84,15 @@ export const Navbar = () => {
               <a href="/booking">Booking</a>
             </li>
             <li>
+              {
+                (user)?
               <a href="/Cart">
                 <Badge badgeContent={cartTotalQuantity} color="secondary">
                   <ShoppingCart
                     style={{ width: "30px", height: "30px", cursor: "pointer" }}
                   />
                 </Badge>
-              </a>
+              </a>: null}
             </li>
           </ul>
         </div>

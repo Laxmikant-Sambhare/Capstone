@@ -15,13 +15,11 @@ import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
 import { ToastContainer } from "react-toastify";
-//import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
 import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
-//import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Checkout from "../Components/Store/Checkout";
 
@@ -35,7 +33,7 @@ function App() {
           <Routes>
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/Cart" element={<Cart />} />
+            <Route exact path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
             <Route exact path="/adoption" element={<Adoption />} />
