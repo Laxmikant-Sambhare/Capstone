@@ -21,7 +21,6 @@ import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
 import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
-import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 //import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 
