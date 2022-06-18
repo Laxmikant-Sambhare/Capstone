@@ -50,7 +50,7 @@ const Login = () => {
             marginTop: "-30px",
           }}
         ></img>
-        <h2 className="head">Login</h2>
+        <h2 className="head">Sign in</h2>
         <img
           src={require("./logo.jpg")}
           alt=""
@@ -92,7 +92,7 @@ const Login = () => {
 
             <div className="buttonContainer" style={{ marginTop: "10px" }}>
               <Button className="btnContainer" type="Submit">
-                Log In
+                Sign in
               </Button>
             </div>
           </Form>
