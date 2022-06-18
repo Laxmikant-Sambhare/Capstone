@@ -3,8 +3,6 @@ import "./Styling.css";
 import { Text1, Form, HeadingTag } from "./Styling";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addTOBookings } from "../../features/bookingslice";
 function ConfirmBooking() {
   // console.log("params", params);
   // const navigate = useNavigate();
@@ -14,13 +12,6 @@ function ConfirmBooking() {
   // };
   const location = useLocation();
   const Bookingdata = location.state;
-  const dispatch =  useDispatch();
-  const data = [
-  ]
-
-  const handleAddtoBookings = (data) => {
-    dispatch(addTOBookings(data));
-  }
 
   const initialValues = {
     FirstName: "",
@@ -88,17 +79,17 @@ function ConfirmBooking() {
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
-              <HeadingTag>
+              <div>
                 <img
                   src={require("./complete-small.jpg")}
                   alt="logo"
                   className="Mainname"
                   style={{ height: "5rem", padding: "2px" }}
                 />
-                <Text1 style={{ marginTop: "9px", marginBottom: "15px" }}>
+                <Text1 style={{ marginTop: "-25px", marginBottom: "15px" }}>
                   BOOK YOUR SLOTS
                 </Text1>
-              </HeadingTag>
+              </div>
               <div className="fields">
                 <label>FirstName</label>
                 <input
@@ -190,7 +181,7 @@ function ConfirmBooking() {
                   <button className="Submit">Book Your Slots</button>
                 </Link>
               ) : (
-                <button className="Submit" onClick={handleAddtoBookings(data)}>Book Your Slots</button>
+                <button className="Submit">Book Your Slots</button>
               )}
             </div>
           </form>
