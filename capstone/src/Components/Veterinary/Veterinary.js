@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Services } from "./Data/Services";
-import { Text, Maincontainer, Container, Vet } from "./Veterinary.styling";
+import { Text, Maincontainer, Container, Vet } from "./Styling";
 const Veterinary = () => {
   return (
     <Vet>

@@ -23,6 +23,8 @@ import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 //import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
+import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
+
 function App() {
   return (
     <div className="App">
