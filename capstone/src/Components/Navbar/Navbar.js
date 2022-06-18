@@ -8,7 +8,7 @@ import { useUserAuth } from "../../context/UserAuthContext";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
+  const {cartItems } = useSelector((state) => state.cart);
   const { logOut, user } = useUserAuth();
     
   const handleLogout = async () => {
@@ -87,7 +87,7 @@ export const Navbar = () => {
               {
                 (user)?
               <a href="/Cart">
-                <Badge badgeContent={cartTotalQuantity} color="secondary">
+                <Badge badgeContent={cartItems.length} color="secondary">
                   <ShoppingCart
                     style={{ width: "30px", height: "30px", cursor: "pointer" }}
                   />
