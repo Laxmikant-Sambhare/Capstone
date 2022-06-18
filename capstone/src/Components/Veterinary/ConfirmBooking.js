@@ -1,7 +1,7 @@
 import React from "react";
-import "./VetDescription.css";
-import { Text, Form } from "./ConfirmBooking.styling";
-import { useParams, useNavigate } from "react-router-dom";
+import "./Styling.css";
+import { Text1, Form } from "./Styling";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 function ConfirmBooking() {
   // console.log("params", params);
@@ -74,9 +74,9 @@ function ConfirmBooking() {
     <div style={{ marginBottom: "100px" }}>
       <Form className="form">
         <div className="container">
-          <Text style={{ marginTop: "-25px", marginBottom: "15px" }}>
+          <Text1 style={{ marginTop: "-25px", marginBottom: "15px" }}>
             BOOK YOUR SLOTS
-          </Text>
+          </Text1>
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
