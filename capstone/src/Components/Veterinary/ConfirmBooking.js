@@ -1,15 +1,15 @@
 import React from "react";
 import "./Styling.css";
 import { Text1, Form } from "./Styling";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 function ConfirmBooking() {
   // console.log("params", params);
-  const navigate = useNavigate();
-  const submit = () => {
-    Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
-    // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-  };
+  // const navigate = useNavigate();
+  // const submit = () => {
+  //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
+  //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+  // };
 
   const initialValues = {
     FirstName: "",
@@ -121,7 +121,7 @@ function ConfirmBooking() {
               <div className="fields">
                 <label>ContactNo</label>
                 <input
-                  type="number"
+                  type="string"
                   name="ContactNo"
                   placeholder="Enter Your Contact Number"
                   value={formValues.ContactNo}
@@ -166,9 +166,13 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
-              <button className="Submit" onClick={submit}>
-                Book Your Slots
-              </button>
+              {Object.keys(formErrors).length === 0 && isSubmit ? (
+                <Link to="/payment">
+                  <button className="Submit">Book Your Slots</button>
+                </Link>
+              ) : (
+                <button className="Submit">Book Your Slots</button>
+              )}
             </div>
           </form>
         </div>
