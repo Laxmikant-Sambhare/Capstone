@@ -75,7 +75,7 @@ function ConfirmBooking() {
     return errors;
   };
   return (
-    <div style={{ marginBottom: "100px" }}>
+    <div style={{ marginBottom: "100px" }} className="BackgroundImage">
       <Form className="form">
         <div className="container">
           <Text1 style={{ marginTop: "-25px", marginBottom: "15px" }}>
