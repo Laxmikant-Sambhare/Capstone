@@ -1,4 +1,3 @@
-
 import React from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -8,21 +7,22 @@ import Rescue from "../Components/Rescue/Rescue";
 import Productlisting from "../Components/Store/Productlisting";
 import Store from "../Components/Store/Store";
 import Veterinary from "../Components/Veterinary/Veterinary";
-import Booking from "../Components/Veterinary/Booking";
+import VetDescription from "../Components/Veterinary/VetDescription";
 import { Navbar } from "../Components/Navbar/Navbar";
 import DogDescription from "../Components/Adoption/DogDescription";
-import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
+import Payment from "../Components/Veterinary/Payment";
 import Productdiscription from "../Components/Store/Productdiscription";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Signup/Login";
 import { ToastContainer } from "react-toastify";
- //import ProtectedRoute from "./components/ProtectedRoute";
+//import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "../context/UserAuthContext";
 import Cart from "../Components/Store/Cart";
 import Footer from "../Components/Footer/Footer";
 import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
 import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
+import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 function App() {
   return (
     <div className="App">
@@ -36,9 +36,17 @@ function App() {
             <Route exact path="/Cart" element={<Cart />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
-            <Route exact path="/adoption" element={<Adoption />} /> 
-              <Route exact path="/adoption/:id" element={<DogDescription />} />
-              <Route exact path="/forms" element={<ProtectedRoute><Forms /></ProtectedRoute>} />
+            <Route exact path="/adoption" element={<Adoption />} />
+            <Route exact path="/adoption/:id" element={<DogDescription />} />
+            <Route
+              exact
+              path="/forms"
+              element={
+                <ProtectedRoute>
+                  <Forms />
+                </ProtectedRoute>
+              }
+            />
             <Route exact path="/store" element={<Store />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
             <Route
@@ -48,15 +56,23 @@ function App() {
             />
             <Route exact path="/vet" element={<Veterinary />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
-            <Route exact path="/vet/:id" element={<Booking />} />
-            <Route exact path="/payment" element={<ConfirmBooking />} />
+            <Route exact path="/vet/:id" element={<VetDescription />} />
+            <Route
+              exact
+              path="/booking"
+              element={
+                <ProtectedRoute>
+                  <ConfirmBooking />
+                </ProtectedRoute>
+              }
+            />
+            <Route exact path="/payment" element={<Payment />} />
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
       <Footer />
-
- </div>
+    </div>
   );
 }
-           
+
 export default App;
