@@ -98,7 +98,7 @@ export const section = [
         imageurl:
           "https://m.media-amazon.com/images/I/61lkCw7nAZL._AC_UL480_FMwebp_QL65_.jpg",
         descripction: "",
-        price: 444.60,
+        price: 444,
       },
       {
         id: "2.3",

@@ -87,7 +87,7 @@ export const Navbar = () => {
               {
                 (user)?
               <a href="/Cart">
-                <Badge badgeContent={cartItems.length} color="secondary">
+                <Badge badgeContent={(cartItems.length !== 0)?cartItems.length:'0'} color="secondary">
                   <ShoppingCart
                     style={{ width: "30px", height: "30px", cursor: "pointer" }}
                   />
