@@ -16,7 +16,7 @@ const Signup = () => {
     setError("");
     try {
       await signUp(email, password);
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       setError(err.message);
     }
@@ -24,7 +24,33 @@ const Signup = () => {
 
   return (
     <div className="signupcontainer">
-      <h2 className="head"> Sign-up</h2>
+      <div
+        style={{
+          marginTop: "-20px",
+        }}
+      >
+        <img
+          src={require("./logo.jpg")}
+          alt=""
+          style={{
+            width: "70px",
+            height: "70px",
+            marginLeft: "-3px",
+            marginTop: "-30px",
+          }}
+        ></img>
+        <h2 className="head"> Sign-up</h2>
+        <img
+          src={require("./logo.jpg")}
+          alt=""
+          style={{
+            width: "70px",
+            height: "70px",
+            marginLeft: "530px",
+            marginTop: "-80px",
+          }}
+        ></img>
+      </div>
       <div className="formContainer">
         <div className="p-4 box">
           {error && <Alert variant="danger">{error}</Alert>}
@@ -32,7 +58,9 @@ const Signup = () => {
             <Form.Group className="inputContainer" controlId="formBasicEmail">
               Email
               <Form.Control
+                className="input"
                 type="email"
+                style={{ marginLeft: "50px" }}
                 placeholder="Enter Your Email address"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -41,26 +69,26 @@ const Signup = () => {
               className="inputContainer"
               controlId="formBasicPassword"
             >
-              password
+              Password
               <Form.Control
                 type="password"
+                className="input"
                 placeholder="Enter Your Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <div className="d-grid gap-2">
-              <Button variant="primary" type="Submit">
+            <div className="buttonContainer">
+              <Button className="btnContainer" type="Submit">
                 Sign up
               </Button>
             </div>
           </Form>
         </div>
-        <div className="p-4 box mt-3 text-center">
+        <div className="LoginPart">
           Already have an account? <Link to="/login">Log In</Link>
         </div>
       </div>
     </div>
   );
 };
-
 export default Signup;
