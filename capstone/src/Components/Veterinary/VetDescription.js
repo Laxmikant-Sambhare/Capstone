@@ -1,5 +1,5 @@
 import React from "react";
-import "./VetDescription.css";
+import "./Styling.css";
 import {
   MobileVet,
   Image,
@@ -10,8 +10,7 @@ import {
   Bold,
   Paragraph,
   Div,
-  Button,
-} from "./VetDescription.styling";
+} from "./Styling";
 import { Questions } from "./Data/Q&A_data";
 import { Services } from "./Data/Services";
 import { useParams, useNavigate } from "react-router-dom";
