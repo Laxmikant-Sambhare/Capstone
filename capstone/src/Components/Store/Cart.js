@@ -102,7 +102,7 @@ const Cart = () => {
                 <span className="amount"> ₹{cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <Link to= '/payment'>
+              <Link to= '/checkout'>
               <button>Check out</button>
               </Link>
               <div className="continue-shopping">

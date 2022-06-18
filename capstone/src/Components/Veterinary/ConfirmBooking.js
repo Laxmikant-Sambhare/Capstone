@@ -1,7 +1,7 @@
 import React from "react";
 import "./Styling.css";
 import { Text1, Form } from "./Styling";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 function ConfirmBooking() {
   // console.log("params", params);
@@ -10,6 +10,10 @@ function ConfirmBooking() {
   //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
   //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
   // };
+  const location = useLocation();
+  const Bookingdata = location.state;
+
+
 
   const initialValues = {
     FirstName: "",
@@ -167,7 +171,7 @@ function ConfirmBooking() {
                 user. This amount will not be refunded under any circumstances.
               </p>
               {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <Link to="/payment">
+                <Link to="/payment" state={Bookingdata}>
                   <button className="Submit">Book Your Slots</button>
                 </Link>
               ) : (

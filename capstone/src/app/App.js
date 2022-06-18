@@ -23,6 +23,7 @@ import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
 //import PrivateRoutes from "../Components/Adoption/PrivateRoutes";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
+import Checkout from "../Components/Store/Checkout";
 
 function App() {
   return (
@@ -64,6 +65,15 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ConfirmBooking/>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              exact
+              path="/checkout"
+              element={
+                <ProtectedRoute>
+                  <Checkout/>
                 </ProtectedRoute>
               }
             />

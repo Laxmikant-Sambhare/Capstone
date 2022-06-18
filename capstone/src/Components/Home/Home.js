@@ -148,14 +148,15 @@ const Catergory = styled.div`
   margin-bottom: 20px;
   > img {
     margin: 30px;
+    margin-bottom: 0px;
     background-color: #ffd301;
     border-radius: 5%;
     width: 200px;
     height: 200px;
-    :hover {
-      opacity: 0.5;
-    }
     cursor: pointer;
+  }
+  :hover {
+    opacity: 0.5;
   }
 `;
 const Banner = styled.div`

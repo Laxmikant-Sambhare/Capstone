@@ -15,6 +15,7 @@ import { Questions } from "./Data/Q&A_data";
 import { Services } from "./Data/Services";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
@@ -35,10 +36,10 @@ function Booking() {
   const service = Services.find((item) => item.id == params.id);
   // const Question = Questions.find((data) => data.id == params.id);
   // console.log("params", params);
-  const navigate = useNavigate();
-  const ToBooking = () => {
-    navigate("/booking");
-  };
+  // const navigate = useNavigate();
+  // const ToBooking = () => {
+  //   navigate("/booking");
+  // };
   return (
     <MobileVet style={{ marginBottom: "100px" }}>
       <div style={{ fontSize: "20px", textAlign: "center", marginTop: "3%" }}>
@@ -67,9 +68,11 @@ function Booking() {
         ))}
       </DivSection>
       <div className="wrap">
-        <button className="animationButton" onClick={ToBooking}>
+        <Link to={"/booking"} state={service}>
+        <button className="animationButton">
           Book Your Slots Now{">>>"}
         </button>
+        </Link>
       </div>
     </MobileVet>
   );
