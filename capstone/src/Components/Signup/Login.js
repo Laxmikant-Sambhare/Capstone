@@ -4,7 +4,7 @@ import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../../context/UserAuthContext";
-import "./styles.css"
+import "./styles.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,43 +35,85 @@ const Login = () => {
 
   return (
     <div className="signupcontainer">
-      <div className="p-4 box" style={{ width: "70%" }}>
-        <h2 className="mb-3">Firebase Auth Login</h2>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              type="email"
-              placeholder="Email address"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-
-          <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
-              Log In
-            </Button>
-          </div>
-        </Form>
-        <hr />
-        <div>
-          <GoogleButton
-            className="g-btn"
-            type="dark"
-            onClick={handleGoogleSignIn}
-          />
-        </div>
+      <div
+        style={{
+          marginTop: "-26px",
+        }}
+      >
+        <img
+          src={require("./logo.jpg")}
+          alt=""
+          style={{
+            width: "70px",
+            height: "70px",
+            marginLeft: "-3px",
+            marginTop: "-30px",
+          }}
+        ></img>
+        <h2 className="head">Login</h2>
+        <img
+          src={require("./logo.jpg")}
+          alt=""
+          style={{
+            width: "70px",
+            height: "70px",
+            marginLeft: "530px",
+            marginTop: "-80px",
+          }}
+        ></img>
       </div>
-      <div className="p-4 box mt-3 text-center">
-        Don't have an account? <Link to="/signup">Sign up</Link>
+      <div className="formContainer">
+        <div className="p-4 box">
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="inputContainer" controlId="formBasicEmail">
+              Email
+              <Form.Control
+                type="email"
+                placeholder="Email address"
+                className="input"
+                style={{ marginLeft: "50px" }}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="inputContainer"
+              controlId="formBasicPassword"
+            >
+              Password
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                className="input"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+
+            <div className="buttonContainer" style={{ marginTop: "10px" }}>
+              <Button className="btnContainer" type="Submit">
+                Log In
+              </Button>
+            </div>
+          </Form>
+
+          <div>
+            <GoogleButton
+              className="g-btn"
+              type="dark"
+              onClick={handleGoogleSignIn}
+              style={{
+                width: "300px",
+                height: "50px",
+                marginLeft: "50px",
+                marginTop: "15px",
+              }}
+            />
+          </div>
+        </div>
+        <div className="LoginPart" style={{ marginTop: "-5px" }}>
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </div>
       </div>
     </div>
   );
