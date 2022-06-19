@@ -8,6 +8,9 @@ import { useUserAuth } from "../../context/UserAuthContext";
 const useStyles = makeStyles((theme) => ({
   badge: {
     fontSize: 12
+  },
+  book: {
+    fontSize: 12
   }
 }));
 
@@ -87,9 +90,9 @@ export const Navbar = () => {
               )}
             </li>
             <li>
-            {/* <Badge badgeContent={(bookingItems.length !== 0)?cartItems.length:'0'} color="secondary" classes={{ badge: classes.badge }}> */}
+            <Badge badgeContent={(bookingItems.length !== 0)?bookingItems.length:'0'} color="primary" classes={{ badge: classes.book }}>
               <a href="/bookings">Bookings</a>
-              {/* </Badge> */}
+              </Badge>
             </li>
             <li>
               {
