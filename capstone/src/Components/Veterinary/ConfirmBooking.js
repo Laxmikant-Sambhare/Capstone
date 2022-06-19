@@ -15,11 +15,9 @@ function ConfirmBooking() {
   const location = useLocation();
   const Bookingdata = location.state;
   const dispatch =  useDispatch();
-  const data = [
-  ]
-
-  const handleAddtoBookings = (data) => {
-    dispatch(addTOBookings(data));
+  const handleAddtoBookings = (formValues,Bookingdata) => {
+    dispatch(addTOBookings(formValues));
+    dispatch(addTOBookings(Bookingdata));
   }
 
   const initialValues = {
@@ -185,13 +183,7 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
-              {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <Link to="/payment" state={Bookingdata}>
-                  <button className="Submit">Book Your Slots</button>
-                </Link>
-              ) : (
-                <button className="Submit" onClick={handleAddtoBookings(data)}>Book Your Slots</button>
-              )}
+                  <button className="Submit" onClick={() => handleAddtoBookings(formValues,Bookingdata)}>Book Your Slots</button>
             </div>
           </form>
         </div>

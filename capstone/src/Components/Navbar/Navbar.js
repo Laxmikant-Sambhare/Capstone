@@ -1,16 +1,21 @@
-import { Input, Badge } from "@material-ui/core";
+import { Input, Badge, makeStyles } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Nav.css";
 import { ShoppingCart } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import { useUserAuth } from "../../context/UserAuthContext";
 
+const useStyles = makeStyles((theme) => ({
+  badge: {
+    fontSize: 12
+  }
+}));
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const {cartItems } = useSelector((state) => state.cart);
   const { logOut, user } = useUserAuth();
-    
+  const classes = useStyles();  
   const handleLogout = async () => {
       try {
         await logOut();
@@ -87,7 +92,7 @@ export const Navbar = () => {
               {
                 (user)?
               <a href="/Cart">
-                <Badge badgeContent={(cartItems.length !== 0)?cartItems.length:'0'} color="secondary">
+                <Badge badgeContent={(cartItems.length !== 0)?cartItems.length:'0'} color="secondary" classes={{ badge: classes.badge }}>
                   <ShoppingCart
                     style={{ width: "30px", height: "30px", cursor: "pointer" }}
                   />
