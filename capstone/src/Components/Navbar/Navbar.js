@@ -8,12 +8,16 @@ import { useUserAuth } from "../../context/UserAuthContext";
 const useStyles = makeStyles((theme) => ({
   badge: {
     fontSize: 12
+  },
+  book: {
+    fontSize: 12
   }
 }));
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const {cartItems } = useSelector((state) => state.cart);
+  const { bookingItems } = useSelector((state) => state.bookings)
   const { logOut, user } = useUserAuth();
   const classes = useStyles();  
   const handleLogout = async () => {
@@ -86,7 +90,9 @@ export const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="/booking">Booking</a>
+            <Badge badgeContent={(bookingItems.length !== 0)?bookingItems.length:'0'} color="primary" classes={{ badge: classes.book }}>
+              <a href="/bookings">Bookings</a>
+              </Badge>
             </li>
             <li>
               {

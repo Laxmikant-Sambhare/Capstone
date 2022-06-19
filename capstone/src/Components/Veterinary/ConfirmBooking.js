@@ -3,6 +3,8 @@ import "./Styling.css";
 import { Text1, Form, HeadingTag } from "./Styling";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addTOBookings } from "../../features/bookingslice";
 function ConfirmBooking() {
   // console.log("params", params);
   // const navigate = useNavigate();
@@ -12,17 +14,25 @@ function ConfirmBooking() {
   // };
   const location = useLocation();
   const Bookingdata = location.state;
+  const dispatch = useDispatch();
+
+  const handleAddtoBookings = (formValues) => {
+    dispatch(addTOBookings(formValues));
+  };
 
   const initialValues = {
-    Service: Bookingdata.service,
-    Image: Bookingdata.image1,
-    Price: Bookingdata.price,
+    // Service: Bookingdata.service,
+    // Image: Bookingdata.image1,
+    // Price: Bookingdata.price,
     FirstName: "",
     LastName: "",
     email: "",
     ContactNo: "",
     Address: "",
     Slots: "",
+    Service: `${Bookingdata.service}`,
+    Image: `${Bookingdata.image1}`,
+    price: `${Bookingdata.price}`,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -211,13 +221,12 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
-              {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <Link to="/payment" state={Bookingdata}>
-                  <button className="Submit">Book Your Slots</button>
-                </Link>
-              ) : (
-                <button className="Submit">Book Your Slots</button>
-              )}
+              <button
+                className="Submit"
+                onClick={() => handleAddtoBookings(formValues)}
+              >
+                Book Your Slots
+              </button>
             </div>
             <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
               Continue To Payment
