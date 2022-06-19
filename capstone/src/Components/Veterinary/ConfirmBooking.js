@@ -14,11 +14,15 @@ function ConfirmBooking() {
   const Bookingdata = location.state;
 
   const initialValues = {
+    Service: Bookingdata.service,
+    Image: Bookingdata.image1,
+    Price: Bookingdata.price,
     FirstName: "",
     LastName: "",
     email: "",
     ContactNo: "",
     Address: "",
+    Slots: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -28,6 +32,10 @@ function ConfirmBooking() {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+  // const handleChanges = (e) => {
+  //   const { name, value } = e.Bookingdata.Service;
+  //   setFormValues({ ...formValues, Service: value });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,6 +52,7 @@ function ConfirmBooking() {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
     if (!values.FirstName) {
       errors.FirstName = "First name is required!";
     } else if (values.FirstName.length < 2 || values.FirstName.length > 10) {
@@ -79,7 +88,12 @@ function ConfirmBooking() {
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
-              <div style={{ backgroundColor: "#ffd301" }}>
+              <div
+                style={{
+                  backgroundColor: "#ffd301",
+                  marginTop: "-10px",
+                }}
+              >
                 <img
                   src={require("./complete-small.jpg")}
                   alt="logo"
@@ -95,6 +109,17 @@ function ConfirmBooking() {
                 >
                   BOOK YOUR SLOTS
                 </Text1>
+              </div>
+              <div className="fields">
+                <label>Service</label>
+                <input
+                  type="text"
+                  name="Service"
+                  // placeholder={Bookingdata.service}
+                  value={Bookingdata.service}
+                  onChange={handleChange}
+                  style={{ marginLeft: "48px" }}
+                />
               </div>
               <div className="fields">
                 <label>FirstName</label>
@@ -162,8 +187,12 @@ function ConfirmBooking() {
 
               <div className="fields">
                 <label>Slots Available</label>
-                <select>
-                  <option value="">None</option>
+                <select
+                  name="slots"
+                  onChange={handleChange}
+                  value={formValues.Slots}
+                >
+                  <option value="none">None</option>
                   <option value="12am-2am">12am-2am</option>
                   <option value="2am-4am">2am-4am</option>
                   <option value="4am-6am">4am-6am</option>
