@@ -108,6 +108,7 @@ function ConfirmBooking() {
                   BOOK YOUR SLOTS
                 </Text1>
               </div>
+              <h3>Service : {Bookingdata.service}</h3>
               <div className="fields">
                 <label>FirstName</label>
                 <input
