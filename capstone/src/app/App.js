@@ -22,6 +22,8 @@ import ProtectedRoute from "../Components/Signup/ProtectedRoute";
 import Forms from "../Components/Adoption/Forms";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Checkout from "../Components/Store/Checkout";
+import Bookings from "../Components/Veterinary/Bookings";
+
 
 function App() {
   return (
@@ -55,6 +57,7 @@ function App() {
               element={<Productdiscription />}
             />
             <Route exact path="/vet" element={<Veterinary />} />
+            <Route exact path="/bookings" element={<Bookings />} />
             <Route exact path="/store/:id" element={<Productlisting />} />
             <Route exact path="/vet/:id" element={<VetDescription />} />
             <Route

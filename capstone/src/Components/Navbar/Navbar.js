@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const {cartItems } = useSelector((state) => state.cart);
+  const { bookingItems } = useSelector((state) => state.bookings)
   const { logOut, user } = useUserAuth();
   const classes = useStyles();  
   const handleLogout = async () => {
@@ -86,7 +87,9 @@ export const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="/booking">Booking</a>
+            {/* <Badge badgeContent={(bookingItems.length !== 0)?cartItems.length:'0'} color="secondary" classes={{ badge: classes.badge }}> */}
+              <a href="/bookings">Bookings</a>
+              {/* </Badge> */}
             </li>
             <li>
               {
