@@ -10,6 +10,7 @@ const Bookings = () => {
              <div className='bookcontainer' key={index} >
         <div style={{width:'300px',margin:'20px'}}>
       <img src={data.Image} alt= ''style={{width: '200px',height : '200px' , marginRight: '20px',}} />
+      <h2 style={{color: "#4b70e2"}}>Slot: {data.slots}</h2>
       <h2>{data.Service}</h2>
       </div>
       <div style={{margin: '20px',width:"300px"}}>

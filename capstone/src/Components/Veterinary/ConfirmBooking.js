@@ -14,25 +14,23 @@ function ConfirmBooking() {
   // };
   const location = useLocation();
   const Bookingdata = location.state;
-  const dispatch = useDispatch();
-
+  const dispatch =  useDispatch();
+  
   const handleAddtoBookings = (formValues) => {
     dispatch(addTOBookings(formValues));
-  };
+  }
 
   const initialValues = {
-    // Service: Bookingdata.service,
-    // Image: Bookingdata.image1,
-    // Price: Bookingdata.price,
     FirstName: "",
     LastName: "",
     email: "",
     ContactNo: "",
     Address: "",
-    Slots: "",
+    slots: "",
     Service: `${Bookingdata.service}`,
     Image: `${Bookingdata.image1}`,
     price: `${Bookingdata.price}`,
+
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -42,10 +40,6 @@ function ConfirmBooking() {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-  // const handleChanges = (e) => {
-  //   const { name, value } = e.Bookingdata.Service;
-  //   setFormValues({ ...formValues, Service: value });
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,7 +56,6 @@ function ConfirmBooking() {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-
     if (!values.FirstName) {
       errors.FirstName = "First name is required!";
     } else if (values.FirstName.length < 2 || values.FirstName.length > 10) {
@@ -98,12 +91,7 @@ function ConfirmBooking() {
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
-              <div
-                style={{
-                  backgroundColor: "#ffd301",
-                  marginTop: "-10px",
-                }}
-              >
+              <div style={{ backgroundColor: "#ffd301" }}>
                 <img
                   src={require("./complete-small.jpg")}
                   alt="logo"
@@ -120,17 +108,7 @@ function ConfirmBooking() {
                   BOOK YOUR SLOTS
                 </Text1>
               </div>
-              <div className="fields">
-                <label>Service</label>
-                <input
-                  type="text"
-                  name="Service"
-                  // placeholder={Bookingdata.service}
-                  value={Bookingdata.service}
-                  onChange={handleChange}
-                  style={{ marginLeft: "48px" }}
-                />
-              </div>
+              <h3>Service : {Bookingdata.service}</h3>
               <div className="fields">
                 <label>FirstName</label>
                 <input
@@ -197,12 +175,12 @@ function ConfirmBooking() {
 
               <div className="fields">
                 <label>Slots Available</label>
-                <select
+                <select 
                   name="slots"
                   onChange={handleChange}
-                  value={formValues.Slots}
+                  value={formValues.slots}
                 >
-                  <option value="none">None</option>
+                  <option value="">None</option>
                   <option value="12am-2am">12am-2am</option>
                   <option value="2am-4am">2am-4am</option>
                   <option value="4am-6am">4am-6am</option>
@@ -221,16 +199,13 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
-              <button
-                className="Submit"
-                onClick={() => handleAddtoBookings(formValues)}
-              >
-                Book Your Slots
-              </button>
+                  <button className="Submit" onClick={() => handleAddtoBookings(formValues)}>Book Your Slots</button>
             </div>
+            <Link to={'/payment'} state={Bookingdata}>
             <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
               Continue To Payment
             </button>
+            </Link>
           </form>
         </div>
       </Form>
