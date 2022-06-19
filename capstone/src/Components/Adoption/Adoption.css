@@ -38,10 +38,11 @@
 
   .dog-list a {
     text-decoration: none;
+    color:black;
   }
 
   
-    .button, input[type="submit"], input[type="reset"] {
+    /* .button, input[type="submit"], input[type="reset"] {
       background: none;
       color: inherit;
       border: none;
@@ -51,5 +52,7 @@
       outline: inherit;
       /* position:absolute;
       top:50%; */
-    }
-  
+    
+  .button{
+    border:none;
+  }

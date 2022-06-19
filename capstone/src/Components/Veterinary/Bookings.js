@@ -11,20 +11,20 @@ const Bookings = () => {
             <img
               src={data.Image}
               alt=""
-              style={{ width: "350px", height: "200px", marginRight: "20px" }}
+              style={{ width: "200px", height: "200px", marginRight: "20px" }}
             />
+            <h2 style={{ color: "#4b70e2" }}>Slot: {data.slots}</h2>
             <h2>{data.Service}</h2>
           </div>
           <div style={{ margin: "20px", width: "300px" }}>
-            <h2>Service charge: ₹{data.price}</h2>
+            <h2>Fee: ₹{data.price}</h2>
             <h2>
               Name: {data.FirstName}
               {data.LastName}
             </h2>
             <h2>Email: {data.email}</h2>
-            <h2>Contact: {data.ContactNo}</h2>
-            <h2>Address: {data.Address}</h2>
-            <h2>Slot:{data.slots}</h2>
+            <h2>Contact: {data.ContactNO}</h2>
+            <h2>Fee: {data.Address}</h2>
           </div>
         </div>
       ))}
