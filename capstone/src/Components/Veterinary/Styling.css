@@ -32,6 +32,16 @@
     border-radius: 5px;
     color: black;
   } 
+  .Paymentbtn{
+    background: red  !important;
+    margin-left: 100px;
+    border-width: 1px;
+    width: 150px;
+    font-weight: bold;
+    height:25px;
+    border-radius: 5px;
+    color: white;
+  }
   .para {
     color: red;
     font-size: 11px;
