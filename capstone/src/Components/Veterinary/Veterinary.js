@@ -14,7 +14,6 @@ const Veterinary = () => {
                   to={`/vet/${data.id}`}
                   state={data}
                   style={{ textDecoration: "none" }}
-                  key={index}
                 >
                   <Maincontainer key={index}>
                     <img src={data.image} alt="" />
@@ -31,7 +30,6 @@ const Veterinary = () => {
                   to={`/vet/${data.id}`}
                   state={data}
                   style={{ textDecoration: "none" }}
-                  key={index}
                 >
                   <Maincontainer key={index}>
                     <img src={data.image} alt="" />

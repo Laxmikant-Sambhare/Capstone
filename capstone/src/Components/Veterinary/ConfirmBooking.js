@@ -1,7 +1,7 @@
 import React from "react";
 import "./Styling.css";
-import { Text1, Form, HeadingTag } from "./Styling";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { Text1, Form } from "./Styling";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addTOBookings } from "../../features/bookingslice";
@@ -12,6 +12,7 @@ function ConfirmBooking() {
   //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
   //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
   // };
+  const navigate = useNavigate;
   const location = useLocation();
   const Bookingdata = location.state;
   const dispatch = useDispatch();
@@ -29,10 +30,10 @@ function ConfirmBooking() {
     email: "",
     ContactNo: "",
     Address: "",
-    Slots: "",
-    Service: `${Bookingdata.service}`,
-    Image: `${Bookingdata.image1}`,
-    price: `${Bookingdata.price}`,
+    slots: "",
+    Service: Bookingdata.service,
+    Image: Bookingdata.image1,
+    price: Bookingdata.price,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -54,7 +55,7 @@ function ConfirmBooking() {
   };
 
   useEffect(() => {
-    console.log(formErrors);
+    // console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
@@ -65,8 +66,8 @@ function ConfirmBooking() {
 
     if (!values.FirstName) {
       errors.FirstName = "First name is required!";
-    } else if (values.FirstName.length < 2 || values.FirstName.length > 10) {
-      errors.FirstName = "The First name must be between 6 and 40 characters";
+    } else if (values.FirstName.length < 2 || values.FirstName.length > 20) {
+      errors.FirstName = "The First name must be between 6 and 20 characters";
     }
     if (!values.LastName) {
       errors.LastName = "Last name is required!";
@@ -200,7 +201,7 @@ function ConfirmBooking() {
                 <select
                   name="slots"
                   onChange={handleChange}
-                  value={formValues.Slots}
+                  value={formValues.slots}
                 >
                   <option value="none">None</option>
                   <option value="12am-2am">12am-2am</option>
@@ -221,6 +222,7 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
+
               <button
                 className="Submit"
                 onClick={() => handleAddtoBookings(formValues)}
@@ -228,9 +230,11 @@ function ConfirmBooking() {
                 Book Your Slots
               </button>
             </div>
-            <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
-              Continue To Payment
-            </button>
+            <Link to="/payment">
+              <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
+                Continue To Payment
+              </button>
+            </Link>
           </form>
         </div>
       </Form>

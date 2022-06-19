@@ -13,7 +13,7 @@ import {
 } from "./Styling";
 import { Questions } from "./Data/Q&A_data";
 import { Services } from "./Data/Services";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const ReadMore = ({ children }) => {
@@ -69,9 +69,9 @@ function Booking() {
       </DivSection>
       <div className="wrap">
         <Link to={"/booking"} state={service}>
-        <button className="animationButton">
-          Book Your Slots Now{">>>"}
-        </button>
+          <button className="animationButton">
+            Book Your Slots Now{">>>"}
+          </button>
         </Link>
       </div>
     </MobileVet>
