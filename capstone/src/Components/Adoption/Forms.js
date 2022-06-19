@@ -11,6 +11,7 @@ export default function Forms() {
     lastName: "",
     email:"",
     phonenumber:"",
+    income:"",
     aadharNo:"",
     pincode:"",
     address:""
@@ -32,6 +33,9 @@ export default function Forms() {
  
   const handlePhoneNumberInputChange = (event) => {
     setValues({...values,phonenumber:event.target.value})
+  }
+  const handleIncomeInputChange = (event) => {
+    setValues({...values,income:event.target.value})
   }
   const handleAadharNumberInputChange = (event) => {
     setValues({...values,aadharNo:event.target.value})
@@ -101,7 +105,17 @@ export default function Forms() {
           name="phonenumber"
         />
        {submitted && !values.phonenumber ? <span id="first-name-error">Please enter a valid Phonenumber</span> : null}  
-
+         
+       <input
+          id="income"
+          value = {values.income}
+          onChange = {handleIncomeInputChange}
+          class="form-field"
+          type="text"
+          placeholder="Income"
+          name="income"
+        />
+       {submitted && !values.income ? <span id="first-name-error">Please enter your income </span> : null}  
        <input
           id="aadharNo"
           value = {values.aadharNo}
@@ -126,7 +140,7 @@ export default function Forms() {
       
       <input
           id="address"
-          value = {values.addess}
+          value = {values.address}
           onChange = {handleAddressInputChange}
           class="form-field"
           type="text"
