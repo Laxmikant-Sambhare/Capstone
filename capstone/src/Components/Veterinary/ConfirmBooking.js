@@ -79,14 +79,20 @@ function ConfirmBooking() {
           <form onSubmit={handleSubmit}>
             <div className="ui divider"></div>
             <div className="ui form">
-              <div>
+              <div style={{ backgroundColor: "#ffd301" }}>
                 <img
                   src={require("./complete-small.jpg")}
                   alt="logo"
                   className="Mainname"
                   style={{ height: "5rem", padding: "2px" }}
                 />
-                <Text1 style={{ marginTop: "-25px", marginBottom: "15px" }}>
+                <Text1
+                  style={{
+                    marginTop: "-35px",
+                    marginBottom: "15px",
+                    marginLeft: "60px",
+                  }}
+                >
                   BOOK YOUR SLOTS
                 </Text1>
               </div>
@@ -184,6 +190,9 @@ function ConfirmBooking() {
                 <button className="Submit">Book Your Slots</button>
               )}
             </div>
+            <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
+              Continue To Payment
+            </button>
           </form>
         </div>
       </Form>
