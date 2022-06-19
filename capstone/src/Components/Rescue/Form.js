@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./Form.css";
 // import { useForm } from 'react-hook-form';
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 function Form() {
   // const { register, handleSubmit, formState: { errors } } = useForm();
   // const onSubmit = data => console.log(data);
@@ -70,79 +70,79 @@ function Form() {
   };
   return (
     <div className="contain">
-          {/* <Text style={{ marginTop: "-25px", marginBottom: "15px" }}>
+      {/* <Text style={{ marginTop: "-25px", marginBottom: "15px" }}>
             BOOK YOUR SLOTS
           </Text> */}
-          <form onSubmit={handleSubmit}>
-            <div className="ui divider"></div>
-            <div className="ui form">
-              <div className="field">
-                <label>FirstName</label>
-                <input
-                  type="text"
-                  name="FirstName"
-                  placeholder=" Enter your Firstname"
-                  value={formValues.FirstName}
-                  onChange={handleChange}
-                  style={{ marginLeft: "30px" }}
-                />
-                <p>{formErrors.FirstName}</p>
-              </div>
+      <form onSubmit={handleSubmit}>
+        <div className="ui divider"></div>
+        <div className="ui form">
+          <div className="field">
+            <label>FirstName</label>
+            <input
+              type="text"
+              name="FirstName"
+              placeholder=" Enter your Firstname"
+              value={formValues.FirstName}
+              onChange={handleChange}
+              style={{ marginLeft: "30px" }}
+            />
+            <p>{formErrors.FirstName}</p>
+          </div>
 
-              <div className="field">
-                <label>LastName</label>
-                <input
-                  type="text"
-                  name="LastName"
-                  placeholder="Enter Your Lastname"
-                  value={formValues.LastName}
-                  onChange={handleChange}
-                  style={{ marginLeft: "34px" }}
-                />
-                <p>{formErrors.LastName}</p>
-              </div>
+          <div className="field">
+            <label>LastName</label>
+            <input
+              type="text"
+              name="LastName"
+              placeholder="Enter Your Lastname"
+              value={formValues.LastName}
+              onChange={handleChange}
+              style={{ marginLeft: "34px" }}
+            />
+            <p>{formErrors.LastName}</p>
+          </div>
 
-              <div className="field">
-                <label>Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="Enter Your Email"
-                  value={formValues.email}
-                  onChange={handleChange}
-                  style={{ marginLeft: "70px" }}
-                />
-                <p>{formErrors.email}</p>
-              </div>
-              <div className="field">
-                <label>ContactNo</label>
-                <input
-                  type="number"
-                  name="ContactNo"
-                  placeholder="Enter Your Contact Number"
-                  value={formValues.ContactNo}
-                  onChange={handleChange}
-                  style={{ marginLeft: "29px" }}
-                />
-                <p>{formErrors.ContactNo}</p>
-              </div>
+          <div className="field">
+            <label>Email</label>
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Your Email"
+              value={formValues.email}
+              onChange={handleChange}
+              style={{ marginLeft: "70px" }}
+            />
+            <p>{formErrors.email}</p>
+          </div>
+          <div className="field">
+            <label>ContactNo</label>
+            <input
+              type="number"
+              name="ContactNo"
+              placeholder="Enter Your Contact Number"
+              value={formValues.ContactNo}
+              onChange={handleChange}
+              style={{ marginLeft: "29px" }}
+            />
+            <p>{formErrors.ContactNo}</p>
+          </div>
 
-              <div className="field">
-                <label>Address</label>
-                <input
-                  type="text"
-                  name="Address"
-                  placeholder="Enter Your Address"
-                  value={formValues.Address}
-                  onChange={handleChange}
-                  style={{ marginLeft: "48px" }}
-                />
-                <p>{formErrors.Address}</p>
-              </div>
+          <div className="field">
+            <label>Address</label>
+            <input
+              type="text"
+              name="Address"
+              placeholder="Enter Your Address"
+              value={formValues.Address}
+              onChange={handleChange}
+              style={{ marginLeft: "48px" }}
+            />
+            <p>{formErrors.Address}</p>
+          </div>
 
-              {/* <div className="field"> */}
-                {/* <label>Slots Available</label> */}
-                {/* <select>
+          {/* <div className="field"> */}
+          {/* <label>Slots Available</label> */}
+          {/* <select>
                   <option value="">None</option>
                   <option value="12am-2am">12am-2am</option>
                   <option value="2am-4am">2am-4am</option>
@@ -157,14 +157,14 @@ function Form() {
                   <option value="8pm-10pm">8pm-10pm</option>
                   <option value="10pm-12am">10pm-12am</option>
                 </select> */}
-              {/* </div> */}
+          {/* </div> */}
 
-              <button className="bttn" onClick={submit}>
-                SUBMIT
-              </button>
-            </div>
-          </form>
+          <button className="bttn" onClick={submit}>
+            SUBMIT
+          </button>
         </div>
+      </form>
+    </div>
     // <form onSubmit={handleSubmit(onSubmit)}>
     //   <input type="text" placeholder="First name" {...register("First name", {required: true, maxLength: 80})} />
     //   First name:
@@ -186,4 +186,4 @@ const Text = styled.h2`
   /* justify-items: center; */
   /* align-items: center; */
 `;
-export default Form
+export default Form;

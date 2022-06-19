@@ -1,42 +1,35 @@
 .signupcontainer{
     background-color: #ffd301;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 40%;
     align-items: center;
-    height: 50vh;
     font-size:large;
-    margin-top: 125px;
-    margin-left: 455px;
+    flex-direction: column;
+    padding: 20px 60px 60px;
+    
   }
 
 .formContainer{
 background-color: white;
-width: 400px;
-height: 250px;
-margin-top: -20px;
+padding: 20px;
 
 
 }
-.head{
-  margin-top: -60px;
-  margin-left: 260px;
-}
+
 .inputContainer{
-  margin-left: 40px;
   padding: 5px;
-  margin-top: 20px;
 }
 .input{
   margin-left: 20px;
   width: 200px;
   border-radius: 5px;
+  padding: 5px;
 }
 .buttonContainer{
-  margin-left: 170px;
   margin-top: 35px;
+  display: flex;
+  justify-content: center;
   
 }
 .btnContainer{
@@ -46,6 +39,6 @@ margin-top: -20px;
   border-radius: 5px;
 }
 .LoginPart{
-  margin-left: 70px;
-  margin-top: 20px;
+ display: flex;
+ justify-content: center;
 }

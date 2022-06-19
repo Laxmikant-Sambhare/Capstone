@@ -66,7 +66,6 @@ export const DivSection = styled.div`
 `;
 
 export const Section = styled.div`
-  /* border: 1px solid #000000; */
   height: 400px;
   width: 400px;
   position: relative;
@@ -103,18 +102,14 @@ export const Paragraph = styled.div`
 
 export const Text1 = styled.h3`
   justify-content: center;
-  margin-top: 20px;
+  display: flex;
+
+  /* margin-top: 20px; */
+  padding: 10px;
+  /* border-radius: 10px 10px 0 0; */
 `;
 export const Form = styled.div`
-  width: 40%;
-  /* height: 700px; */
-  font-size: 14px;
-  /* background-color: #ffd301; */
-  margin-top: 1%;
-  margin-left: 31%;
-  padding: 2%;
-  border-radius: 15px;
-  /* border: 1px solid #000; */
+  margin: 25px 0;
 `;
 export const Bookings = styled.div`
   display: flex;
