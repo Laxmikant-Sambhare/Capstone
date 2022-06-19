@@ -1,8 +1,13 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
+import { removeFromForms } from '../../features/bookingslice'
 const Bookings = () => {
+  const dispatch = useDispatch();
   const { bookingItems } = useSelector((state) => state.bookings)
+  const handleRemovefromFoms = (data) => {
+    dispatch(removeFromForms(data));
+  };
   return (
     <BookingContainer>
         {
@@ -13,12 +18,19 @@ const Bookings = () => {
       <h2 style={{color: "#4b70e2"}}>Slot: {data.slots}</h2>
       <h2>{data.Service}</h2>
       </div>
-      <div style={{margin: '20px',width:"300px"}}>
+      <div style={{margin: '20px',width:"300px"}}> 
       <h2>Fee: ₹{data.price}</h2>
       <h2>Name: {data.FirstName}{data.LastName}</h2>
       <h2>Email: {data.email}</h2>
       <h2>Contact: {data.ContactNO}</h2>
       <h2>Fee: {data.Address}</h2>
+      <button style={{border: "1px",
+    outline: "1px",
+    borderRadius: "5px",
+    marginTop: "0.7rem",
+    padding: "2px",
+    cursor: "pointer",
+    backgroundColor: "rgb(251, 57, 57)",}} onClick={() => handleRemovefromFoms(data)}>Cancel Booking</button>
       </div>
       </div> 
           ))

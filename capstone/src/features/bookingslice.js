@@ -17,10 +17,27 @@ const bookingslice = createSlice({
         toast.success("Your slot is booked successfully", {
           position: "bottom-left",
         })
-      },  
+      }, 
+      removeFromForms(state, action) {
+        state.bookingItems.map((bookingItem) => {
+          if (bookingItem.id === action.payload.id) {
+            const nextBookingItems = state.bookingItems.filter(
+              (item) => item.id !== bookingItem.id
+            );
+  
+            state.bookingItems = nextBookingItems;
+  
+            toast.error("Your slot has been cancelled", {
+              position: "bottom-left",
+            });
+          }
+          localStorage.setItem("bookingItems", JSON.stringify(state.bookingItems));
+          return state;
+        });
+      }, 
     },
 });
 
-export const { addTOBookings } = bookingslice.actions;
+export const { addTOBookings , removeFromForms} = bookingslice.actions;
 
 export default bookingslice.reducer;

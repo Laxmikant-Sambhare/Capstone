@@ -1,9 +1,9 @@
 import React from "react";
 import "./Styling.css";
-import { Text1, Form, HeadingTag } from "./Styling";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { Text1, Form } from "./Styling";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTOBookings } from "../../features/bookingslice";
 function ConfirmBooking() {
   // console.log("params", params);
@@ -12,15 +12,21 @@ function ConfirmBooking() {
   //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
   //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
   // };
+  const { bookingItems } = useSelector((state) => state.bookings)
   const location = useLocation();
   const Bookingdata = location.state;
   const dispatch =  useDispatch();
-  
-  const handleAddtoBookings = (formValues) => {
-    dispatch(addTOBookings(formValues));
+  const [isBooked, setIsBooked] = useState(false);
+  const handleAddtoBookings = (formValues,) => {
+    if (Object.keys(formErrors).length === 0 && isSubmit){
+    dispatch(addTOBookings(formValues))
+    setIsBooked(true);
+    }
+    
   }
 
   const initialValues = {
+    id: `${bookingItems.length}`,
     FirstName: "",
     LastName: "",
     email: "",
@@ -35,6 +41,7 @@ function ConfirmBooking() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +59,7 @@ function ConfirmBooking() {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formValues);
     }
-  }, [formErrors]);
+  });
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -199,13 +206,14 @@ function ConfirmBooking() {
                 T & C* <br></br>A service charge of X will be charged from the
                 user. This amount will not be refunded under any circumstances.
               </p>
-                  <button className="Submit" onClick={() => handleAddtoBookings(formValues)}>Book Your Slots</button>
             </div>
+          
+          { (isBooked !== true)?<button className="Submit" onClick={() => handleAddtoBookings(formValues)}>Book Your Slots</button>:
             <Link to={'/payment'} state={Bookingdata}>
             <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
               Continue To Payment
             </button>
-            </Link>
+            </Link>}
           </form>
         </div>
       </Form>
