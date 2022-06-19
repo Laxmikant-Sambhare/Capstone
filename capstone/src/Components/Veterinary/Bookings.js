@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { removeFromForms } from '../../features/bookingslice'
 const Bookings = () => {
@@ -9,7 +10,40 @@ const Bookings = () => {
     dispatch(removeFromForms(data));
   };
   return (
-    <BookingContainer>
+    <>
+    {(bookingItems.length === 0)?
+     (<div className='no-bookings'style={{  fontSize: "20px",
+      marginTop: "2rem",
+      color: "rgb(84, 84, 84)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",}}>
+     <p>There are no bookings.</p>
+     <div className="start-vet" style={{ color: "gray",
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "0.5rem",
+    }}>
+            <Link to="/Vet">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                className="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                />
+              </svg>
+              <span>Start booking Services</span>
+            </Link>
+          </div>
+     </div>)
+    :(<BookingContainer>
         {
           bookingItems.map ((data, index) =>(
              <div className='bookcontainer' key={index} >
@@ -28,14 +62,15 @@ const Bookings = () => {
     outline: "1px",
     borderRadius: "5px",
     marginTop: "0.7rem",
-    padding: "2px",
+    padding: "3px",
     cursor: "pointer",
-    backgroundColor: "rgb(251, 57, 57)",}} onClick={() => handleRemovefromFoms(data)}>Cancel Booking</button>
+    backgroundColor: "rgb(251, 57, 57)", margin: "0"}} onClick={() => handleRemovefromFoms(data)}>Cancel Booking</button>
       </div>
       </div> 
           ))
         }
-    </BookingContainer>
+    </BookingContainer>)}
+    </>
   )
 }
 
