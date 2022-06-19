@@ -28,9 +28,9 @@ const Bookings = () => {
     outline: "1px",
     borderRadius: "5px",
     marginTop: "0.7rem",
-    padding: "2px",
+    padding: "3px",
     cursor: "pointer",
-    backgroundColor: "rgb(251, 57, 57)",}} onClick={() => handleRemovefromFoms(data)}>Cancel Booking</button>
+    backgroundColor: "rgb(251, 57, 57)", margin: "0"}} onClick={() => handleRemovefromFoms(data)}>Cancel Booking</button>
       </div>
       </div> 
           ))
