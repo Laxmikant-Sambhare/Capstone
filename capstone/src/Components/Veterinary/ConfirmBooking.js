@@ -26,6 +26,7 @@ function ConfirmBooking() {
     email: "",
     ContactNo: "",
     Address: "",
+    slots: "",
     Service: `${Bookingdata.service}`,
     Image: `${Bookingdata.image1}`,
     price: `${Bookingdata.price}`,
@@ -173,7 +174,11 @@ function ConfirmBooking() {
 
               <div className="fields">
                 <label>Slots Available</label>
-                <select>
+                <select 
+                  name="slots"
+                  onChange={handleChange}
+                  value={formValues.slots}
+                >
                   <option value="">None</option>
                   <option value="12am-2am">12am-2am</option>
                   <option value="2am-4am">2am-4am</option>
@@ -195,9 +200,11 @@ function ConfirmBooking() {
               </p>
                   <button className="Submit" onClick={() => handleAddtoBookings(formValues)}>Book Your Slots</button>
             </div>
+            <Link to={'/payment'} state={Bookingdata}>
             <button className="Paymentbtn" style={{ backgroundColor: "red" }}>
               Continue To Payment
             </button>
+            </Link>
           </form>
         </div>
       </Form>
