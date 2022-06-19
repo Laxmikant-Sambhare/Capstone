@@ -23,69 +23,79 @@ const Signup = () => {
   };
 
   return (
-    <div className="signupcontainer">
-      <div
-        style={{
-          marginTop: "-20px",
-        }}
-      >
-        <img
-          src={require("./logo.jpg")}
-          alt=""
-          style={{
-            width: "70px",
-            height: "70px",
-            marginLeft: "-3px",
-            marginTop: "-30px",
-          }}
-        ></img>
-        <h2 className="head"> Sign-up</h2>
-        <img
-          src={require("./logo.jpg")}
-          alt=""
-          style={{
-            width: "70px",
-            height: "70px",
-            marginLeft: "530px",
-            marginTop: "-80px",
-          }}
-        ></img>
-      </div>
-      <div className="formContainer">
-        <div className="p-4 box">
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="inputContainer" controlId="formBasicEmail">
-              Email
-              <Form.Control
-                className="input"
-                type="email"
-                style={{ marginLeft: "50px" }}
-                placeholder="Enter Your Email address"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group
-              className="inputContainer"
-              controlId="formBasicPassword"
-            >
-              Password
-              <Form.Control
-                type="password"
-                className="input"
-                placeholder="Enter Your Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-            <div className="buttonContainer">
-              <Button className="btnContainer" type="Submit">
-                Sign up
-              </Button>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        paddingTop: "90px",
+      }}
+    >
+      <div className="signupcontainer">
+        <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <img
+              src={require("./logo.jpg")}
+              alt=""
+              style={{
+                width: "60px",
+                height: "60px",
+              }}
+            ></img>
+            <h2 className="head"> Sign-up</h2>
+            <img
+              src={require("./logo.jpg")}
+              alt=""
+              style={{
+                width: "60px",
+                height: "60px",
+              }}
+            ></img>
+          </div>
+          <div className="formContainer">
+            <div className="p-4 box">
+              {error && <Alert variant="danger">{error}</Alert>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Group
+                  className="inputContainer"
+                  controlId="formBasicEmail"
+                >
+                  Email
+                  <Form.Control
+                    className="input"
+                    type="email"
+                    style={{ marginLeft: "50px" }}
+                    placeholder="Enter Your Email address"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Form.Group>
+                <Form.Group
+                  className="inputContainer"
+                  controlId="formBasicPassword"
+                >
+                  Password
+                  <Form.Control
+                    type="password"
+                    className="input"
+                    placeholder="Enter Your Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </Form.Group>
+                <div className="buttonContainer">
+                  <Button className="btnContainer" type="Submit">
+                    Sign up
+                  </Button>
+                </div>
+              </Form>
             </div>
-          </Form>
-        </div>
-        <div className="LoginPart">
-          Already have an account? <Link to="/login">Sign In</Link>
+            <div className="LoginPart">
+              Already have an account? <Link to="/login">Sign In</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
