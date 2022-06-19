@@ -15,7 +15,6 @@ const bookingslice = createSlice({
         state.bookingOrders.push(action.payload);
       },  
     },
-    
 });
 
 export const { addTOBookings } = bookingslice.actions;
