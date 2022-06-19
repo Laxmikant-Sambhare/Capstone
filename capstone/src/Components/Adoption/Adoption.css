@@ -55,4 +55,8 @@
     
   .button{
     border:none;
+    /* color:blue; */
+    background-color: #ffd301;
+    border-radius: 5px;
+    padding:10px;
   }

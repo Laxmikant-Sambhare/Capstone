@@ -1,6 +1,8 @@
 import React from "react";
 import {useState} from "react";
 import "./Forms.css";
+import  { toast } from "react-toastify";
+
 
 export default function Forms() {
   const [values,setValues] = useState({
@@ -49,6 +51,10 @@ export default function Forms() {
     event.preventDefault();
     if(values.firstName && values.lastName && values.email  && values.phonenumber && values.aadharNo && values.pincode && values.address){
       setValid(true)
+      toast.info("You have registered for adoption", {
+        position: "bottom-left",
+      });
+
     }
     
     setSubmitted(true);
@@ -56,9 +62,25 @@ export default function Forms() {
   return (
     <div class="form-container">
       <form class="register-form" onSubmit = {handleSubmit}>
+      {/* <img
+            src={require("./complete-small.jpg")}
+            alt="logo"
+            className="Mainname"
+            style={{ height: "5rem", padding: "2px" }}
+          /> */}
 
-        <h2> ADOPTION FORM:</h2>
-        {submitted && valid ? <div class="success-message">Success! Thank you for registering</div> : null}  
+       <div style={{display: "flex",alignItems:"center", margin:"20px"}}>
+       <img
+            src={require("./complete-small.jpg")}
+            alt="logo"
+            className="Mainname"
+            style={{ height: "5rem", padding: "2px" }}
+          />
+        <h1> ADOPTION FORM</h1>
+       
+
+         </div>
+        {/* {submitted && valid ? <div class="success-message">Success! Thank you for registering</div> : null}   */}
         <input
           value = {values.firstName}
           onChange = {handleFirstNameInputChange}
@@ -146,10 +168,13 @@ export default function Forms() {
         />
       {submitted && !values.address ? <span id="first-name-error">Please enter a valid Addess</span> : null}
 
-        <button class="form-field" type="submit">
+         <button class="adopt-btn" type="submit" >
           ADOPT
-        </button>
+        </button> 
       </form>
+      {/* <button class="form-field" type="submit" >
+          ADOPT
+        </button> */}
     </div>
   );
 }
