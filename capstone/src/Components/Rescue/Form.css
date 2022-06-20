@@ -55,7 +55,7 @@
     height:25px;
     border-radius: 5px;
   }
-  p {
+  .content {
     color: red;
   }
   .field{

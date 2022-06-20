@@ -73,72 +73,72 @@ function Form() {
       {/* <Text style={{ marginTop: "-25px", marginBottom: "15px" }}>
             BOOK YOUR SLOTS
           </Text> */}
-      <form onSubmit={handleSubmit}>
-        <div className="ui divider"></div>
-        <div className="ui form">
-          <div className="field">
-            <label>FirstName</label>
-            <input
-              type="text"
-              name="FirstName"
-              placeholder=" Enter your Firstname"
-              value={formValues.FirstName}
-              onChange={handleChange}
-              style={{ marginLeft: "30px" }}
-            />
-            <p>{formErrors.FirstName}</p>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="ui divider"></div>
+            <div className="ui form">
+              <div className="field">
+                <label>FirstName</label>
+                <input
+                  type="text"
+                  name="FirstName"
+                  placeholder=" Enter your Firstname"
+                  value={formValues.FirstName}
+                  onChange={handleChange}
+                  style={{ marginLeft: "30px" }}
+                />
+                <p className='content'>{formErrors.FirstName}</p>
+              </div>
 
-          <div className="field">
-            <label>LastName</label>
-            <input
-              type="text"
-              name="LastName"
-              placeholder="Enter Your Lastname"
-              value={formValues.LastName}
-              onChange={handleChange}
-              style={{ marginLeft: "34px" }}
-            />
-            <p>{formErrors.LastName}</p>
-          </div>
+              <div className="field">
+                <label>LastName</label>
+                <input
+                  type="text"
+                  name="LastName"
+                  placeholder="Enter Your Lastname"
+                  value={formValues.LastName}
+                  onChange={handleChange}
+                  style={{ marginLeft: "34px" }}
+                />
+                <p className='content'>{formErrors.LastName}</p>
+              </div>
 
-          <div className="field">
-            <label>Email</label>
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter Your Email"
-              value={formValues.email}
-              onChange={handleChange}
-              style={{ marginLeft: "70px" }}
-            />
-            <p>{formErrors.email}</p>
-          </div>
-          <div className="field">
-            <label>ContactNo</label>
-            <input
-              type="number"
-              name="ContactNo"
-              placeholder="Enter Your Contact Number"
-              value={formValues.ContactNo}
-              onChange={handleChange}
-              style={{ marginLeft: "29px" }}
-            />
-            <p>{formErrors.ContactNo}</p>
-          </div>
+              <div className="field">
+                <label>Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  value={formValues.email}
+                  onChange={handleChange}
+                  style={{ marginLeft: "70px" }}
+                />
+                <p className='content'>{formErrors.email}</p>
+              </div>
+              <div className="field">
+                <label>ContactNo</label>
+                <input
+                  type="number"
+                  name="ContactNo"
+                  placeholder="Enter Your Contact Number"
+                  value={formValues.ContactNo}
+                  onChange={handleChange}
+                  style={{ marginLeft: "29px" }}
+                />
+                <p className='content'>{formErrors.ContactNo}</p>
+              </div>
 
-          <div className="field">
-            <label>Address</label>
-            <input
-              type="text"
-              name="Address"
-              placeholder="Enter Your Address"
-              value={formValues.Address}
-              onChange={handleChange}
-              style={{ marginLeft: "48px" }}
-            />
-            <p>{formErrors.Address}</p>
-          </div>
+              <div className="field">
+                <label>Address</label>
+                <input
+                  type="text"
+                  name="Address"
+                  placeholder="Enter Your Address"
+                  value={formValues.Address}
+                  onChange={handleChange}
+                  style={{ marginLeft: "48px" }}
+                />
+                <p className='content'>{formErrors.Address}</p>
+              </div>
 
           {/* <div className="field"> */}
           {/* <label>Slots Available</label> */}
