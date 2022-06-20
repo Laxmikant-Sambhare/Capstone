@@ -2,7 +2,6 @@ import React from "react";
 import "./Styling.css";
 import {
   MobileVet,
-  Image,
   Description,
   Section,
   DivSection,
@@ -13,7 +12,7 @@ import {
 } from "./Styling";
 import { Questions } from "./Data/Q&A_data";
 import { Services } from "./Data/Services";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const ReadMore = ({ children }) => {
@@ -34,44 +33,53 @@ const ReadMore = ({ children }) => {
 function Booking() {
   const params = useParams();
   const service = Services.find((item) => item.id == params.id);
-  // const Question = Questions.find((data) => data.id == params.id);
-  // console.log("params", params);
-  // const navigate = useNavigate();
-  // const ToBooking = () => {
-  //   navigate("/booking");
-  // };
+
   return (
-    <MobileVet style={{ marginBottom: "100px" }}>
-      <div style={{ fontSize: "20px", textAlign: "center", marginTop: "3%" }}>
+    <MobileVet>
+      <div
+        style={{
+          fontSize: "20px",
+          display: "flex",
+          justifyContent: "center",
+          margin: "30px 0",
+        }}
+      >
         <b>{service.service}</b>
       </div>
-      <Image>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <img src={service.image1} alt="" />
-      </Image>
+      </div>
+      <div style={{ padding: "50px" }}>
+        <Description>
+          <ReadMore>{service.Description}</ReadMore>
+        </Description>
 
-      <Description>
-        <ReadMore>{service.Description}</ReadMore>
-      </Description>
-      <DivSection>
-        {Questions.map((data) => (
-          <>
+        <DivSection>
+          {Questions.map((data) => (
             <Section>
-              <Div>
-                <Image1 src={data.image} alt=""></Image1>
-              </Div>
-              <Bold>{data.question}</Bold>
+              <a href={data.link}>
+                <Div>
+                  <Image1 src={data.image} alt=""></Image1>
+                </Div>
+              </a>
+              <Bold style={{ color: "black " }}>{data.question}</Bold>
               <Paragraph>
                 <ReadMore>{data.Description}</ReadMore>
               </Paragraph>
             </Section>
-          </>
-        ))}
-      </DivSection>
+          ))}
+        </DivSection>
+      </div>
       <div className="wrap">
         <Link to={"/booking"} state={service}>
-        <button className="animationButton">
-          Book Your Slots Now{">>>"}
-        </button>
+          <button className="animationButton">
+            Book Your Slots Now{">>>"}
+          </button>
         </Link>
       </div>
     </MobileVet>
