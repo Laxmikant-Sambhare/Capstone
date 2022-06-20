@@ -6,12 +6,6 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTOBookings } from "../../features/bookingslice";
 function ConfirmBooking() {
-  // console.log("params", params);
-  // const navigate = useNavigate();
-  // const submit = () => {
-  //   Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
-  //   // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-  // };
   const { bookingItems } = useSelector((state) => state.bookings);
   const location = useLocation();
   const Bookingdata = location.state;
@@ -31,6 +25,7 @@ function ConfirmBooking() {
     email: "",
     ContactNo: "",
     Address: "",
+    PinCode: "",
     slots: "",
     Service: `${Bookingdata.service}`,
     Image: `${Bookingdata.image1}`,
@@ -67,7 +62,7 @@ function ConfirmBooking() {
     }
     if (!values.LastName) {
       errors.LastName = "Last name is required!";
-    } else if (values.LastName.length < 2 || values.LastName.length > 20) {
+    } else if (values.LastName.length < 1 || values.LastName.length > 20) {
       errors.LastName = "The last name must be between 2 and 20 characters";
     }
     if (!values.email) {
@@ -83,9 +78,16 @@ function ConfirmBooking() {
     if (!values.Address) {
       errors.Address = "Address is required!";
     } else if (values.Address.length < 20 || values.Address.length > 100) {
-      errors.Address = "The Address must be between 20 to 100 characters.";
+      errors.Address = "The Address must be between 15 to 100 characters.";
     }
-
+    if (!values.PinCode) {
+      errors.PinCode = "Pincode is required!";
+    } else if (values.PinCode.length < 6 || values.PinCode.length > 6) {
+      errors.PinCode = "The pincode should have 6 digits";
+    }
+    // if (values.slots.length > 10) {
+    //   errors.slots = "Select a time slot!";
+    // }
     return errors;
   };
   return (
@@ -172,7 +174,18 @@ function ConfirmBooking() {
                     />
                     <p className="para">{formErrors.Address}</p>
                   </div>
-
+                  <div className="fields">
+                    <input
+                      type="text"
+                      name="PinCode"
+                      placeholder="Enter Your Pin Code"
+                      value={formValues.PinCode}
+                      onChange={handleChange}
+                    />
+                    <p className="para">{formErrors.PinCode}</p>
+                  </div>
+                </div>
+                <div className="bookingRow">
                   <div className="fields">
                     <select
                       style={{ padding: "10px", width: "100%" }}
@@ -196,6 +209,7 @@ function ConfirmBooking() {
                     </select>
                   </div>
                 </div>
+
                 <p style={{ fontSize: "15px" }}>
                   T & C* <br></br>A service charge of X will be charged from the
                   user. This amount will not be refunded under any
