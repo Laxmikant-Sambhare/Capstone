@@ -1,11 +1,11 @@
 import styled from "styled-components";
-export const Vet = styled.div``;
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 14%;
+  margin-left: 8%;
   margin-bottom: 50px;
+  justify-content: space-around;
 `;
 export const Maincontainer = styled.div`
   width: 20rem;
@@ -39,30 +39,29 @@ export const Text = styled.div`
   font-size: medium;
   cursor: pointer;
 `;
-export const MobileVet = styled.div``;
+export const MobileVet = styled.div`
+  margin-bottom: 100px;
+`;
 export const Image = styled.div`
-  margin-top: 1%;
-  margin-left: 27%;
-
+  display: flex;
+  justify-content: center;
   > img {
     height: 190px;
-    margin-bottom: 35px;
-    margin-top: 25px;
+
+    border-radius: 10px;
   }
 `;
 export const Description = styled.div`
-  width: 60%;
-  height: 40%;
+  display: flex;
   justify-items: center;
-  margin-left: 20%;
   font-size: 14px;
+  margin: 20px 0;
   text-indent: 2cm;
 `;
 
 export const DivSection = styled.div`
   display: flex;
-  margin-top: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const Section = styled.div`
@@ -72,8 +71,6 @@ export const Section = styled.div`
   border-radius: 5px;
 `;
 export const Div = styled.div`
-  height: 225px;
-  width: 398.5px;
   overflow: hidden;
 `;
 export const Image1 = styled.img`
@@ -104,9 +101,7 @@ export const Text1 = styled.h3`
   justify-content: center;
   display: flex;
 
-  /* margin-top: 20px; */
   padding: 10px;
-  /* border-radius: 10px 10px 0 0; */
 `;
 export const Form = styled.div`
   margin: 25px 0;
