@@ -5,15 +5,16 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/counter/cartSlice";
 import "./styles.css"
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const Productlisting = () => {
   const params = useParams();
   const product = section.find((item) => item.id == params.id);
+  const { user } = useUserAuth();
   const [isActive, setIsActive] = useState(false);
   const dispatch = useDispatch();
   const handleAddToCart = (data) => {
     dispatch(addToCart(data));
-    console.log("hi")
   };
   console.log(product);
   return (
@@ -51,18 +52,24 @@ const Productlisting = () => {
                       <span className="price">Price: ₹{data.price}</span>
                     </div>
                   </Link>
+                  {
+                  (user)?
                   <button onClick={() => handleAddToCart(data)}>
                     Add To Cart
-                  </button>
+                  </button>: <h4 style={{color: 'red'}}>Signin first for adding to cart</h4>}
                 </div>
               </>
             ))}
         </div>
       </div>
-
+      <Bottomtap/>
     </div>
   );
 };
+
+const Bottomtap = styled.div`
+height: 50px
+`
 
 const Dropdown = styled.div`
   width: 110px;

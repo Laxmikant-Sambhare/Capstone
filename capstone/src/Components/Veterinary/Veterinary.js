@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Services } from "./Data/Services";
-import { Text, Container, Containers, MobileVet } from "./Veterinary.styling";
+import { Text, Maincontainer, Container, Vet } from "./Styling";
 const Veterinary = () => {
   return (
-    <MobileVet>
-      <Containers>
+    <Vet>
+      <Container>
         {Services.map((data, index) => {
           return (
             <>
@@ -16,7 +16,7 @@ const Veterinary = () => {
                   style={{ textDecoration: "none" }}
                   key={index}
                 >
-                  <Container key={index}>
+                  <Maincontainer key={index}>
                     <img src={data.image} alt="" />
 
                     <Text>
@@ -24,7 +24,7 @@ const Veterinary = () => {
                       <br></br>
                       Help Line No: x
                     </Text>
-                  </Container>
+                  </Maincontainer>
                 </Link>
               ) : (
                 <Link
@@ -33,18 +33,18 @@ const Veterinary = () => {
                   style={{ textDecoration: "none" }}
                   key={index}
                 >
-                  <Container key={index}>
+                  <Maincontainer key={index}>
                     <img src={data.image} alt="" />
 
                     <Text>{data.service}</Text>
-                  </Container>
+                  </Maincontainer>
                 </Link>
               )}
             </>
           );
         })}
-      </Containers>
-    </MobileVet>
+      </Container>
+    </Vet>
   );
 };
 

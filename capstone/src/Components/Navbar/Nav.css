@@ -44,6 +44,7 @@ li {
 
 .dropdown .dropdown-content {
     position: absolute;
+    z-index: 10000;
     padding: 15px;
     background: #ffd301;
     font-weight: 500;
@@ -137,7 +138,6 @@ li {
 }
 
 /* hero section   */
-
 .hero-section {
   height: 80vh;
   display: flex;

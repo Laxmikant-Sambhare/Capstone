@@ -1,12 +1,33 @@
-import { Input,Badge } from "@material-ui/core";
+import { Input, Badge, makeStyles } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Nav.css";
-import { ShoppingCart } from '@material-ui/icons';
+import { ShoppingCart } from "@material-ui/icons";
 import { useSelector } from "react-redux";
+import { useUserAuth } from "../../context/UserAuthContext";
+
+const useStyles = makeStyles((theme) => ({
+  badge: {
+    fontSize: 12
+  },
+  book: {
+    fontSize: 12
+  }
+}));
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
+  const {cartItems } = useSelector((state) => state.cart);
+  const { bookingItems } = useSelector((state) => state.bookings)
+  const { logOut, user } = useUserAuth();
+  const classes = useStyles();  
+  const handleLogout = async () => {
+      try {
+        await logOut();
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
   return (
     <div className="navbar">
       <nav className="main-nav">
@@ -17,8 +38,6 @@ export const Navbar = () => {
           className="Mainname"
           style={{ height: "7rem", padding: "2px" }}
         />
-
-        {/* the second div for the navbar element */}
         <div className="menu-link">
           <ul>
             <li>
@@ -28,7 +47,12 @@ export const Navbar = () => {
               <a href="/contact">Contact</a>
             </li>
             <li>
-              <a href="/signup">Signup</a>
+             {(!user)? 
+             <a href="/signup">Signup</a>
+             :<h2 className="signout" variant="primary" onClick={handleLogout} style={{ fontWeight: "500", fontSize:"2rem",
+              color: "#333",cursor: "pointer"}} >
+          Signout
+        </h2>}
             </li>
             <li className="dropdown">
               <div
@@ -66,16 +90,21 @@ export const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="/booking">Booking</a>
+            <Badge badgeContent={(bookingItems.length !== 0)?bookingItems.length:'0'} color="primary" classes={{ badge: classes.book }}>
+              <a href="/bookings">Bookings</a>
+              </Badge>
             </li>
             <li>
-              <a href="/Cart"> 
-              <Badge  badgeContent={cartTotalQuantity } color="secondary">
-            <ShoppingCart style={{width : '30px', height: '30px',cursor: 'pointer'}}/>
-            </Badge>
-            </a>
+              {
+                (user)?
+              <a href="/Cart">
+                <Badge badgeContent={(cartItems.length !== 0)?cartItems.length:'0'} color="secondary" classes={{ badge: classes.badge }}>
+                  <ShoppingCart
+                    style={{ width: "30px", height: "30px", cursor: "pointer" }}
+                  />
+                </Badge>
+              </a>: null}
             </li>
-            
           </ul>
         </div>
         <Input
