@@ -23,7 +23,7 @@ function ConfirmBooking() {
       <Payment>
         <HeadingTag>
           <img
-            src={require("./complete-small.jpg")}
+            src={require("./images/complete-small.jpg")}
             alt="logo"
             className="Mainname"
             style={{ height: "5rem", padding: "2px" }}
@@ -48,7 +48,9 @@ function ConfirmBooking() {
                   alt=""
                   style={{ width: "150px", height: "150px" }}
                 />
-                <h2 style={{ marginLeft: "-150px" }}>{data.service}</h2>
+                <h2 style={{ marginLeft: "-150px", marginTop: "-20px" }}>
+                  {data.service}
+                </h2>
               </div>
               <h2>Service charge: ₹{data.price}</h2>
             </div>
