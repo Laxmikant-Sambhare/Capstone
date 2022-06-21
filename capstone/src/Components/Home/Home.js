@@ -5,10 +5,9 @@ import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import { Link } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { requirePropFactory, Typography } from "@material-ui/core";
 
 const Home = () => {
-
   const slideImages = [
     {
       url: "https://www.seekpng.com/png/full/3-39193_happy-birthday-if-you-have-clicked-through-to.png",
@@ -19,7 +18,7 @@ const Home = () => {
       caption: "Slide 2",
     },
     {
-      url: "https://image.shutterstock.com/image-photo/collage-different-dogs-on-white-260nw-1724568655.jpg",
+      url: require("./image.jpg"),
       caption: "Slide 3",
     },
     {
@@ -145,6 +144,7 @@ const Banner = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   height: 350px;
+  /* z-index: -1; */
 `;
 
 export default Home;
