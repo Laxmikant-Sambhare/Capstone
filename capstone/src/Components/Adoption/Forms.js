@@ -2,6 +2,8 @@ import React from "react";
 import {useState} from "react";
 import "./Forms.css";
 import  { toast } from "react-toastify";
+import { collection, addDoc } from "firebase/firestore/lite";
+import { db } from "../../firebase";
 
 
 export default function Forms() {
@@ -44,6 +46,25 @@ export default function Forms() {
   }
   const handleAddressInputChange = (event) => {
     setValues({...values,address:event.target.value})
+  }
+
+  const handleAdopt = async(values) => {
+    await addDoc(collection(db,"Adopt"),{
+      firstName:values.firstName,
+      lastName:values.lastName,
+      email:values.email,
+      phonenumber:values.phonenumber,
+      income:values.income,
+      aadharNo:values.aadharNo,
+      pincode:values.pincode,
+      address:values.address,
+    })
+    .then((res) => {
+      console.log("Adoption Details is added Succesfully ");
+    })
+    .catch((err) => {
+      console.log("Adoption Details cannot be Added");
+    })
   }
 
 
@@ -168,7 +189,7 @@ export default function Forms() {
         />
       {submitted && !values.address ? <span id="first-name-error">Please enter a valid Addess</span> : null}
 
-         <button class="adopt-btn" type="submit" >
+         <button class="adopt-btn" type="submit" onClick = {() => handleAdopt(values)} >
           ADOPT
         </button> 
       </form>
