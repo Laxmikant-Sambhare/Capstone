@@ -3,8 +3,8 @@ import "./Form.css";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
-import { useDispatch, useSelector } from "react-redux";
-function Form() {
+import { useDispatch} from "react-redux";
+function Form({imageRef}) {
   const dispatch = useDispatch();
   const handleAddtoRescue = (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -16,7 +16,7 @@ function Form() {
     FirstName: "",
     LastName: "",
     email: "",
-    imgUrl: "",
+    imgUrl: `${imageRef}`,
     ContactNo: "",
     Address: "",
   };
