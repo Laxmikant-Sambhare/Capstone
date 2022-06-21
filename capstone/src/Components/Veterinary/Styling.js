@@ -3,16 +3,17 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 8%;
+  /* margin-left: 7%; */
   margin-bottom: 50px;
   justify-content: space-around;
+  gap: 10%;
 `;
 export const Maincontainer = styled.div`
   width: 20rem;
   height: 20rem;
-  margin-top: 25%;
-  margin-right: 100px;
-  margin-bottom: 20%;
+  margin-top: 15%;
+  /* margin-right: 7%; */
+  margin-bottom: 30%;
   box-shadow: black 0 0 15px;
   border-radius: 20px;
   border-collapse: collapse;
@@ -41,6 +42,7 @@ export const Text = styled.div`
 `;
 export const MobileVet = styled.div`
   margin-bottom: 100px;
+  /* margin-top: 100px; */
 `;
 export const Image = styled.div`
   display: flex;
