@@ -5,16 +5,34 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTOBookings } from "../../features/bookingslice";
+import { collection, addDoc } from "firebase/firestore/lite";
+import { db } from "../../firebase";
 function ConfirmBooking() {
   const { bookingItems } = useSelector((state) => state.bookings);
   const location = useLocation();
   const Bookingdata = location.state;
   const dispatch = useDispatch();
   const [isBooked, setIsBooked] = useState(false);
-  const handleAddtoBookings = (formValues) => {
+  const handleAddtoBookings = async (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       dispatch(addTOBookings(formValues));
       setIsBooked(true);
+      await addDoc(collection(db, "bookings"), {
+        FirstName: formValues.FirstName,
+        LastName: formValues.LastName,
+        email: formValues.email,
+        ContactNo: formValues.ContactNo,
+        Address: formValues.Address,
+        PinCode: formValues.PinCode,
+        slots: formValues.slots,
+        Service: formValues.Service,
+      })
+        .then(function (res) {
+          console.log("Data is successfully added");
+        })
+        .catch(function (err) {
+          console.log("Data cannot be added");
+        });
     }
   };
 
