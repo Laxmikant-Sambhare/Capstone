@@ -48,9 +48,9 @@ function ConfirmBooking() {
                   alt=""
                   style={{ width: "150px", height: "150px" }}
                 />
-                <h2>{data.service}</h2>
+                <h2 style={{ marginLeft: "-150px" }}>{data.service}</h2>
               </div>
-              <h2>Price: ₹{data.price}</h2>
+              <h2>Service charge: ₹{data.price}</h2>
             </div>
           </>
         </Product>
