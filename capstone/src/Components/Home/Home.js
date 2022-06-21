@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.css";
-import { Button } from "react-bootstrap";
+
 
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import { Link } from "react-router-dom";
-import { requirePropFactory, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 const Home = () => {
   const slideImages = [

@@ -16,6 +16,7 @@ function Form() {
     FirstName: "",
     LastName: "",
     email: "",
+    imgUrl: "",
     ContactNo: "",
     Address: "",
   };
