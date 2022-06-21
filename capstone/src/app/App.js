@@ -24,18 +24,26 @@ import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Checkout from "../Components/Store/Checkout";
 import Bookings from "../Components/Veterinary/Bookings";
 
-
 function App() {
   return (
     <div className="App">
       <UserAuthContextProvider>
         <Navbar />
+        <div style={{ marginTop: "100px" }}></div>
         <BrowserRouter>
           <ToastContainer />
           <Routes>
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            <Route
+              exact
+              path="/Cart"
+              element={
+                <ProtectedRoute>
+                  <Cart />
+                </ProtectedRoute>
+              }
+            />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/rescue" element={<Rescue />} />
             <Route exact path="/adoption" element={<Adoption />} />
@@ -65,7 +73,7 @@ function App() {
               path="/booking"
               element={
                 <ProtectedRoute>
-                  <ConfirmBooking/>
+                  <ConfirmBooking />
                 </ProtectedRoute>
               }
             />
@@ -74,7 +82,7 @@ function App() {
               path="/checkout"
               element={
                 <ProtectedRoute>
-                  <Checkout/>
+                  <Checkout />
                 </ProtectedRoute>
               }
             />

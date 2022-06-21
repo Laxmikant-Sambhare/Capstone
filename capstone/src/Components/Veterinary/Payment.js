@@ -15,9 +15,9 @@ function ConfirmBooking() {
   function handleToken(token, addresses) {
     console.log({ token, addresses });
   }
-  const location = useLocation();
-  const store = location.state;
 
+  const location = useLocation();
+  const data = location.state;
   return (
     <Bookings>
       <Payment>
@@ -44,13 +44,13 @@ function ConfirmBooking() {
             <div style={{ display: "flex", alignItems: "center" }}>
               <div style={{ width: "300px", display: "flex", margin: "20px" }}>
                 <img
-                  src={store.image}
+                  src={data.image}
                   alt=""
                   style={{ width: "150px", height: "150px" }}
                 />
-                <h2>{store.service}</h2>
+                <h2 style={{ marginLeft: "-150px" }}>{data.service}</h2>
               </div>
-              {/* <h2>Price: ₹{store.price}</h2> */}
+              <h2>Service charge: ₹{data.price}</h2>
             </div>
           </>
         </Product>
@@ -61,7 +61,7 @@ function ConfirmBooking() {
             margin: "10px",
           }}
         >
-          Total: ₹{store.price}
+          Total: ₹{data.price}
         </h1>
         <Containers>
           <PaymentContainer>
@@ -71,7 +71,7 @@ function ConfirmBooking() {
               token={handleToken}
               billingAddress
               shippingAddress
-              amount={store.price} //*100 for converting from dollar to blaah
+              amount={data.price} //*100 for converting from dollar to blaah
               name="Service Charge"
             />
           </PaymentContainer>
