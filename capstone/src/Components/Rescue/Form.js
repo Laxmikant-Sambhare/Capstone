@@ -155,7 +155,7 @@ function Form({ imageRef }) {
             />
             <p className="content">{formErrors.Address}</p>
           </div>
-          <div className="fields">
+          <div className="field">
             <label>Pincode</label>
             <input
               type="text"
@@ -165,7 +165,7 @@ function Form({ imageRef }) {
               onChange={handleChange}
               style={{ marginLeft: "48px" }}
             />
-            <p className="para">{formErrors.PinCode}</p>
+            <p className="content">{formErrors.PinCode}</p>
           </div>
 
           <button
