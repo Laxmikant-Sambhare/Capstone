@@ -15,7 +15,7 @@ const rescueslice = createSlice({
       state.rescueItems.push(action.payload);
       localStorage.setItem("rescueItems", JSON.stringify(state.rescueItems));
       toast.success("You have succesfully uploaded  to rescue panel", {
-        position: "bottom-left",
+        position: "top-right",
       });
     },
 },

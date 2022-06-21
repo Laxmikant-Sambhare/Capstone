@@ -15,7 +15,7 @@ const bookingslice = createSlice({
       state.bookingItems.push(action.payload);
       localStorage.setItem("bookingItems", JSON.stringify(state.bookingItems));
       toast.success("Your slot is booked successfully", {
-        position: "bottom-left",
+        position: "top-right",
       });
     },
     removeFromForms(state, action) {
@@ -28,7 +28,7 @@ const bookingslice = createSlice({
           state.bookingItems = nextBookingItems;
 
           toast.error("Your slot has been cancelled", {
-            position: "bottom-left",
+            position: "top-right",
           });
         }
         localStorage.setItem(
