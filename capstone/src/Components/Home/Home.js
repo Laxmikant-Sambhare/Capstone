@@ -145,6 +145,7 @@ const Banner = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   height: 350px;
+  z-index: 0;
 `;
 
 export default Home;
