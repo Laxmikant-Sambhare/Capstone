@@ -73,7 +73,7 @@ export default function Forms() {
     if(values.firstName && values.lastName && values.email  && values.phonenumber && values.aadharNo && values.pincode && values.address){
       setValid(true)
       toast.info("You have registered for adoption", {
-        position: "bottom-left",
+        position: "top-right",
       });
 
     }

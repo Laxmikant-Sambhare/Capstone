@@ -46,9 +46,6 @@ export const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
              {(!user)? 
              <a href="/signup">Signup</a>
              :<h2 className="signout" variant="primary" onClick={handleLogout} style={{ fontWeight: "500", fontSize:"2rem",
