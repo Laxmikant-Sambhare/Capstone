@@ -3,10 +3,10 @@ import "./Form.css";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "../../firebase";
-function Form() {
+function Form({ imageRef }) {
   const dispatch = useDispatch();
   const handleAddtoRescue = async (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -33,7 +33,7 @@ function Form() {
     FirstName: "",
     LastName: "",
     email: "",
-    imgUrl: "",
+    imgUrl: `${imageRef}`,
     ContactNo: "",
     Address: "",
     PinCode: "",
