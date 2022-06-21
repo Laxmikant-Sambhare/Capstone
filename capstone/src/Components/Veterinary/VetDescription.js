@@ -52,7 +52,7 @@ function Booking() {
           justifyContent: "center",
         }}
       >
-        <img src={service.image1} alt="" />
+        <img src={service.image1} alt="ServicImage" />
       </div>
       <div style={{ padding: "50px" }}>
         <Description>
@@ -64,7 +64,7 @@ function Booking() {
             <Section>
               <a href={data.link}>
                 <Div>
-                  <Image1 src={data.image} alt=""></Image1>
+                  <Image1 src={data.image} alt="Image"></Image1>
                 </Div>
               </a>
               <Bold style={{ color: "black " }}>{data.question}</Bold>
