@@ -32,12 +32,14 @@ export const Navbar = () => {
     <div className="navbar">
       <nav className="main-nav">
         {/* this div for logo */}
+        <a href="/">
         <img
           src={require("./Navlogo.jpg")}
           alt="logo"
           className="Mainname"
           style={{ height: "7rem", padding: "2px" }}
         />
+        </a>
         <div className="menu-link">
           <ul>
             <li>
