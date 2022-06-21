@@ -91,11 +91,13 @@ export const Navbar = () => {
                 </div>
               )}
             </li>
-            <li>
+           { 
+           (user)?
+           <li>
             <Badge badgeContent={(bookingItems.length !== 0)?bookingItems.length:'0'} color="primary" classes={{ badge: classes.book }}>
               <a href="/bookings">Bookings</a>
               </Badge>
-            </li>
+            </li>: null}
             <li>
               {
                 (user)?

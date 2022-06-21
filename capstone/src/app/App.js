@@ -23,7 +23,9 @@ import Forms from "../Components/Adoption/Forms";
 import ConfirmBooking from "../Components/Veterinary/ConfirmBooking";
 import Checkout from "../Components/Store/Checkout";
 import Bookings from "../Components/Veterinary/Bookings";
-import Imageupload from "../Components/Store/Imageupload";
+import Imgacc from "../Components/Store/Imgacc";
+import Dataacces from "../Components/Store/Dataacces";
+
 
 function App() {
   return (
@@ -36,7 +38,8 @@ function App() {
           <Routes>
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/img" element={<Imageupload />} />
+            <Route exact path="/img" element={<Imgacc />} />
+            <Route exact path="/data" element={<Dataacces/>} />
             <Route
               exact
               path="/Cart"
@@ -92,6 +95,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
+      <div style={{ marginBottom: "100px" }}></div>
       <Footer />
     </div>
   );

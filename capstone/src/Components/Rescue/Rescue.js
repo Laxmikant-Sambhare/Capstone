@@ -12,9 +12,11 @@ const Res = () => {
   ]);
   const [isuploaded, setisuploaded] = useState("false");
   const imagesListRef = ref(storage, "images/");
-  const imageRef = ref(storage, `images/${v4()}`);
+  const [refer , setref] = useState("")
   const uploadFile = () => {
     if (imageUpload == null) return;
+    const imageRef = ref(storage, `images/${v4()}`);
+    setref(imageRef)
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         setImageUrls([url]);
@@ -78,7 +80,7 @@ const Res = () => {
             </div>
           </div>
         </div>
-        {isuploaded === true ? <Form imageRef={imageRef}/> : null}
+        {isuploaded === true ? <Form imageRef={refer}/> : null}
       </>
     </div>
   );

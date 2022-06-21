@@ -10,7 +10,7 @@ import { storage } from "../../firebase";
 import { v4 } from "uuid";
 import { toast } from "react-toastify";
 
-function Imageupload() {
+function Imgacc() {
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -33,7 +33,7 @@ function Imageupload() {
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageUrls((prev) => [...prev, url]);
-          if( url === undefined) (listAll())
+          
         });
       });
     });
@@ -55,4 +55,4 @@ function Imageupload() {
   );
 }
 
-export default Imageupload;
+export default Imgacc;
