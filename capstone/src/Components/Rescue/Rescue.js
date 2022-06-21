@@ -78,7 +78,7 @@ const Res = () => {
             </div>
           </div>
         </div>
-        {isuploaded === true ? <Form imageRef={imageRef} /> : null}
+        {isuploaded === true ? <Form imageRef={imageRef}/> : null}
       </>
     </div>
   );

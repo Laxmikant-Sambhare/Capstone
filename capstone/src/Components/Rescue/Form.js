@@ -10,7 +10,6 @@ function Form({ imageRef }) {
   const dispatch = useDispatch();
   const handleAddtoRescue = async (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      dispatch(addToRescue(formValues));
       await addDoc(collection(db, "rescue"), {
         FirstName: formValues.FirstName,
         LastName: formValues.LastName,
@@ -21,6 +20,7 @@ function Form({ imageRef }) {
         imgUrl: formValues.imgUrl,
       })
         .then(function (res) {
+          dispatch(addToRescue(formValues));
           console.log("Data is successfully added");
         })
         .catch(function (err) {
