@@ -1,28 +1,17 @@
 import React from "react";
 import "./Form.css";
-// import { useForm } from 'react-hook-form';
-// import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
 import { useDispatch, useSelector } from "react-redux";
 function Form() {
-  // const { rescueItems } = useSelector((state) => state.bookings);
   const dispatch = useDispatch();
   const handleAddtoRescue = (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       dispatch(addToRescue(formValues));
-      // setIsBooked(true);
     }
   };
-  // const { register, handleSubmit, formState: { errors } } = useForm();
-  // const onSubmit = data => console.log(data);
-  // console.log(errors);
-  // const navigate = useNavigate();
-  // const submit = () => {
-  // Object.keys(formErrors).length === 0 && isSubmit && navigate("/payment");
-  // <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-  // };
+
   const initialValues = {
     FirstName: "",
     LastName: "",
@@ -57,10 +46,7 @@ function Form() {
     if (!values.FirstName) {
       errors.FirstName = "Firstname is required!";
     }
-    // else if{
-    //   if (values.FirstName.length < 2 || values.FirstName.length > 10) {
-    //     errors.FirstName = "The First name must be between 6 and 40 characters"
-    // }
+
     if (!values.email) {
       errors.email = "Email is required!";
     } else if (!regex.test(values.email)) {
@@ -79,9 +65,6 @@ function Form() {
   };
   return (
     <div className="contain">
-      {/* <Text style={{ marginTop: "-25px", marginBottom: "15px" }}>
-            BOOK YOUR SLOTS
-          </Text> */}
       <form onSubmit={handleSubmit}>
         <div className="ui divider"></div>
         <div className="ui form">
