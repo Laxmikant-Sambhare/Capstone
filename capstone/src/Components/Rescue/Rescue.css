@@ -39,9 +39,9 @@
     height: 148px;
     object-fit: cover;
   }
-  #input[type="file"] {
+  /* #input[type="file"] {
       display: none;
-  }
+  } */
   .label{
     width: 100%;
     display: flex;

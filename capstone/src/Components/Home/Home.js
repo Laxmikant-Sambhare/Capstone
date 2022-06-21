@@ -144,11 +144,7 @@ const Banner = styled.div`
   margin-left: 80px;
   margin-right: 80px;
   height: 350px;
-<<<<<<< HEAD
-  z-index: 0;
-=======
   /* z-index: -1; */
->>>>>>> feb22da92e312c2e22091464d217b708567b847b
 `;
 
 export default Home;
