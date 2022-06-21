@@ -72,7 +72,7 @@ function ConfirmBooking() {
     }
     if (!values.ContactNo) {
       errors.ContactNo = "Contact number is required!";
-    } else if (values.ContactNo.length === 10) {
+    } else if (values.ContactNo.length < 10 || values.ContactNo.length > 10) {
       errors.ContactNo = "Contact no should have 10 digits";
     }
     if (!values.Address) {
