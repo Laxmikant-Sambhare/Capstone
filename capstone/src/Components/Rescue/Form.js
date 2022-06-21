@@ -4,11 +4,28 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
 import { useDispatch, useSelector } from "react-redux";
+import { collection, addDoc } from "firebase/firestore/lite";
+import { db } from "../../firebase";
 function Form() {
   const dispatch = useDispatch();
-  const handleAddtoRescue = (formValues) => {
+  const handleAddtoRescue = async (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       dispatch(addToRescue(formValues));
+      await addDoc(collection(db, "rescue"), {
+        FirstName: formValues.FirstName,
+        LastName: formValues.LastName,
+        email: formValues.email,
+        ContactNo: formValues.ContactNo,
+        Address: formValues.Address,
+        PinCode: formValues.PinCode,
+        imgUrl: formValues.imgUrl,
+      })
+        .then(function (res) {
+          console.log("Data is successfully added");
+        })
+        .catch(function (err) {
+          console.log("Data cannot be added");
+        });
     }
   };
 
@@ -19,6 +36,7 @@ function Form() {
     imgUrl: "",
     ContactNo: "",
     Address: "",
+    PinCode: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -61,6 +79,11 @@ function Form() {
     }
     if (!values.LastName) {
       errors.LastName = "Lastname is required!";
+    }
+    if (!values.PinCode) {
+      errors.PinCode = "Pincode is required!";
+    } else if (values.PinCode.length < 6 || values.PinCode.length > 6) {
+      errors.PinCode = "The pincode should have 6 digits";
     }
     return errors;
   };
@@ -131,6 +154,18 @@ function Form() {
               style={{ marginLeft: "48px" }}
             />
             <p className="content">{formErrors.Address}</p>
+          </div>
+          <div className="fields">
+            <label>Pincode</label>
+            <input
+              type="text"
+              name="PinCode"
+              placeholder="Enter Your Pin Code"
+              value={formValues.PinCode}
+              onChange={handleChange}
+              style={{ marginLeft: "48px" }}
+            />
+            <p className="para">{formErrors.PinCode}</p>
           </div>
 
           <button
