@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "./Form.css"; //imported to implement styling
 import { useState, useEffect } from "react"; //component needs to do something after render
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
