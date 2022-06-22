@@ -7,10 +7,10 @@ import { useDispatch } from "react-redux";
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "../../firebase";
 function Form({ imageRef }) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();//to dispatch an action,then updates the state change
   const handleAddtoRescue = async (formValues) => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      await addDoc(collection(db, "rescue"), {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {//errors stored as objects,keys inside are looked and checks form errors.
+      await addDoc(collection(db, "rescue"), {//if all condition is satisfied,then info is added to collection named rescue.
         FirstName: formValues.FirstName,
         LastName: formValues.LastName,
         email: formValues.email,
@@ -19,9 +19,9 @@ function Form({ imageRef }) {
         PinCode: formValues.PinCode,
         imgUrl: formValues.imgUrl,
       })
-        .then(function (res) {
-          dispatch(addToRescue(formValues));
-          console.log("Data is successfully added");
+        .then(function (res) {//response
+          dispatch(addToRescue(formValues));//fn  dispatched
+          console.log("Data is successfully added");//prints in console
         })
         .catch(function (err) {
           console.log("Data cannot be added");
