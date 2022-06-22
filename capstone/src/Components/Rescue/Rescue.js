@@ -35,7 +35,7 @@ const Res = () => {
             <h1 className="heading">Dog Rescue Panel</h1>
             <div className="img-holder">
               {/* {imageUrls.map((url) => { */}
-               <img src={imageUrls} className="img" alt="img" />
+              <img src={imageUrls} className="img" alt="img" />
               {/* })} */}
               <input
                 type="file"
@@ -46,8 +46,9 @@ const Res = () => {
                   setImageUpload(event.target.files[0]);
                 }}
                 style={{
-                  width: "100%",
-                  height: "40px",
+                  width: "200px",
+                  padding: "3px",
+                  height: "30px",
                   borderRadius: "5px",
                   marginTop: "2rem",
                   fontWight: "400",
@@ -80,7 +81,7 @@ const Res = () => {
             </div>
           </div>
         </div>
-        {isuploaded === true ? <Form imageRef={imageUrls}/> : null}
+        {isuploaded === true ? <Form imageRef={imageUrls} /> : null}
       </>
     </div>
   );
