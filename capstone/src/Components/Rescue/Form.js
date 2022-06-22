@@ -1,6 +1,6 @@
 import React from "react";
-import "./Form.css";
-import { useState, useEffect } from "react";//component needs to do something after render
+import "./Form.css"; //imported to implement styling
+import { useState, useEffect } from "react"; //component needs to do something after render
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
 import { useDispatch } from "react-redux";
@@ -181,8 +181,5 @@ function Form({ imageRef }) {
 }
 const Text = styled.h2`
   justify-content: center;
-  /* text-align: center; */
-  /* justify-items: center; */
-  /* align-items: center; */
 `;
 export default Form;
