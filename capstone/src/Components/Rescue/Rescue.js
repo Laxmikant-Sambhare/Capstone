@@ -46,8 +46,9 @@ const Res = () => {
                   setImageUpload(event.target.files[0]);
                 }}
                 style={{
-                  width: "100%",
-                  height: "40px",
+                  width: "200px",
+                  padding: "3px",
+                  height: "30px",
                   borderRadius: "5px",
                   marginTop: "2rem",
                   fontWight: "400",

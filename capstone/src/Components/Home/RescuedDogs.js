@@ -1,19 +1,13 @@
 import { useState, useEffect } from "react";
-import {
-  getDownloadURL,
-  ref,
-  
-} from "firebase/storage";
-import { db, storage} from "../../firebase";
+import { db} from "../../firebase";
 import styled from "styled-components";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { Slide } from "react-slideshow-image";
 
 function RescuedDogs() {
   const [users, setUsers] = useState([]);
-  const [url, setUrl] = useState([]);
   const usersCollerctionref =  collection (db,  "rescue");
-  const [reff, setreff] = useState ( )
+ 
 
   useEffect(() => {
     const getUsers = async () => {
@@ -21,18 +15,7 @@ function RescuedDogs() {
       setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
     };
     getUsers();
-    setreff(users.map((doc) => (doc.imgUrl) ))
-    console.log(reff)
-    const func = async () => {
-
-      const reference = ref(storage, `${reff}`);
-      await getDownloadURL(reference).then((x) => {
-          setUrl(x);
-      })
-  }
-
-
-  func();
+   
   }, []);
 
   return (
