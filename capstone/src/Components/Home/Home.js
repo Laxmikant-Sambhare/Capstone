@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
+import RescuedDogs from "./RescuedDogs";
 
 const Home = () => {
   const slideImages = [
@@ -54,8 +55,7 @@ const Home = () => {
     },
   ];
   return (
-    <>
-      <div>
+      <div className="homecontainer">
         <Banner>
           <div className="slide-container">
             <Slide>
@@ -110,14 +110,16 @@ const Home = () => {
             })}
           </Categories>
         </div>
-        <Bottomtabs />
+        <hr/>
+        <h1 style={{textAlign: "center"}}>Recently Rescued Dogs</h1>
+        <div style={{display: "flex", justifyContent: "center", margin:"20px"}}>
+        <RescuedDogs/>
+        </div>
       </div>
-    </>
+    
   );
 };
-const Bottomtabs = styled.div`
-  height: 50px;
-`;
+
 const Categories = styled.div`
   display: flex;
   flex-wrap: wrap;

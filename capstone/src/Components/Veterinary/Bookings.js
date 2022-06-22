@@ -107,7 +107,6 @@ const BookingContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 2rem;
-  margin-bottom: 100px;
   .bookcontainer {
     display: flex;
     flex-direction: column;
