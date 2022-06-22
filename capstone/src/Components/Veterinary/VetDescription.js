@@ -36,25 +36,13 @@ function Booking() {
 
   return (
     <MobileVet>
-      <div
-        style={{
-          fontSize: "20px",
-          display: "flex",
-          justifyContent: "center",
-          margin: "30px 0",
-        }}
-      >
+      <div className="mobileVet">
         <b>{service.service}</b>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <img src={service.image1} alt="ServicImage" />
+      <div className="serviceImageContainer">
+        <img src={service.image1} alt="ServicImage" className="serviceImage" />
       </div>
-      <div style={{ padding: "50px" }}>
+      <div className="ContentDiv">
         <Description>
           <ReadMore>{service.Description}</ReadMore>
         </Description>

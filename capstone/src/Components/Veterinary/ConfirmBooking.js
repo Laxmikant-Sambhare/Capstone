@@ -103,9 +103,9 @@ function ConfirmBooking() {
     } else if (values.PinCode.length < 6 || values.PinCode.length > 6) {
       errors.PinCode = "The pincode should have 6 digits";
     }
-    // if (values.slots.length > 10) {
-    //   errors.slots = "Select a time slot!";
-    // }
+    if (values.slots.length === 0) {
+      errors.slots = "Select a time slot!";
+    }
     return errors;
   };
   return (
@@ -225,6 +225,7 @@ function ConfirmBooking() {
                       <option value="8pm-10pm">8pm-10pm</option>
                       <option value="10pm-12am">10pm-12am</option>
                     </select>
+                    <p className="para">{formErrors.slots}</p>
                   </div>
                 </div>
 

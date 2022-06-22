@@ -15,7 +15,7 @@ const Veterinary = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Maincontainer key={index}>
-                  <img src={data.image} alt="" />
+                  <img src={data.image} alt="serviceImage" />
 
                   <Text>
                     {data.service}
@@ -31,7 +31,7 @@ const Veterinary = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Maincontainer key={index}>
-                  <img src={data.image} alt="" />
+                  <img src={data.image} alt="serviceImage" />
 
                   <Text>{data.service}</Text>
                 </Maincontainer>
