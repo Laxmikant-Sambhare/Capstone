@@ -1,4 +1,9 @@
+//importing necessary modules to use in file.
 import React from "react";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Styling.css";
 import {
   MobileVet,
@@ -10,11 +15,11 @@ import {
   Paragraph,
   Div,
 } from "./Styling";
+
 import { Questions } from "./Data/Q&A_data";
 import { Services } from "./Data/Services";
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+
+//A readmore readless feature is implemented. And the text which is to be given inside is accepted as a prop.
 const ReadMore = ({ children }) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
