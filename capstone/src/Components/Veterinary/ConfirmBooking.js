@@ -1,18 +1,44 @@
 import React from "react";
-import "./Styling.css";
-import { Text1 } from "./Styling";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import "./Styling.css";
+import { Text1 } from "./Styling";
+
+//Redux state management tool is used here.
 import { addTOBookings } from "../../features/bookingslice";
+//Collection and addDoc are modules available in firebase firestore to add documents to a particular collection.
 import { collection, addDoc } from "firebase/firestore/lite";
 import { db } from "../../firebase";
+
 function ConfirmBooking() {
+  //accessing the current state of booking items.
   const { bookingItems } = useSelector((state) => state.bookings);
+  //use location stores the data from previous location.
   const location = useLocation();
   const Bookingdata = location.state;
+  //use dispatch is to dispatch an action and update state to redux.
   const dispatch = useDispatch();
   const [isBooked, setIsBooked] = useState(false);
+  const initialValues = {
+    id: `${bookingItems.length}`,
+    FirstName: "",
+    LastName: "",
+    email: "",
+    ContactNo: "",
+    Address: "",
+    PinCode: "",
+    slots: "",
+    Service: `${Bookingdata.service}`,
+    Image: `${Bookingdata.image1}`,
+    price: `${Bookingdata.price}`,
+  };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  //Book your slots event.
   const handleAddtoBookings = async (formValues) => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       dispatch(addTOBookings(formValues));
@@ -35,29 +61,12 @@ function ConfirmBooking() {
         });
     }
   };
-
-  const initialValues = {
-    id: `${bookingItems.length}`,
-    FirstName: "",
-    LastName: "",
-    email: "",
-    ContactNo: "",
-    Address: "",
-    PinCode: "",
-    slots: "",
-    Service: `${Bookingdata.service}`,
-    Image: `${Bookingdata.image1}`,
-    price: `${Bookingdata.price}`,
-  };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-
+  //This takes in the chnages values of input fiels.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
+  //handle submkit is given to form to check for validation conditions.
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -121,12 +130,6 @@ function ConfirmBooking() {
                   borderRadius: "10px 10px 0 0",
                 }}
               >
-                {/* <img
-                  src={require("./complete-small.jpg")}
-                  alt="logo"
-                  className="Mainname"
-                  style={{ height: "5rem", padding: "2px" }}
-                /> */}
                 <Text1>
                   <h3>{Bookingdata.service}</h3>
                 </Text1>
@@ -237,6 +240,7 @@ function ConfirmBooking() {
               </div>
             </div>
             <div className="bookYourSlots">
+              {/* it is checking if isBooked is false */}
               {isBooked !== true ? (
                 <button
                   className="Submit"

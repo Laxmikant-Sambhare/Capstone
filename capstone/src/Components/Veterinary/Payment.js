@@ -68,6 +68,7 @@ function ConfirmBooking() {
         <Containers>
           <PaymentContainer>
             <Text2>Card Payment</Text2>
+            {/* react-stripe-checkout is used for payment.  */}
             <StripeCheckout
               stripeKey="pk_test_51KuyaPSCQaVx7HBe8OxRf2sNJR6frOJUsRuVFJzPvui7Ni4icPjxO5u1YjNTWAwFtK9xxxQS03dMb6aetPKBxzSP004S3AwqfR"
               token={handleToken}
