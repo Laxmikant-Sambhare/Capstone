@@ -78,7 +78,8 @@ import {
               token={handleToken}
               billingAddress
               shippingAddress
-              amount={Price} //*100 for converting from dollar to blaah
+              currency="inr"
+              amount={Price*100} //*100 for converting from dollar to blaah
               name="Service Charge"
             />
           </PaymentContainer>
