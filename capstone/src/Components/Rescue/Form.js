@@ -1,6 +1,6 @@
 import React from "react";
 import "./Form.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";//component needs to do something after render
 import styled from "styled-components";
 import { addToRescue } from "../../features/rescueslice";
 import { useDispatch } from "react-redux";
