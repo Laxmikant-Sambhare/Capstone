@@ -73,7 +73,8 @@ function ConfirmBooking() {
               token={handleToken}
               billingAddress
               shippingAddress
-              amount={data.price} //*100 for converting from dollar to blaah
+              currency="inr"
+              amount={data.price * 100}
               name="Service Charge"
             />
           </PaymentContainer>
