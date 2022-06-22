@@ -35,7 +35,7 @@ const Res = () => {
             <h1 className="heading">Dog Rescue Panel</h1>
             <div className="img-holder">
               {/* {imageUrls.map((url) => { */}
-               <img src={imageUrls} className="img" alt="img" />
+              <img src={imageUrls} className="img" alt="img" />
               {/* })} */}
               <input
                 type="file"
@@ -81,7 +81,7 @@ const Res = () => {
             </div>
           </div>
         </div>
-        {isuploaded === true ? <Form imageRef={imageUrls}/> : null}
+        {isuploaded === true ? <Form imageRef={imageUrls} /> : null}
       </>
     </div>
   );
